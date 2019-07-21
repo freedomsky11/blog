@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>安装gem &#34;bullet&#34; | 码字空间</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1、打开bullet的github官网网页，认真阅读README.MD文件2、在gemfile文件里，gem rails 及数据库gem的后面加上1gem &apos;bullet&apos;, group: &apos;development&apos;  3、在config/environments/development.rb里加入初始化命令1234567891011121314151617181920config.after_i">
+<meta property="og:type" content="article">
+<meta property="og:title" content="安装gem &quot;bullet&quot;">
+<meta property="og:url" content="http://www.hanwei.ink/2017/09/28/2615087/index.html">
+<meta property="og:site_name" content="码字空间">
+<meta property="og:description" content="1、打开bullet的github官网网页，认真阅读README.MD文件2、在gemfile文件里，gem rails 及数据库gem的后面加上1gem &apos;bullet&apos;, group: &apos;development&apos;  3、在config/environments/development.rb里加入初始化命令1234567891011121314151617181920config.after_i">
+<meta property="og:locale" content="zh">
+<meta property="og:updated_time" content="2019-07-19T19:26:38.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="安装gem &quot;bullet&quot;">
+<meta name="twitter:description" content="1、打开bullet的github官网网页，认真阅读README.MD文件2、在gemfile文件里，gem rails 及数据库gem的后面加上1gem &apos;bullet&apos;, group: &apos;development&apos;  3、在config/environments/development.rb里加入初始化命令1234567891011121314151617181920config.after_i">
+  
+    <link rel="alternate" href="/atom.xml" title="码字空间" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">码字空间</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">韩巍的一点墨水</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.hanwei.ink"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-2615087" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/09/28/2615087/" class="article-date">
+  <time datetime="2017-09-28T01:26:00.000Z" itemprop="datePublished">2017-09-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      安装gem &#34;bullet&#34;
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1、打开bullet的github官网网页，认真阅读README-MD文件"><a href="#1、打开bullet的github官网网页，认真阅读README-MD文件" class="headerlink" title="1、打开bullet的github官网网页，认真阅读README.MD文件"></a>1、打开bullet的github官网网页，认真阅读README.MD文件</h3><h3 id="2、在gemfile文件里，gem-rails-及数据库gem的后面加上"><a href="#2、在gemfile文件里，gem-rails-及数据库gem的后面加上" class="headerlink" title="2、在gemfile文件里，gem rails 及数据库gem的后面加上"></a>2、在gemfile文件里，gem rails 及数据库gem的后面加上</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gem <span class="string">'bullet'</span>, <span class="symbol">group:</span> <span class="string">'development'</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="3、在config-environments-development-rb里加入初始化命令"><a href="#3、在config-environments-development-rb里加入初始化命令" class="headerlink" title="3、在config/environments/development.rb里加入初始化命令"></a>3、在config/environments/development.rb里加入初始化命令</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">config.after_initialize <span class="keyword">do</span></span><br><span class="line">  Bullet.enable = <span class="literal">true</span></span><br><span class="line">  Bullet.alert = <span class="literal">true</span></span><br><span class="line">  Bullet.bullet_logger = <span class="literal">true</span></span><br><span class="line">  Bullet.console = <span class="literal">true</span></span><br><span class="line">  <span class="comment">#Bullet.growl = true</span></span><br><span class="line">  <span class="comment">#Bullet.xmpp = &#123; :account  =&gt; 'bullets_account<span class="doctag">@jabber</span>.org',</span></span><br><span class="line">  <span class="comment">#                :password =&gt; 'bullets_password_for_jabber',</span></span><br><span class="line">  <span class="comment">#                 :receiver =&gt; 'your_account<span class="doctag">@jabber</span>.org',</span></span><br><span class="line">  <span class="comment">#                :show_online_status =&gt; true &#125;</span></span><br><span class="line">  Bullet.rails_logger = <span class="literal">true</span></span><br><span class="line">  <span class="comment">#Bullet.honeybadger = true</span></span><br><span class="line">  <span class="comment">#Bullet.bugsnag = true</span></span><br><span class="line">  <span class="comment">#Bullet.airbrake = true</span></span><br><span class="line">  <span class="comment">#Bullet.rollbar = true</span></span><br><span class="line">  Bullet.add_footer = <span class="literal">true</span></span><br><span class="line">  <span class="comment">#Bullet.stacktrace_includes = [ 'your_gem', 'your_middleware' ]</span></span><br><span class="line">  <span class="comment">#Bullet.stacktrace_excludes = [ 'their_gem', 'their_middleware' ]</span></span><br><span class="line">  <span class="comment">#Bullet.slack = &#123; webhook_url: 'http://some.slack.url', channel: '#default', username: 'notifier' &#125;</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<p>由于是本地开发使用的，因此不需要使用发信及关联其他软件，故将相关的选项屏蔽</p>
+<h3 id="4、打开localhost-3000，依次打开相关网页测试是否需要进行后端优化"><a href="#4、打开localhost-3000，依次打开相关网页测试是否需要进行后端优化" class="headerlink" title="4、打开localhost:3000，依次打开相关网页测试是否需要进行后端优化"></a>4、打开localhost:3000，依次打开相关网页测试是否需要进行后端优化</h3><h3 id="5、针对对应的N-1-Query、Table-Scan、counter-cache、index来进行优化。"><a href="#5、针对对应的N-1-Query、Table-Scan、counter-cache、index来进行优化。" class="headerlink" title="5、针对对应的N + 1 Query、Table Scan、counter cache、index来进行优化。"></a>5、针对对应的N + 1 Query、Table Scan、counter cache、index来进行优化。</h3>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.hanwei.ink/2017/09/28/2615087/" data-id="cjycvv94k0040znx1zgnp0llx" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/09/28/2615176/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Refactor &amp; 效能提升第三章作业
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/09/28/2614655/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Refactor &amp; 效能提升第二章作业</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/03/14/personal-track-join-the-market/">个人轨迹 | 投身市场</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/31/javascript-learning-month-activity-summary/">Javascript连学一月活动总结</a>
+          </li>
+        
+          <li>
+            <a href="/2017/09/29/refactor/">Refactor &amp; 效能提升第五章作业</a>
+          </li>
+        
+          <li>
+            <a href="/2017/09/28/2615176/">Refactor &amp; 效能提升第三章作业</a>
+          </li>
+        
+          <li>
+            <a href="/2017/09/28/2615087/">安装gem &#34;bullet&#34;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Han Wei<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
