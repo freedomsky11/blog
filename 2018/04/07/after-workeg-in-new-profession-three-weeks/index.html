@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>工作三周分享——做前端可能需要的一些知识 | 码字空间</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="转行成为前端工程师三周了，有很多东西想分享给社区的小伙伴，但无奈现在每天都是枪林弹雨，周末和晚上都在狂补基础，时间实在有限，更多的东西等缓过来再分享，这里就先简单的分享下这段时间我觉得对转前端比较重要的东西，很多是徐帅在课上强调过的，还有一些我开始找工作的时候徐帅也给过建议，但是当时没有get到点，现在有了切身体会，所以供小伙伴们参考和补课。1、DOM对象，这是链接HTML/CSS与JS的关键知识">
+<meta property="og:type" content="article">
+<meta property="og:title" content="工作三周分享——做前端可能需要的一些知识">
+<meta property="og:url" content="http://www.hanwei.ink/2018/04/07/after-workeg-in-new-profession-three-weeks/index.html">
+<meta property="og:site_name" content="码字空间">
+<meta property="og:description" content="转行成为前端工程师三周了，有很多东西想分享给社区的小伙伴，但无奈现在每天都是枪林弹雨，周末和晚上都在狂补基础，时间实在有限，更多的东西等缓过来再分享，这里就先简单的分享下这段时间我觉得对转前端比较重要的东西，很多是徐帅在课上强调过的，还有一些我开始找工作的时候徐帅也给过建议，但是当时没有get到点，现在有了切身体会，所以供小伙伴们参考和补课。1、DOM对象，这是链接HTML/CSS与JS的关键知识">
+<meta property="og:locale" content="zh">
+<meta property="og:updated_time" content="2019-07-23T07:31:10.925Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="工作三周分享——做前端可能需要的一些知识">
+<meta name="twitter:description" content="转行成为前端工程师三周了，有很多东西想分享给社区的小伙伴，但无奈现在每天都是枪林弹雨，周末和晚上都在狂补基础，时间实在有限，更多的东西等缓过来再分享，这里就先简单的分享下这段时间我觉得对转前端比较重要的东西，很多是徐帅在课上强调过的，还有一些我开始找工作的时候徐帅也给过建议，但是当时没有get到点，现在有了切身体会，所以供小伙伴们参考和补课。1、DOM对象，这是链接HTML/CSS与JS的关键知识">
+  
+    <link rel="alternate" href="/atom.xml" title="码字空间" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">码字空间</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">韩巍的一点墨水</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.hanwei.ink"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-after-workeg-in-new-profession-three-weeks" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/04/07/after-workeg-in-new-profession-three-weeks/" class="article-date">
+  <time datetime="2018-04-07T05:00:00.000Z" itemprop="datePublished">2018-04-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/技术之路/">技术之路</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      工作三周分享——做前端可能需要的一些知识
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>转行成为前端工程师三周了，有很多东西想分享给社区的小伙伴，但无奈现在每天都是枪林弹雨，周末和晚上都在狂补基础，时间实在有限，更多的东西等缓过来再分享，这里就先简单的分享下这段时间我觉得对转前端比较重要的东西，很多是徐帅在课上强调过的，还有一些我开始找工作的时候徐帅也给过建议，但是当时没有get到点，现在有了切身体会，所以供小伙伴们参考和补课。<br><strong>1、DOM对象</strong>，这是链接HTML/CSS与JS的关键知识点，也是jQuery/Vue等库和框架的底层基础，少了它前端知识会有重大缺失。有的公司不一定用它，但这个知识对于理解前端框架非常重要。<br><strong>2、原生CSS</strong>，虽然有很多框架，徐帅也说过用框架会有效率。但是，工作中不可避免会遇到一些框架解决不了的问题，这个时候使用原生的CSS就不可避免。然后，这里重点的是CSS布局。因为布局定好以后基本就是调样式的问题了。<br><strong>3、jQuery</strong>，很多公司已经不用这个了，但是还可能有很多公司在用，我公司的一个管理页面就是用的它。所以，有时间的话最好学习一下，而且如果了解了上面提到的 DOM 对象，看jq其实非常快。<br><strong>4、js基础</strong>，就像徐帅说的一切都是JS，无论是小程序还是各种框架甚至是google插件本质上都是JS写出来的。js基础越好就意味着你能做的事情越多，在具备基础的html/css知识后，本质上考验的就是你的js基础知识了。<br><strong>5、VUE和小程序</strong>，小程序和VUE很像，但是还是有很多不一样的地方，如果要开发小程序，一定要认真看小程序开发文档，虽然有和徐帅学VUE理解会很快，但这不代表你可以直接上来就用。<strong>认真看文档是程序员最基本的素质。</strong><br><strong>6、把知识用起来</strong>。很多同学跟着学习了好长时间还不知道怎么用，这里反应了两个问题。第一个是没需求，第二个是没思路。<br>（1）工作与不工作对于学技术最大的区别不在于有没有工资，而在于有没有需求。当产品提需求的时候，为了工作我们自然而然要去把知识用起来。但是还没工作的同学就没有这个条件。那怎么办呢？自己找需求。方式很多，比如做老师布置的作业、做自己想做的东西、到freecodecamp上做题以及问问工作了的同学在做什么，只要你想给自己找需求自然找得到。<br>（2）有需求后很多同学做的时候会没思路，这个问题其实不单没工作的同学会遇到，工作了的也会遇到。除了多看基础多思考外，更高效的方法就是多看别人的Demo，demo就是别人写好的项目代码，最好看类似项目的开源代码。这个过程里不单可以直接把部分代码拿过来用，而且可以学习和借鉴别人的思路解决自己的问题，同时这也是运用基础知识的过程，通过这个过程你会发现自己的不足，就可以有针对性的去补基础了。<br> <strong>7、看demo的技巧</strong>。<br>（1）有的demo往往很大，这个时候很难下手，这个时候可以试着庖丁解牛。就是需要用什么功能就重点看对应部分的代码。<br>（2）在想弄明白代码作用的时候，可以多用删除和撤销。这样就能很直观的理解很多代码的作用。<br>（3）编辑器搜索，当我们想了解一个变量或者函数的作用的时候，不妨在文件甚至项目里搜索它，看看它都用在什么地方，或者在那里定义，又或者从哪里引入。这对于理解变量和函数有着非常大的帮助。<br>（4）把开发文档、w3c和mdn当作字典来用。虽然google也可以很快查的你想要的东西，但直接使用开发文档或者w3c和mdn来查相关内容效率会高很多，看demo就像看英文文章一样，学过html/css/js就像基本知道了语法，剩下的标签、属性、借口无非就是单词。碰到不懂的查一查，看demo基本问题就不大了。<br><strong>8、photoshop</strong>，如果是找做前端页面的工作（比如实习工作），会要求你根据PSD切图还原界面，这是传统的前端做法。psd就是ps设计稿，基本你需要做的就是切图还有写html，再通过css调样式，之后给页面绑接口。如果是找这类型的工作，建议简单学一下PS的基础技能，不算难，学几个具体的PS技能就可以办到了。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.hanwei.ink/2018/04/07/after-workeg-in-new-profession-three-weeks/" data-id="cjyfi464o0087z2x1qjhgr7ok" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/05/05/the-way-i-transfer-new-profession/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          年近三十，非计算机专业，在体制内工作六年后转职程序员心得
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/03/14/personal-track-join-the-market/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">投身市场</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/个人轨迹/">个人轨迹</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术之路/">技术之路</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/生活感悟/">生活感悟</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/英语学习/">英语学习</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/读书心得/">读书心得</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/闲谈趣事/">闲谈趣事</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/07/21/how-about-typescript-future/">typescript未来会如何？</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/11/learning-experience-of-dida-reading/">水滴阅读学习体验</a>
+          </li>
+        
+          <li>
+            <a href="/2019/05/29/feelings-is-more-important-than-result/">我读《世界为何存在》：体验比结果更重要</a>
+          </li>
+        
+          <li>
+            <a href="/2019/05/19/do-not-hurt-other-people-and-be-hurt-by-them/">我读《动物农场》：不要被猪忽悠，更不要做猪</a>
+          </li>
+        
+          <li>
+            <a href="/2019/05/16/love-is-like-look-at-mirror/">恋爱就像照镜子</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Han Wei<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
