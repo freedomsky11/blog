@@ -69,6 +69,47 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-2613586" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/09/27/2613586/" class="article-date">
+  <time datetime="2017-09-27T03:47:00.000Z" itemprop="datePublished">2017-09-27</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/编程技术/">编程技术</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/27/2613586/">Refactor &amp; 效能提升第一章作业</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>打开一个网站的速度通常取决于三个因素：1、网页文件的大小（和网速决定下载需要的时间，通常一个页面100-200KB，网速通常不可控。）；2、服务器所在位置；3、服务器生产页面所需要的时间（通常100-200ms）。网页打开的时间实际上是由这几个因素需要的时间的累加。<br>网页文件代码通常包含html、css、javescript三部分，他对打开网页的影响就体现在其对下载文件所需要的时间的影响上。后端代码通常包括ruby code以及数据库相关，其对打开网页所需要的时间的影响，体现在它运行代码从数据库拿出相关数据并生成相应的页面和文件需要的时间（也就是从收到quest请求，到routing、controller、model、view的时间）。服务器所在地就简单多了，主要看服务器离使用者的远近（对应相应的地理位置）以及服务器能够提供的带宽，它可以通过使用ping命令查看完成一次封包请求需要的时间来测试。<br>所以，针对这三点我们要提高一个网页的打开速度。其中，提高网页文件的大小属于前端调整。而提高服务器的位置以及服务器产生页面的时间属于后端调整。<br>然而，在进行代码优化的时候我们就不得不考虑一个问题，那就是从那块开始优化的时间投入产出比最高？也可以说，如果使得见效最快。<br>这就需要考虑两个问题，一个是优化需要的时间，还有一个是优化后的效果。<br>比较三者，可以发现调整网页文件的大小和服务器的位置效果最明显。而，调整后端命令，由于本身后端生成页面时所需要的时间量级已经小于两者，所以收效较低。举个例子如下：<br>调整前端架构或搬机器：从 10s 下降到 2s (1s = 1000ms)<br>调整后端代码或数据库架构：从 500ms 下降到 150ms<br>再来看看投入时间，由于服务器通常是成组的，而且调整服务器会涉及到很多问题，特别是跨大区域调整服务器是问题非常多。而修改网页代码以及后端程序生成代码则相对简单得多，只需要对代码进行调整就好。而其中，后端代码往往相互关联所以调整起来规模又会比调整相对独立的前端页面代码复杂的多。<br>所以，综上，优先调整前端代码的时间和效率是最划算的。特别是作为个体户程序员来讲，这个往这个方向思考会更有效率。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.hanwei.ink/2017/09/27/2613586/" data-id="cjyh1808y007v0px1abmpa50b" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-2613282" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/09/27/2613282/" class="article-date">
@@ -132,7 +173,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/09/27/2613282/" data-id="cjygyt6hc0098pnx1akdn64vp" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2017/09/27/2613282/" data-id="cjyh1809m009b0px1z66e0qt6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -257,7 +298,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/06/23/1970268/" data-id="cjygyt6gm007rpnx1mcota0rz" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2017/06/23/1970268/" data-id="cjyh1808v007p0px1fmnpbzle" class="article-share-link">Share</a>
       
       
     </footer>
@@ -351,7 +392,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/06/21/20170620-learning-record/" data-id="cjygyt6gl007ppnx18k6yb2qx" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2017/06/21/20170620-learning-record/" data-id="cjyh1808z007z0px1vkobxfur" class="article-share-link">Share</a>
       
       
     </footer>
@@ -452,7 +493,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/06/21/20170619-learning-record/" data-id="cjygyt6gk007npnx1m6df2ezc" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2017/06/21/20170619-learning-record/" data-id="cjyh1808u007n0px1k9sllbce" class="article-share-link">Share</a>
       
       
     </footer>
@@ -574,7 +615,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/06/19/20170618-learning-record/" data-id="cjygyt6gn007tpnx1ctj44uw4" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2017/06/19/20170618-learning-record/" data-id="cjyh1808w007r0px17sl8s7c5" class="article-share-link">Share</a>
       
       
     </footer>
@@ -711,7 +752,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/06/18/20170617-learning-record/" data-id="cjygyt6hb0097pnx1z19l65lg" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2017/06/18/20170617-learning-record/" data-id="cjyh1809m009a0px1aozx8bye" class="article-share-link">Share</a>
       
       
     </footer>
@@ -822,7 +863,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/06/17/20170616-learning-record/" data-id="cjygyt6gj007lpnx1nhv57qw3" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2017/06/17/20170616-learning-record/" data-id="cjyh1808t007l0px1fvpctpwy" class="article-share-link">Share</a>
       
       
     </footer>
@@ -952,7 +993,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/06/16/20170615-learning-record/" data-id="cjygyt6gi007hpnx1xubc7b77" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2017/06/16/20170615-learning-record/" data-id="cjyh1808s007j0px1nlrfjwdv" class="article-share-link">Share</a>
       
       
     </footer>
@@ -996,120 +1037,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/06/15/an-error-record-app-helpers-flashes-helper-a-app-helpers-flasher-helper-rb-rb/" data-id="cjygyt6gi007jpnx1wrf5r8hq" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-20170614-learning-record" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/06/15/20170614-learning-record/" class="article-date">
-  <time datetime="2017-06-14T18:53:00.000Z" itemprop="datePublished">2017-06-15</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/编程技术/">编程技术</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/15/20170614-learning-record/">20170614学习纪录</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>##Objective</p>
-<p>###今天做了什么？</p>
-<ol>
-<li>写ORID</li>
-<li>完成了Rails第三课：Rails101，前两节。</li>
-</ol>
-<p>###关于今天的学习，你记得什么？</p>
-<p>####新旧知识</p>
-<ol>
-<li>写ORID的时候还是要做一个当日笔记把闪念、知识点记下来</li>
-<li>emmet用得好的话可以提高效率</li>
-<li>emmet的基本符号有：&gt; + ^ $ ( ) [  ]  {  } . # </li>
-<li>emmet中的#和.对应了css中的id和类</li>
-<li>emmet中通过tab键替换，加上返回键基本完善了编辑功能</li>
-<li>emmet过程中重点是要理解各个元素间的包含关系</li>
-<li>Dash这个应用可以作为常驻一屏来使用</li>
-<li>Spectacle让笔记本的屏幕起到了多屏的使用效率</li>
-<li>bootstrap是一个套件框架，包含了css和js</li>
-<li>要使用bootstrap的css功能和js功能先要安装gem，之后在将相应的模块接入project的css和js里</li>
-<li>helpers里面的功能及代码</li>
-<li>Bootstrap是Web设计圈有名的CSS框架，提供了开发项目快速便利的元件素材，如按钮、下拉选单、表格等等样式。</li>
-<li>在Rails上要帮项目穿上Bootstrap，用的是bootstrap-sass这个套件。</li>
-<li>option+G能快速输入©符号。</li>
-<li>bootstrap/alert是bootstrap的js提示套件</li>
-<li>生成MVC的时候，从底层开始，即：M→C→V</li>
-</ol>
-<p>####遗留问题</p>
-<ol>
-<li>按票数排序，先插入票数column，设置初始值为零（这个没想好怎么做），之后票数变化对应的进行值更新，用教材的公司，update_attribute</li>
-<li>lash_class(key)的函数原理，以及怎么在rails c中测试它的值，及to_sym</li>
-<li>emmet有几个功能按照dash的说明没能成功。</li>
-</ol>
-<p>####涉及资源</p>
-<ol>
-<li>网站：LOGDOWN；</li>
-<li>网站：全栈营</li>
-<li>网站：heroku</li>
-<li>App：Dash</li>
-<li>Atom package：emmet</li>
-</ol>
-<p>##Reflective</p>
-<p>###你要如何形容今天的情绪？</p>
-<ol>
-<li>在学习使用emmet的时候，感慨自己之前怎么没有专门安排时间来学习一个它的使用。</li>
-</ol>
-<p>###今天的高峰是什么？</p>
-<ul>
-<li>理解了flashes_helper的原理</li>
-</ul>
-<p>###今天的低点是什么？</p>
-<ul>
-<li>emmet有几个功能按照dash的说明没能成功。</li>
-</ul>
-<p>##Interpretive</p>
-<p>###我们今天学到了什么？</p>
-<ol>
-<li>我们现在学习的工具和套件最简便的学习方式就是去他们的官网或者github上面查看使用说明，而dash就是把这些工具拉到本地来使用，反而特别好用。</li>
-<li>很多工具朋友们之前都介绍了，但是没有自己真正消化，其实它们和自己一点关系都没有。</li>
-</ol>
-<p>###今天有什么重要的领悟？</p>
-<ul>
-<li>我们现在学习的工具和套件最简便的学习方式就是去他们的官网或者github上面查看使用说明，而dash就是把这些工具拉到本地来使用，反而特别好用。</li>
-</ul>
-<p>##Decisional</p>
-<p>###我们会如何用几句话形容今天？</p>
-<ul>
-<li>为了提高效率学习了一些工具的使用。</li>
-</ul>
-<p>###明天有什么计划？</p>
-<ol>
-<li>写ORID；</li>
-<li>学习全栈营；</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/06/15/20170614-learning-record/" data-id="cjygyt6gg007dpnx1967gi0hf" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2017/06/15/an-error-record-app-helpers-flashes-helper-a-app-helpers-flasher-helper-rb-rb/" data-id="cjyh1808r007h0px1c5l9to9d" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1162,6 +1090,10 @@
       <ul>
         
           <li>
+            <a href="/2019/07/24/how-to-build-a-blog-quickly/">如何快速搭建一个博客</a>
+          </li>
+        
+          <li>
             <a href="/2019/07/23/my-blog-formally-lauched/">我的博客终于正式上线啦！</a>
           </li>
         
@@ -1175,10 +1107,6 @@
         
           <li>
             <a href="/2019/07/11/learning-experience-of-dida-reading/">水滴阅读学习体验</a>
-          </li>
-        
-          <li>
-            <a href="/2019/05/29/feelings-is-more-important-than-result/">我读《世界为何存在》：体验比结果更重要</a>
           </li>
         
       </ul>

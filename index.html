@@ -69,6 +69,78 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-how-to-build-a-blog-quickly" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/07/24/how-to-build-a-blog-quickly/" class="article-date">
+  <time datetime="2019-07-24T09:13:04.000Z" itemprop="datePublished">2019-07-24</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/编程技术/">编程技术</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/24/how-to-build-a-blog-quickly/">如何快速搭建一个博客</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>昨天的文章发出后有朋友问我有没有搭建教程，我当时回答他说是跟着<a href="https://hexo.io/" target="_blank" rel="noopener">hexo</a>官网搭出来的。事后想想，仅靠官网上的文档是不足以搭出像我这样一个博客的，虽然并不是很复杂，但我自己在使用hexo之前其实还做了些其他工作。昨天复盘了搭博客的经历，今天就来复盘一下搭博客的步骤吧。</p>
+<p>我的博客最终使用的是 hexo + githup pages 搭建的。前者提供一个搭建模板，用于生成博客的静态网页。后者用来部署同时提供了类似 Nginx、IIS 等 http 代理服务。</p>
+<h4 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h4><ul>
+<li>一台安装了 NodeJs 的个人电脑，用来进行文章编辑和发布用，同时也提供文章本地保存，也可以使用github对项目及文章数据进行保存</li>
+<li>一个github的账号，免费的就可以，需要给电脑和账号间配置好ssh证书，详见github官网。</li>
+<li>一个域名，由于目前主流浏览器对 http 协议都会进行安全提示，所以最好配个 ssl 证书，证书目前有收费的和免费的，免费的就可以</li>
+</ul>
+<h4 id="开始搭建"><a href="#开始搭建" class="headerlink" title="开始搭建"></a>开始搭建</h4><ol>
+<li><p>本地系统搭建，按照官网操作即可，命令如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">npm install</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+
+<p>运行完命令后，本地预览项目就跑起来了。可以通过浏览器打开 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 预览效果。此时可以在项目文件夹内的source/_post下新建文章了，使用的是markdown格式，而且文章的开头需要按照实例的模板填写文章相关信息，详见官网。</p>
+</li>
+<li><p>在 github上新建一个仓库，在项目的_config.yml中配置该项目的地址，以及指定推送的分支。之后会把 生成的静态博客页面发送到这个分支上，用来给 githup pages 发布用。注意，免费账号只能通过 master 分支发布。</p>
+</li>
+<li><p>做完上述工作后，就可以在本地运行如下两行命令生成静态网页，并推送到我们先前指定的项目分支中了。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo deploy</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>发布到对应的分支后，在项目的 setting 中的 Github Pages 的下，设置一下 source 选项就可以了，选择你要之前配置的发布的那个分支，免费账户目前只能是master。配置好，就能看到 github 给你分配的项目地址了，一般是 https://你的账户名.github.io/你的项目名/ 这样的形式，过一会就你打开了。之后，你每次添加完文章后，都需要执行第三步来提交网站更新。</p>
+</li>
+<li><p>补充一下，这里的项目只是用来发布的，如果需要进行项目管理的话，可以用其他分支来保存项目数据，比如edit。也可以另外起一个github项目来保存，我就是使用的这一种方式。</p>
+</li>
+</ol>
+<h4 id="配置域名"><a href="#配置域名" class="headerlink" title="配置域名"></a>配置域名</h4><p>到上面我们的完整就可以用了，但是作为个人网站，没有使用一点个人特色的域名总觉得少了些什么。所以接下来，我们配置一下域名。</p>
+<ol>
+<li>首先在我们的域名提供商那将我们的域名指向前面 github 提供的地址。域名指向有几种，我们用的是域名指向域名的方式。</li>
+<li>在github的项目中的 setting 中的 Github Pages 的下，设置一下 Custom domain 填上我们的域名。此时 github 的项目中会自动生成一个CNAME文件，里面正是你刚刚填写的域名。</li>
+<li>到这里我们的域名配置就完成了。但是，Github Pages 有个小bug。那就是我们每次提交更新的时候，项目里面的 CNAME 文件都会被冲掉，需要我们每次都重新填写域名，这非常低效。解决方法是，在你本地项目的 themes 里面的模板文件夹下的 source 文件夹里放入这个 CANME 文件。也可以直接新建一个无扩展名文件，写入你的域名即可。这样之后，每次更新这个文件会自动部署到你的发布项目中。</li>
+<li>最后就是 https 的问题了。若你的域名不支持 https 的话很多浏览器会有不安全提醒，这个时候去给你的域名申请一个ssl证书就好了。申请好了以后，在github的项目中的 setting 中的 Github Pages 的下勾选 Enforce HTTPS 就可以了，github会自动去证书提供商那里扫描证书，后面打开页面 https 就正常了。</li>
+<li>值得注意的是，域名配置都涉及到相应的运营商，不同的运营商处理的速度不一样，所以域名和证书生效的时间也不等，一般最长不超过一天。</li>
+</ol>
+<h4 id="持续写作"><a href="#持续写作" class="headerlink" title="持续写作"></a>持续写作</h4><p>如果一切顺利我们的博客就搭完啦，但你会发现它空洞洞的没什么内容。想要博客丰富起来，只能靠你自己持续的写作了^0^。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.hanwei.ink/2019/07/24/how-to-build-a-blog-quickly/" data-id="cjyh1809b008r0px1aje7j7ov" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-my-blog-formally-lauched" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/07/23/my-blog-formally-lauched/" class="article-date">
@@ -109,7 +181,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2019/07/23/my-blog-formally-lauched/" data-id="cjygyt6h2008rpnx1u9di4d2j" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2019/07/23/my-blog-formally-lauched/" data-id="cjyh1809c008u0px11whqywgp" class="article-share-link">Share</a>
       
       
     </footer>
@@ -155,7 +227,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2019/07/21/arts-first-week/" data-id="cjygyt6h0008npnx1nwdr2upg" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2019/07/21/arts-first-week/" data-id="cjyh1809a008q0px1zmtq8rjt" class="article-share-link">Share</a>
       
       
     </footer>
@@ -207,7 +279,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2019/07/21/how-about-typescript-future/" data-id="cjygyt6h1008qpnx1ee6lp3t3" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2019/07/21/how-about-typescript-future/" data-id="cjyh1809d008v0px1i00ncmw8" class="article-share-link">Share</a>
       
       
     </footer>
@@ -259,7 +331,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2019/07/11/learning-experience-of-dida-reading/" data-id="cjygyt6gz008lpnx14axylbsr" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2019/07/11/learning-experience-of-dida-reading/" data-id="cjyh1809a008n0px16kidyh6w" class="article-share-link">Share</a>
       
       
     </footer>
@@ -300,7 +372,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2019/05/29/feelings-is-more-important-than-result/" data-id="cjygyt6h3008upnx1br5al588" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2019/05/29/feelings-is-more-important-than-result/" data-id="cjyh18099008l0px1ey461mc6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -341,7 +413,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2019/05/19/do-not-hurt-other-people-and-be-hurt-by-them/" data-id="cjygyt6gw008gpnx1uxn2t24q" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2019/05/19/do-not-hurt-other-people-and-be-hurt-by-them/" data-id="cjyh18097008i0px1lvrnlcc3" class="article-share-link">Share</a>
       
       
     </footer>
@@ -382,7 +454,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2019/05/16/love-is-like-look-at-mirror/" data-id="cjygyt6gx008ipnx1z7r1272h" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2019/05/16/love-is-like-look-at-mirror/" data-id="cjyh18096008g0px1wb4cmcs9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -442,7 +514,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2019/04/15/follow-your-heart-then-use-the-trend/" data-id="cjygyt6gv008epnx1dp9tyd1j" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2019/04/15/follow-your-heart-then-use-the-trend/" data-id="cjyh18096008e0px1kky4loxu" class="article-share-link">Share</a>
       
       
     </footer>
@@ -496,58 +568,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2019/03/10/grass-green-again/" data-id="cjygyt6gu008bpnx18rz2v1y5" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-to-newyear-2019" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/02/05/hello-to-newyear-2019/" class="article-date">
-  <time datetime="2019-02-04T16:00:00.000Z" itemprop="datePublished">2019-02-05</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/个人轨迹/">个人轨迹</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/05/hello-to-newyear-2019/">辞旧迎新（戊戌）</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>戊戌年即将过去了，今年又经历了很多事情，估计这是每一个认真生活的人都会有的感受。眼看还有几个小时就要新年了，赶紧回顾一下。时间有限简要说说我觉得重要的几点吧。 </p>
-<p>一、保住了爱情。今年特别忙，先是996995，后来干脆就996了。这个过程了，我感觉最对不起的是自己的女票。忙碌的工作，不单减少我们能交流的时间，而且多数时候下班也累的精疲力尽，很多时候说话的时候脑袋已经不在转了，交流的时候就像没魂了似的。这里要感谢女票的包容与理解，来年我会更加完善我在关系里的表现的。 </p>
-<p>二、实现了一个儿时的梦想。在我十二三岁的时候产生了一个理想，做一名程序员，后来在高考的过程中遗忘掉了。两年前正是想起了这个被我遗忘多年的理想，最终给我提供了正向的力量，脱离了体制。 </p>
-<p>三、分享了一些理念。接触了很多的朋友，有一些遇到了一些困惑的问题。由于多年受到连叔的熏陶，在一些朋友遇到问题的时候，从我的角度分享了一些观念。人本质上还是要靠自己，所以这些观念只是告诉他们，在我眼里他们的一些他们没看到的选择。作为自由主义者，我觉得帮人的边界也就到这一步了。 </p>
-<p>四、认识了一群不错的人。今年任职了两家互联网公司，虽然两家公司都让我觉得冰冷冷的，但是公司里的小伙伴们反而让我觉得很温暖。这是我很诧异的一个问题，一群温暖的小伙伴，为何会组成一个冰冷冷的公司？思来想去，我觉得答案在管理者上。 </p>
-<p>五、确立了一些新的原则。一年的工作经历，给我带来了很多困惑，这里面也不乏观念冲突。在冲突中，我确立了一些新的原则。这些原则还需要进一步打磨，也还需要实践，暂不分享。 </p>
-<p>六、积累了客可观的开发经验。今年的996995、996工作时长，以及两家公司的非技术导向型管理，让我经历了地狱式开发。我不是喜欢从苦难中学习的人，也不认为苦难必然会催生成长。只是作为一名成长型的人，很多经历都可以提炼出一些东西。世界上没有白走的路。 </p>
-<p>七、今年工作的原因，很多好习惯都没能坚持下来。我认为真是变态工作制的弊端。对于这种工作制我是不认同的，第一家是因为转行的第一份多苦都要熬下来。第二家，则是由于个人加入使得团队工作量多了一人份，且小伙伴都是被动型人格，没忍心在Q4关头走。996是我不认同的工作方式，这是牺牲长期个人成长换取公司短期成长的方式。强调一下，个人和公司共同成长才是最合理的工作方式，除此之外，概不认可。 </p>
-<p>明年，希望能有更多时间花在重要的人身上，有更多的时间热爱生活，有更多的时间运动学习。当然，预期靠希望，不如靠自己。 </p>
-<p>想要什么样的生活，就要做出什么样的选择。 </p>
-<p>最后，祝各位朋友新年快乐！ </p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2019/02/05/hello-to-newyear-2019/" data-id="cjygyt6gt0089pnx1z625we4s" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2019/03/10/grass-green-again/" data-id="cjyh18095008b0px18nio7cay" class="article-share-link">Share</a>
       
       
     </footer>
@@ -600,6 +621,10 @@
       <ul>
         
           <li>
+            <a href="/2019/07/24/how-to-build-a-blog-quickly/">如何快速搭建一个博客</a>
+          </li>
+        
+          <li>
             <a href="/2019/07/23/my-blog-formally-lauched/">我的博客终于正式上线啦！</a>
           </li>
         
@@ -613,10 +638,6 @@
         
           <li>
             <a href="/2019/07/11/learning-experience-of-dida-reading/">水滴阅读学习体验</a>
-          </li>
-        
-          <li>
-            <a href="/2019/05/29/feelings-is-more-important-than-result/">我读《世界为何存在》：体验比结果更重要</a>
           </li>
         
       </ul>
