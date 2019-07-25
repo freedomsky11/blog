@@ -69,6 +69,103 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-2017-7th-week-summary" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/02/23/2017-7th-week-summary/" class="article-date">
+  <time datetime="2017-02-23T05:59:00.000Z" itemprop="datePublished">2017-02-23</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/编程技术/">编程技术</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/23/2017-7th-week-summary/">2017年第07周总结</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-“本周学到的最棒概念-工具”"><a href="#1-“本周学到的最棒概念-工具”" class="headerlink" title="1.“本周学到的最棒概念/工具”"></a>1.“本周学到的最棒概念/工具”</h2><p>本周学到的最棒的工具是model/controller/views的三维空间模型，这是我在学习过程中尝试去理解关系想象出来的模型，通过使用它感觉一下子明白了，出发，显示，调用这些东西，有时间我还会尝试用它去理解restful。</p>
+<h2 id="2-“本周遇到最大的坑”"><a href="#2-“本周遇到最大的坑”" class="headerlink" title="2.“本周遇到最大的坑”"></a>2.“本周遇到最大的坑”</h2><p>本周遇到的最大的坑是每给自己创造良好的学习环境，放假在家，受到各种干扰，现在后面才意识到自己应该主动点去咖啡厅之类的地方的，而不是被动的在家里忍受注意力的缺失。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.hanwei.ink/2017/02/23/2017-7th-week-summary/" data-id="cjyibrm80005cz5x11m2b7k2b" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-1457325" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/02/23/1457325/" class="article-date">
+  <time datetime="2017-02-23T05:53:00.000Z" itemprop="datePublished">2017-02-23</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/编程技术/">编程技术</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/23/1457325/">20170222学习纪录</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>##Objective</p>
+<p>###关于今天的课程，你记得什么？<br>1、安全是编程过程中涉及到敏感信息是第一个要考虑的因素；<br>2、本地的图片无法大量上传到heroku，也就是heroku只提供了程序架构和代码上传服务，没有提供图片上传及邮件发送等服务；<br>3、不同的服务有不同的提供商，编程界天生就是一个相互协作的业界，你用别人的服务就需要付钱，你为别人提供服务就能收钱；<br>4、database.yml这个文件是不上传的，在gitignore里面需要设置不追踪它，我们平时的私密信息就放在这里面；<br>5、教材提供的database.yml.example其实一个可以上传的事例，我们下载以后cp出对应的文件就可以继续使用数据库，通过这样的方式及保护了隐秘信息又保证了程序可以继续运行；<br>6、电脑版微信可以语音；<br>7、azs 3很容易丢失自己的私密信息，一定要谨慎！<br>8、不要将自己的私密信息方法carrierwavr.rb里；<br>9、Figaro这个工具，密码用它管理<br>10、ENV环境变数；<br>10、Github提供了非常便捷和合作可能，具体合作的步骤如下：<br>    - step 0 ：找到队友、确定谁做主程，主程复制merge pull request;<br>    - step 1 ：添加队友，主程在项目的repo里的setting&gt;collaborators&gt;根据队友的githubid查找队友，并按add collaborators发出邀请；<br>    - step 2 ：队友会在自己注册的github邮箱里收到邀请消息，点解view invitation后，可通过Accept invitation接受邀请成为队友，之后就可以在自己的github页面看到以主程名开头的repo；<br>    - step 3 ：主程先git checkout master切换到master分支，后把最新的分支merge到master上，例如：git merge story5，之后git push origin master，到服务器；<br>    - step 4 ：队友第一次下载项目是由git clone repo地址，之后bundle install，以及rake db:migrate，以后有新的分支都事先切换到master分支，然后git pull origin master，之后生成新的分支进行修改功能。如果列表的栏位发生了变化，则需要调用rake db三兄弟类；<br>    - step 5 ：新建分支进行新的功能编写，使用命令 git checkout -b name-function（姓名-功能）；<br>    - step 6 ：完成功能并确认无误后，将最新的分支推上repo，git add .  git commit -m “功能描述” git push origin name-function；<br>    - step 7 ：打开项目repo，选中自己刚刚上传的分支，通过compare &amp; pull request，确认base:master，compare：name-function后，添加描述（可不添加），点击create pull request（副程千万不能点击merge pull request）；<br>    - step 8 ：若无冲突提示，则主程可在repo点击 Pull merge页标,点击merge pull request，之后Confirm merge就可以了，若有提示则可在本地修改无误后重新上传分支，也可通过Resolve conflict修复；<br>    - step 9 ：修复时会有&lt;&lt;&lt;&lt;&lt;&lt;  &gt;&gt;&gt;&gt;&gt;&gt;&gt;master ========三行代码，处理完所有分之后可点击make as resolved。所有完成后会显示Resolved all conflict并点击commit changes,这时和step 8 一样；</p>
+<p>###完成了什么？<br>1、完成了一部分安全学习；<br>2、和队友完成了github组队学习；</p>
+<p>##Reflective</p>
+<p>###你要如何形容今天的情绪？<br>经过一晚上的学习，终于解决了核心问题的学习：通过github来合并代码的学习，组队学习过程中收获到了不少的反馈！</p>
+<p>###今天的高峰是什么？<br>明细感觉到组队学习的效果优于个人；</p>
+<p>###今天的低点是什么？<br>没有完成后半部分的学习；</p>
+<p>##Interpretive</p>
+<p>###我们今天学到了什么？<br>1、GitHub真的是一个好用的工具；<br>2、mac的一些便捷操作方法；<br>3、通过dash来查看emmet的使用指南；<br>4、当学习的东西涉及到几个角色的时候，最终能同时多角色配合；</p>
+<p>###今天一个重要的领悟是什么？</p>
+<p>####学习方法<br>学习中如果和队友需要分担不同角色，最后在学习过程中，同时开两条以上的线学习，这样不但能知道自己这一步的反馈，也能知道对方是如何做的，更能很好的理解这双方的功能；</p>
+<p>####编程知识<br>github的合作功能真的是很强大！也不难理解。</p>
+<p>##Decisional</p>
+<p>###我们会如何用一句话形容今天的工作？<br>组队学习开始体现收效了！</p>
+<p>###有哪些工作需要明天继续努力？<br>完成第一部分的功能和主页的魔改！</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.hanwei.ink/2017/02/23/1457325/" data-id="cjyibrm7z005az5x1ut9x8byl" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-20170220-learning-record" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/02/23/20170220-learning-record/" class="article-date">
@@ -114,7 +211,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/02/23/20170220-learning-record/" data-id="cjyh1capk005959x15dixzta7" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2017/02/23/20170220-learning-record/" data-id="cjyibrm81005ez5x1kyeju2qv" class="article-share-link">Share</a>
       
       
     </footer>
@@ -164,7 +261,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/02/20/20170219-learning-record/" data-id="cjyh1caph005359x12d04psbk" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2017/02/20/20170219-learning-record/" data-id="cjyibrm7z0058z5x1qfu6fwn5" class="article-share-link">Share</a>
       
       
     </footer>
@@ -214,7 +311,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/02/19/1432581/" data-id="cjyh1capi005559x1wdcdwuus" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2017/02/19/1432581/" data-id="cjyibrm7y0056z5x1qf162p9x" class="article-share-link">Share</a>
       
       
     </footer>
@@ -264,7 +361,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/02/17/1426149/" data-id="cjyh1capf004z59x1tmqceqr2" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2017/02/17/1426149/" data-id="cjyibrm7x0054z5x1cns2p5gj" class="article-share-link">Share</a>
       
       
     </footer>
@@ -314,7 +411,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/02/16/20170215-learning-record/" data-id="cjyh1capg005159x1435mh4b0" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2017/02/16/20170215-learning-record/" data-id="cjyibrm7x0052z5x1c2v2nsik" class="article-share-link">Share</a>
       
       
     </footer>
@@ -364,7 +461,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/02/15/20170214-learning-record/" data-id="cjyh1cape004v59x1zzqs9aea" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2017/02/15/20170214-learning-record/" data-id="cjyibrm7w0050z5x1orpbqply" class="article-share-link">Share</a>
       
       
     </footer>
@@ -404,7 +501,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/02/14/1416391/" data-id="cjyh1capf004x59x1p2p93x5l" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2017/02/14/1416391/" data-id="cjyibrm7t004yz5x18a049hsv" class="article-share-link">Share</a>
       
       
     </footer>
@@ -453,105 +550,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/02/14/1415389/" data-id="cjyh1capd004t59x179rltjme" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-20170212-learning-record" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/02/13/20170212-learning-record/" class="article-date">
-  <time datetime="2017-02-12T17:07:00.000Z" itemprop="datePublished">2017-02-13</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/编程技术/">编程技术</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/13/20170212-learning-record/">20170212学习纪录</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><h3 id="关于今天的课程，你记得什么？"><a href="#关于今天的课程，你记得什么？" class="headerlink" title="关于今天的课程，你记得什么？"></a>关于今天的课程，你记得什么？</h3><p>1、巩固了德雷福斯模型；<br>2、了解了业界的豆知识；<br>3、知道了dash和google环流这两个工具；<br>4、知道了在裸辞这件事情上自己并不孤单；<br>5、不要有畏难情绪；<br>6、技能进阶路线；</p>
-<h3 id="完成了什么？"><a href="#完成了什么？" class="headerlink" title="完成了什么？"></a>完成了什么？</h3><p>1、Xdite老师的豆知识讲座；<br>2、组织了一场线上meetup；</p>
-<h2 id="Reflective"><a href="#Reflective" class="headerlink" title="Reflective"></a>Reflective</h2><h3 id="你要如何形容今天的情绪？"><a href="#你要如何形容今天的情绪？" class="headerlink" title="你要如何形容今天的情绪？"></a>你要如何形容今天的情绪？</h3><p>母亲并基本好了，也和父亲汇合了，我也可以开始安心继续学习了，又拉下了一周的课程，得加把劲了。</p>
-<h3 id="今天的高峰是什么？"><a href="#今天的高峰是什么？" class="headerlink" title="今天的高峰是什么？"></a>今天的高峰是什么？</h3><p>和伙伴们第一次进行meetup气氛比较轻松愉快；</p>
-<h3 id="今天的低点是什么？"><a href="#今天的低点是什么？" class="headerlink" title="今天的低点是什么？"></a>今天的低点是什么？</h3><p>注意力集中度没有恢复过来；</p>
-<h2 id="Interpretive"><a href="#Interpretive" class="headerlink" title="Interpretive"></a>Interpretive</h2><h3 id="我们今天学到了什么？"><a href="#我们今天学到了什么？" class="headerlink" title="我们今天学到了什么？"></a>我们今天学到了什么？</h3><p>1、跨界其实没有想象中的难；<br>2、职场的修炼步骤；<br>3、思想的交流相当于一个指数函数，每多一个人就多出不少的量；<br>4、畏难情绪很多人都有、跟不上进度很多人也有，只要明白自己的目的，按自己的节奏来就好；</p>
-<h3 id="今天一个重要的领悟是什么？"><a href="#今天一个重要的领悟是什么？" class="headerlink" title="今天一个重要的领悟是什么？"></a>今天一个重要的领悟是什么？</h3><p>做事情要按自己的节奏来，和别人对比最大的破坏力在于可能打破自己的节奏，而和别人对比的坏处实际上也就只有这一个，所以只要能避免这个漏洞，别人的进步只会成为你进步的指引。</p>
-<h2 id="Decisional"><a href="#Decisional" class="headerlink" title="Decisional"></a>Decisional</h2><h3 id="我们会如何用一句话形容今天的工作？"><a href="#我们会如何用一句话形容今天的工作？" class="headerlink" title="我们会如何用一句话形容今天的工作？"></a>我们会如何用一句话形容今天的工作？</h3><p>meetup迈出第一步；</p>
-<h3 id="有哪些工作需要明天继续努力？"><a href="#有哪些工作需要明天继续努力？" class="headerlink" title="有哪些工作需要明天继续努力？"></a>有哪些工作需要明天继续努力？</h3><p>保持节奏继续学习，记住日行二十英里原则；</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/02/13/20170212-learning-record/" data-id="cjyh1capc004r59x168icoib2" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-1411457" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/02/12/1411457/" class="article-date">
-  <time datetime="2017-02-12T06:36:00.000Z" itemprop="datePublished">2017-02-12</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/编程技术/">编程技术</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/12/1411457/">2017年第6周线上meetup总结</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>##主题一 两个最</p>
-<p>###分别发言</p>
-<p>####我<br>收获最大的概念：德雷福斯模型<br>遇到最大的坑：太拘泥于学习形式</p>
-<p>####陈俊鸿<br>收获的两个工具：dash工具/google环流；<br>最大的坑：畏难情绪</p>
-<p>####陈颖君<br>最大收获：专心两个字的意义；<br>最大的坑：离职导致分心了</p>
-<p>###分别提取中的有效信息</p>
-<p>####我<br>日行二十英里概念<br>要安装dash</p>
-<p>####陈俊鸿<br>德雷福斯模型用来定位自己的水平层次，小公司是非常需要高级新手的；</p>
-<p>####陈颖君<br>和公司的技术小哥交流过，感觉水平也一般，一开始也是需要师傅手把手教，所以我们学习也是能不断减少差距的；<br>发现自己有渭南情绪的时候要及时把自己抽离出来，之后继续前进；</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/02/12/1411457/" data-id="cjyh1capa004n59x183fhy4ot" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2017/02/14/1415389/" data-id="cjyibrm7s004wz5x1f7si855s" class="article-share-link">Share</a>
       
       
     </footer>
@@ -565,7 +564,7 @@
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/7/">&laquo; 上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/9/">下一页 &raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/7/">&laquo; 上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><span class="space">&hellip;</span><a class="page-number" href="/page/18/">18</a><a class="extend next" rel="next" href="/page/9/">下一页 &raquo;</a>
   </nav>
 
 </section>
@@ -576,7 +575,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/个人轨迹/">个人轨迹</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/生活感悟/">生活感悟</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/编程技术/">编程技术</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/英语学习/">英语学习</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/读书心得/">读书心得</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/闲谈趣事/">闲谈趣事</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/个人轨迹/">个人轨迹</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/生活感悟/">生活感悟</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/编程技术/">编程技术</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/英语学习/">英语学习</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/诗词歌赋/">诗词歌赋</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/读书心得/">读书心得</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/闲谈趣事/">闲谈趣事</a></li></ul>
     </div>
   </div>
 
