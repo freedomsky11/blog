@@ -69,6 +69,95 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-1416391" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/02/14/1416391/" class="article-date">
+  <time datetime="2017-02-13T23:15:00.000Z" itemprop="datePublished">2017-02-14</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/编程技术/">编程技术</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/14/1416391/">错误纪录：1..cart_item.product.quantity</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="错误日期：2017年2月13日"><a href="#错误日期：2017年2月13日" class="headerlink" title="错误日期：2017年2月13日"></a>错误日期：2017年2月13日</h1><h1 id="具体情况："><a href="#具体情况：" class="headerlink" title="具体情况："></a>具体情况：</h1><pre><code>在完成购物网站的数量下拉菜单时将 1..cart_item.product.quantity 达成了1...cart_item.product.quantity,是的下来选项的数字比cart_item.product.quantity少了最后一个；</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.hanwei.ink/2017/02/14/1416391/" data-id="cjykajhk8004ygex1uzfwy6n6" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-1415389" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/02/14/1415389/" class="article-date">
+  <time datetime="2017-02-13T19:09:00.000Z" itemprop="datePublished">2017-02-14</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/编程技术/">编程技术</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/14/1415389/">20170213学习纪录</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><h3 id="关于今天的课程，你记得什么？"><a href="#关于今天的课程，你记得什么？" class="headerlink" title="关于今天的课程，你记得什么？"></a>关于今天的课程，你记得什么？</h3><p>1、find与find_by的区别，find_by会返回nil;<br>2、在ROR中，nil表示空；<br>3、form_for这种收集数据作为输入的方式需要在深入学习一下；<br>4、post操作由于需要专递参数，所以无法通过url来实现偷链；<br>5、get操作由于是获取东西，所以可以通过url来获取，所以需要进行权限设置；<br>6、要注意collection与member的区别，我的理解是，member是直属成员，而collection则是关联的对象；<br>7、再次明确，controller是在views和modle中间的载体，是用来响应我们的动作的，包括初始动作；<br>8、要在views里执行的东西是在Helpe里定义的，也可以说显示逻辑是使用helper包装的；<br>9、要对数据的操作是通过在model里定义的，而controller可以理解是搬运工，链接他们的桥梁，包括动作相应参数传递等等，数值计算应放入model中；<br>10、id的每个model都有的东西，而建立关联则是通过XXX_id来把两者之间建立联系；<br>11、对于不明白的问题记下来，然后写一篇专门的解答，这是ORID、报错纪录外的第三种学习纪录；<br>12、前端知识非常庞杂，比起学该应该要多收集、多用，所以在学习的过程中还是需要把重点放在后端上。因为前端学习用才是根本；<br>13、一定要完成基本的作业才去进行创意大赛，功能有限、版面在不断完善就好；<br>14、后面会教大家写文案，这个也是个非常牛逼的技能；<br>15、collection后面要定义使用的方法，而resources默认生成的方法就有了七个，它们虽然同样是四种，但本质上是不同的类型；<br>16、destroy_all这个方法；<br>17、类和集合的方法是类似的；<br>18、= a|| b的意义是，如果a为空，则=b,否则=a;<br>19、include?这个方法；<br>20、组队一定要处理好组队和分工问题，个人强不等于团队强，必须把人员充分组合出相应功能才行，这和单人全栈的意义类似；<br>21、淘宝真是万能，代码、ps一应俱全；<br>22、大部分的操作权限设置时在controller里面完成的；<br>23、.blank?这个方法；<br>24、在往后的几周里我们会学习很多的基础语法知识；<br>25、search使用的也是collection，貌似是把数据集中起来的意思；<br>26、current_<em>是controller的方法，要在views中使用它，需要在application中通过helper_method来声明一个函数也叫current_</em>，并且再在其内部使用这个原始的current_*；<br>27、uploar里定义的图片大小语句.thumb及.medium在后面加入.url后即为对图片地址的大小进行选取，如果直接使用.url就是设置的默认值或者在没有设置默认值的情况下是原有图片的大小；<br>28、要根据希望操作的对象及关联关系来生成对应的controller，比如cart的清空操作和cart_item的单一操作则不同；<br>29、method: :delete do ____ 的方法，后面可以是图标或者文字等等；<br>30、GET、PATCH、PUT、DELETE的使用地址是一样的，通过它们本身的方法不同来区分；<br>31、在flash[]复制中，通过#{}可以将变量赋值给提示信息；<br>32、routes其实也表示了参数传递的方向；<br>33、下一部分的课程会不断深入理解model、routing这些技术知识，以及会学习rails的寄信浏览服务；<br>34、Xdite老师打造的购物网站教程其实是一个完整的功能包，以后不论我们需要完成什么网页的功能基本上就可以通过这个来获取相关的零部件；<br>35、人大脑的【工作记忆】一般只有五个空位，所以工作学习中遇到的问题最好记录下来，不然后面很容易忘记掉，之后针对这些问题写出blog，来描述解决方法，就是一个套路和文章了；<br>36、组队技巧：a、找队友 b、分配任务 c、组队编程；<br>37、组队同城尤佳，一个主要负责程序，另一个负责css和找图；<br>38、物品不能重复加入我的实现方法：current_cart.cart_items.find_by(product_id:params[:id]);<br>39、cart貌似是一个块显示；<br>40、+-号修改货品数量功能未实现，后面要思考怎么处理；<br>41、f.submit无method可能是因为推送只有post一种方法吧。</p>
+<h3 id="完成了什么？"><a href="#完成了什么？" class="headerlink" title="完成了什么？"></a>完成了什么？</h3><p>1、基本完成了购物网站第二部分购物车实作的练习；<br>2、听了Xdite老师周一的演讲；</p>
+<h2 id="Reflective"><a href="#Reflective" class="headerlink" title="Reflective"></a>Reflective</h2><h3 id="你要如何形容今天的情绪？"><a href="#你要如何形容今天的情绪？" class="headerlink" title="你要如何形容今天的情绪？"></a>你要如何形容今天的情绪？</h3><p>今天采用结合了拼图理论及日行二十英里原则的学习法学习效率极大提高，总体上还是非常兴奋的，因为老师说的购物车在我看了好像很容易理解，不知道是不是我的错觉。</p>
+<h3 id="今天的高峰是什么？"><a href="#今天的高峰是什么？" class="headerlink" title="今天的高峰是什么？"></a>今天的高峰是什么？</h3><p>很好的理解购物网站的第二部分的内容；</p>
+<h3 id="今天的低点是什么？"><a href="#今天的低点是什么？" class="headerlink" title="今天的低点是什么？"></a>今天的低点是什么？</h3><p>独立解作业碰到了很多未知的知识点。</p>
+<h2 id="Interpretive"><a href="#Interpretive" class="headerlink" title="Interpretive"></a>Interpretive</h2><h3 id="我们今天学到了什么？"><a href="#我们今天学到了什么？" class="headerlink" title="我们今天学到了什么？"></a>我们今天学到了什么？</h3><p>1、遇到的问题要记录下来，并且写专门的文章来解答和形成套路；<br>2、学习一定要使用劳”逸“结合的方式；<br>3、做项目最重要的是组织能力；<br>4、要以restful的七个方法，model、controller、views为学习的核心框架，其他的都是在这个框架下的扩张；<br>5、学习过程中需要小本子记录很多事情，然后回顾完成后提取，之后就可以删掉了，读书记笔记也可以使用一样的方法；</p>
+<h3 id="今天一个重要的领悟是什么？"><a href="#今天一个重要的领悟是什么？" class="headerlink" title="今天一个重要的领悟是什么？"></a>今天一个重要的领悟是什么？</h3><p>拼图理论及日行二十英里原则不单单能用在知识块上以及按天来使用，同样也可以在一天的学习中运用，就好像我们上学时的课时及休息时间的安排，已经不同学科之间的交换，具体的就是一天可以同时进行两项及以上学习，然后交叉和安排休息时间，如果把我们的大脑比作肌肉，那么这个原理和我们做无氧训练时分组及每组有不同的动作的原理是一样的，如果重复只做一个动作，那么大脑很快就疲劳了，所以我想脑力也是如此。最好是能把左右脑的调用区域安排在一起，更细分的就是把不同大脑活动区域的学习放在一起，或者加上无氧锻炼等等，这就是劳逸结合啊。</p>
+<h2 id="Decisional"><a href="#Decisional" class="headerlink" title="Decisional"></a>Decisional</h2><h3 id="我们会如何用一句话形容今天的工作？"><a href="#我们会如何用一句话形容今天的工作？" class="headerlink" title="我们会如何用一句话形容今天的工作？"></a>我们会如何用一句话形容今天的工作？</h3><p>尝试融合各位老师的学习法提炼出自己的学习法，发现效率奇高。</p>
+<h3 id="有哪些工作需要明天继续努力？"><a href="#有哪些工作需要明天继续努力？" class="headerlink" title="有哪些工作需要明天继续努力？"></a>有哪些工作需要明天继续努力？</h3><p>完成购物网站第三部分内容；</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.hanwei.ink/2017/02/14/1415389/" data-id="cjykajhk6004ugex1jmd19ovj" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-20170212-learning-record" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/02/13/20170212-learning-record/" class="article-date">
@@ -108,7 +197,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/02/13/20170212-learning-record/" data-id="cjyicfz5l004u86x15jbs17m3" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2017/02/13/20170212-learning-record/" data-id="cjykajhk7004wgex1rtf5ve2l" class="article-share-link">Share</a>
       
       
     </footer>
@@ -157,7 +246,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/02/12/1411457/" data-id="cjyicfz5j004q86x1pqmvrtqm" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2017/02/12/1411457/" data-id="cjykajhk5004sgex1bts1wgpp" class="article-share-link">Share</a>
       
       
     </footer>
@@ -199,7 +288,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/02/12/2017-6th-week-summary/" data-id="cjyicfz5k004s86x1fzop9bv6" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2017/02/12/2017-6th-week-summary/" data-id="cjykajhk3004ogex14f0da9kk" class="article-share-link">Share</a>
       
       
     </footer>
@@ -258,7 +347,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/02/12/1410997/" data-id="cjyicfz5i004o86x1l431avhg" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2017/02/12/1410997/" data-id="cjykajhk5004qgex1rfn8q0oh" class="article-share-link">Share</a>
       
       
     </footer>
@@ -307,7 +396,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/02/12/1410894/" data-id="cjyicfz5h004m86x1rq07jxi8" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2017/02/12/1410894/" data-id="cjykajhk2004kgex1084kclr8" class="article-share-link">Share</a>
       
       
     </footer>
@@ -356,7 +445,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/02/12/1410887/" data-id="cjyicfz5g004k86x1jen0g5xy" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2017/02/12/1410887/" data-id="cjykajhk3004mgex1s1td484f" class="article-share-link">Share</a>
       
       
     </footer>
@@ -396,7 +485,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/02/07/error-logging-new-column-model-without-modifying-the-corresponding-permit/" data-id="cjyicfz5e004i86x168001m55" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2017/02/07/error-logging-new-column-model-without-modifying-the-corresponding-permit/" data-id="cjykajhjz004igex1b5c4jjfx" class="article-share-link">Share</a>
       
       
     </footer>
@@ -445,87 +534,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/02/07/1392511/" data-id="cjyicfz5e004g86x14mdnrbyl" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-1392491" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/02/07/1392491/" class="article-date">
-  <time datetime="2017-02-07T05:13:00.000Z" itemprop="datePublished">2017-02-07</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/编程技术/">编程技术</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/07/1392491/">错误记录：写入resources时漏了s</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="错误日期：2017年2月5日"><a href="#错误日期：2017年2月5日" class="headerlink" title="错误日期：2017年2月5日"></a>错误日期：2017年2月5日</h1><h1 id="具体情况："><a href="#具体情况：" class="headerlink" title="具体情况："></a>具体情况：</h1><pre><code>在写入routes.rb时，漏掉了resources的s，造成无法正确生成routes。</code></pre>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/02/07/1392491/" data-id="cjyicfz5c004c86x12o1qs9oe" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-1392480" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/02/07/1392480/" class="article-date">
-  <time datetime="2017-02-07T05:09:00.000Z" itemprop="datePublished">2017-02-07</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/编程技术/">编程技术</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/07/1392480/">错误记录：漏掉&lt;%=  &gt;符号</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="错误日期：2017年2月5日"><a href="#错误日期：2017年2月5日" class="headerlink" title="错误日期：2017年2月5日"></a>错误日期：2017年2月5日</h1><h1 id="具体情况："><a href="#具体情况：" class="headerlink" title="具体情况："></a>具体情况：</h1><pre><code>在生成app/admin/products/index.html.erb界面的&lt;%= Product.title &gt;时，漏掉了&lt;%= &gt;符号。导致无法显示product.title的数值，而是现实了字符串。</code></pre><h1 id="如何避免："><a href="#如何避免：" class="headerlink" title="如何避免："></a>如何避免：</h1><pre><code>在views，如果要显示的东西是需要ruby语言计算出来的，一定加入&lt;% &gt;或者&lt;%= &gt;</code></pre>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/02/07/1392480/" data-id="cjyicfz5d004e86x1e8gwg7gw" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2017/02/07/1392511/" data-id="cjykajhjv004cgex1d0otmixt" class="article-share-link">Share</a>
       
       
     </footer>
@@ -565,7 +574,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">七月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">五月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">四月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">二月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">九月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">五月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">六月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">七月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">五月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">四月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">二月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">九月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">五月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">六月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a></li></ul>
     </div>
   </div>
 
