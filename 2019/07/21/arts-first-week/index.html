@@ -7,17 +7,17 @@
   
   <title>ARTS第一周 | 码字空间</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Algorithm：1. Two Sum Review：WebAssembly — Is It As Scary As It Sounds? 作者通过实作一个简单的项目介绍了WebAssembly，里面还应用了几个介绍资源，看完后能对WebAssembly有个大致的了解。 Tip：通过Hexo搭建个人博客非常方便，不到半天就能搭好。 Share：Typescript未来会如何？">
+  <meta name="description" content="Algorithm：1. Two Sum 123456789101112/** * @param &amp;#123;number[]&amp;#125; nums * @param &amp;#123;number&amp;#125; target * @return &amp;#123;number[]&amp;#125; */var twoSum = function(nums, target) &amp;#123;    let map = &amp;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ARTS第一周">
 <meta property="og:url" content="http://www.hanwei.ink/2019/07/21/arts-first-week/index.html">
 <meta property="og:site_name" content="码字空间">
-<meta property="og:description" content="Algorithm：1. Two Sum Review：WebAssembly — Is It As Scary As It Sounds? 作者通过实作一个简单的项目介绍了WebAssembly，里面还应用了几个介绍资源，看完后能对WebAssembly有个大致的了解。 Tip：通过Hexo搭建个人博客非常方便，不到半天就能搭好。 Share：Typescript未来会如何？">
+<meta property="og:description" content="Algorithm：1. Two Sum 123456789101112/** * @param &amp;#123;number[]&amp;#125; nums * @param &amp;#123;number&amp;#125; target * @return &amp;#123;number[]&amp;#125; */var twoSum = function(nums, target) &amp;#123;    let map = &amp;">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-25T06:48:37.360Z">
+<meta property="og:updated_time" content="2019-07-27T07:24:26.256Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ARTS第一周">
-<meta name="twitter:description" content="Algorithm：1. Two Sum Review：WebAssembly — Is It As Scary As It Sounds? 作者通过实作一个简单的项目介绍了WebAssembly，里面还应用了几个介绍资源，看完后能对WebAssembly有个大致的了解。 Tip：通过Hexo搭建个人博客非常方便，不到半天就能搭好。 Share：Typescript未来会如何？">
+<meta name="twitter:description" content="Algorithm：1. Two Sum 123456789101112/** * @param &amp;#123;number[]&amp;#125; nums * @param &amp;#123;number&amp;#125; target * @return &amp;#123;number[]&amp;#125; */var twoSum = function(nums, target) &amp;#123;    let map = &amp;">
   
     <link rel="alternate" href="/atom.xml" title="码字空间" type="application/atom+xml">
   
@@ -95,6 +95,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>Algorithm：<a href="https://leetcode.com/problems/two-sum/" target="_blank" rel="noopener">1. Two Sum</a></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @param &#123;number[]&#125; nums</span></span><br><span class="line"><span class="comment"> * @param &#123;number&#125; target</span></span><br><span class="line"><span class="comment"> * @return &#123;number[]&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> twoSum = <span class="function"><span class="keyword">function</span>(<span class="params">nums, target</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> map = &#123;&#125;</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (map[nums[i]] !== <span class="literal">undefined</span>) <span class="keyword">return</span> [map[nums[i]], i];</span><br><span class="line">        map[target - nums[i]] = i;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
 <p>Review：<a href="https://medium.com/better-programming/webassembly-is-it-as-scary-as-it-sounds-b0c38fb2d9c8" target="_blank" rel="noopener">WebAssembly — Is It As Scary As It Sounds?</a></p>
 <p>作者通过实作一个简单的项目介绍了WebAssembly，里面还应用了几个介绍资源，看完后能对WebAssembly有个大致的了解。</p>
 <p>Tip：通过Hexo搭建个人博客非常方便，不到半天就能搭好。</p>
@@ -103,7 +105,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2019/07/21/arts-first-week/" data-id="cjykajhlt008vgex19cneax0q" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2019/07/21/arts-first-week/" data-id="cjyl81yn900925ix1rzm32zxb" class="article-share-link">Share</a>
       
       
     </footer>
