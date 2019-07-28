@@ -227,6 +227,9 @@
 </li>
 <li><p>做完上述工作后，就可以在本地运行如下两行命令生成静态网页，并推送到我们先前指定的项目分支中了。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>上述命令是重新生成我们的静态网页，希望增量更新可以使用下面的命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate --deploy</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>发布到对应的分支后，在项目的 setting 中的 Github Pages 的下，设置一下 source 选项就可以了，选择你要之前配置的发布的那个分支，免费账户目前只能是master。配置好，就能看到 Github 给你分配的项目地址了，一般是 https://你的账户名.github.io/你的项目名/ 这样的形式，过一会就你打开了。之后，你每次添加完文章后，都需要执行第三步来提交网站更新。</p>
 </li>

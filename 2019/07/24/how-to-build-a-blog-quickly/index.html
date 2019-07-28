@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="码字空间">
 <meta property="og:description" content="昨天的文章发出后有朋友问我有没有搭建教程，我当时回答他说是跟着hexo官网搭出来的。事后想想，仅靠官网上的文档是不足以搭出像我这样一个博客的，虽然并不是很复杂，但我自己在使用hexo之前其实还做了些其他工作。昨天复盘了搭博客的经历，今天就来复盘一下搭博客的步骤吧。 我的博客最终使用的是 hexo + Github Pages 搭建的。前者提供一个搭建模板，用于生成博客的静态网页。后者用来部署同时提">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-28T03:20:56.721Z">
+<meta property="og:updated_time" content="2019-07-28T09:18:01.115Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何快速搭建一个博客">
 <meta name="twitter:description" content="昨天的文章发出后有朋友问我有没有搭建教程，我当时回答他说是跟着hexo官网搭出来的。事后想想，仅靠官网上的文档是不足以搭出像我这样一个博客的，虽然并不是很复杂，但我自己在使用hexo之前其实还做了些其他工作。昨天复盘了搭博客的经历，今天就来复盘一下搭博客的步骤吧。 我的博客最终使用的是 hexo + Github Pages 搭建的。前者提供一个搭建模板，用于生成博客的静态网页。后者用来部署同时提">
@@ -111,6 +111,9 @@
 </li>
 <li><p>做完上述工作后，就可以在本地运行如下两行命令生成静态网页，并推送到我们先前指定的项目分支中了。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>上述命令是重新生成我们的静态网页，希望增量更新可以使用下面的命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate --deploy</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>发布到对应的分支后，在项目的 setting 中的 Github Pages 的下，设置一下 source 选项就可以了，选择你要之前配置的发布的那个分支，免费账户目前只能是master。配置好，就能看到 Github 给你分配的项目地址了，一般是 https://你的账户名.github.io/你的项目名/ 这样的形式，过一会就你打开了。之后，你每次添加完文章后，都需要执行第三步来提交网站更新。</p>
 </li>
