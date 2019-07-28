@@ -69,6 +69,116 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-programming-routine-ror-steps-towards-product-upload" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/02/25/programming-routine-ror-steps-towards-product-upload/" class="article-date">
+  <time datetime="2017-02-24T18:39:00.000Z" itemprop="datePublished">2017-02-25</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/编程技术/">编程技术</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/25/programming-routine-ror-steps-towards-product-upload/">编程套路：ROR实现product上传多图的步骤</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>##以商店product添加多图为例</p>
+<p>###paperclip</p>
+<h4 id="Step-1"><a href="#Step-1" class="headerlink" title="Step 1"></a>Step 1</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gem &apos;paperclip&apos;</span><br><span class="line">bundle install</span><br></pre></td></tr></table></figure>
+
+<p>重开rails s</p>
+<h4 id="Step-2"><a href="#Step-2" class="headerlink" title="Step 2"></a>Step 2</h4><p>修改app/models/product.rb，加入</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">has_attached_file <span class="symbol">:image</span>, <span class="symbol">styles:</span> &#123; <span class="symbol">medium:</span> <span class="string">"300x300&gt;"</span>, <span class="symbol">thumb:</span> <span class="string">"100x100&gt;"</span> &#125;,</span><br><span class="line">                                    <span class="symbol">default_url:</span> <span class="string">"/images/:style/missing.png"</span>   <span class="comment">#这一行可不要#</span></span><br><span class="line">validates_attachment_content_type <span class="symbol">:image</span>, <span class="symbol">content_type:</span> /\Aimage\/.*\Z/</span><br></pre></td></tr></table></figure>
+
+<h4 id="Step-3"><a href="#Step-3" class="headerlink" title="Step 3"></a>Step 3</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rails generate paperclip product image</span><br></pre></td></tr></table></figure>
+
+<p>确认生成的XXXXXXX_add_attachment_image_to_products.rb如下</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">AddAttachmentImageToProducts</span> &lt; ActiveRecord::Migration</span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">self</span>.<span class="title">up</span></span></span><br><span class="line">    change_table <span class="symbol">:products</span> <span class="keyword">do</span> <span class="params">|t|</span></span><br><span class="line">      t.attachment <span class="symbol">:image</span></span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">self</span>.<span class="title">down</span></span></span><br><span class="line">    remove_attachment <span class="symbol">:products</span>, <span class="symbol">:image</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rake db:migrate</span><br></pre></td></tr></table></figure>
+
+<h4 id="Step-4"><a href="#Step-4" class="headerlink" title="Step 4"></a>Step 4</h4><p>在app/views/admin/product相关页面加入如下</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">+&lt;div&gt;</span><br><span class="line">+&lt;%= f.input <span class="symbol">:image</span>, <span class="symbol">as:</span> <span class="symbol">:file</span> %&gt;</span><br><span class="line">+&lt;<span class="regexp">/div&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="Step-5"><a href="#Step-5" class="headerlink" title="Step 5"></a>Step 5</h4><p>修改app/controllers/admin/products_controller如下</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">private</span><br><span class="line"> <span class="function"><span class="keyword">def</span> <span class="title">product_params</span></span></span><br><span class="line">   params.<span class="keyword">require</span>(<span class="symbol">:product</span>).permit(<span class="symbol">:title</span>, <span class="symbol">:description</span>, <span class="symbol">:quantity</span>, <span class="symbol">:price</span>, <span class="symbol">:image</span>) <span class="comment">#:image加入參數</span></span><br><span class="line"> <span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="Step-6"><a href="#Step-6" class="headerlink" title="Step 6"></a>Step 6</h4><p>图片调用方法</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;%= image_tag @user.avatar.url %&gt;</span><br><span class="line">&lt;%= image_tag @user.avatar.url(<span class="symbol">:medium</span>) %&gt;</span><br><span class="line">&lt;%= image_tag @user.avatar.url(<span class="symbol">:thumb</span>) %&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="carrierwave（我第一次实操的时候上面的paperclip和这个都进行了操作，所以不知道最后是那个起了作用，因而可以分开实验下）"><a href="#carrierwave（我第一次实操的时候上面的paperclip和这个都进行了操作，所以不知道最后是那个起了作用，因而可以分开实验下）" class="headerlink" title="carrierwave（我第一次实操的时候上面的paperclip和这个都进行了操作，所以不知道最后是那个起了作用，因而可以分开实验下）"></a>carrierwave（我第一次实操的时候上面的paperclip和这个都进行了操作，所以不知道最后是那个起了作用，因而可以分开实验下）</h3><h4 id="Step-1-1"><a href="#Step-1-1" class="headerlink" title="Step 1"></a>Step 1</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">+gem <span class="string">'carrierwave'</span></span><br><span class="line">+gem <span class="string">'mini_magick'</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bundle install</span><br></pre></td></tr></table></figure>
+
+<h4 id="Step-2-1"><a href="#Step-2-1" class="headerlink" title="Step 2"></a>Step 2</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ convert -version</span><br><span class="line">$ brew install imagemagick</span><br></pre></td></tr></table></figure>
+
+<h4 id="Step-3-1"><a href="#Step-3-1" class="headerlink" title="Step 3"></a>Step 3</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ rails g uploader image</span><br><span class="line">$ rails g model photo product_id:integer image:string</span><br><span class="line">$ rake db:migrate</span><br></pre></td></tr></table></figure>
+
+<h4 id="Step-4-1"><a href="#Step-4-1" class="headerlink" title="Step 4"></a>Step 4</h4><p>接著Photo中加入關係與mount_uploader</p>
+<figure class="highlight ruby"><figcaption><span>photo.rb</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Photo</span> &lt; ActiveRecord::Base</span></span><br><span class="line">  belongs_to <span class="symbol">:product</span></span><br><span class="line"></span><br><span class="line">  mount_uploader <span class="symbol">:image</span>, ImageUploader</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<p>在Product中也做相關宣告</p>
+<figure class="highlight ruby"><figcaption><span>product.rb</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Product</span> &lt; ActiveRecord::Base</span></span><br><span class="line">  has_many <span class="symbol">:photos</span>, <span class="symbol">dependent:</span> <span class="symbol">:destroy</span></span><br><span class="line"></span><br><span class="line">  accepts_nested_attributes_for <span class="symbol">:photos</span>  </span><br><span class="line">  <span class="comment">#之後我們要做nested form，先在這邊設定接受變更Photo底下的attributes</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="Step-5（这步可不做）"><a href="#Step-5（这步可不做）" class="headerlink" title="Step 5（这步可不做）"></a>Step 5（这步可不做）</h4><p>在Rails console確認關係</p>
+<p>首先需要修正無法在 rails c 讀取到 uploader.rb 的問題:</p>
+<figure class="highlight ruby"><figcaption><span>config/appliaction.rb</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">module</span> <span class="title">Artstore</span></span></span><br><span class="line">  <span class="class"><span class="keyword">class</span> <span class="title">Application</span> &lt; Rails::Application</span></span><br><span class="line">   …(略)</span><br><span class="line">    config.active_record.raise_in_transactional_callbacks = <span class="literal">true</span></span><br><span class="line">+    config.autoload_paths += <span class="string">%W(<span class="subst">#&#123;config.root&#125;</span>/app/uploaders)</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<p>接下來在Rails c輸入Product.first.photos應該就可以確認結果，如下結果就是成功，但因為目前我們還沒上傳任何圖片，回傳的是[ ]，而到目前為止圖片上傳功能的Model端設定已經OK。</p>
+<h4 id="Step-6-1"><a href="#Step-6-1" class="headerlink" title="Step 6"></a>Step 6</h4><p>設定上傳圖片時，同時切成各種尺寸的圖片供使用</p>
+<p>然後編輯你的image_uploader.rb 讓MiniMagick可以用還可將照片切成各種尺寸</p>
+<figure class="highlight ruby"><figcaption><span>app/uploaders/image_uploader.rb</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ImageUploader</span> &lt; CarrierWave::Uploader::<span class="title">Base</span></span></span><br><span class="line">…(略)</span><br><span class="line"></span><br><span class="line">+ <span class="keyword">include</span> CarrierWave::MiniMagick <span class="comment">#設定使用minimagick</span></span><br><span class="line"></span><br><span class="line">…(略)</span><br><span class="line"></span><br><span class="line">+  process <span class="symbol">resize_to_fit:</span> [<span class="number">800</span>, <span class="number">800</span>] <span class="comment">#圖片上傳後，自動切成你要的size</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">+ version <span class="symbol">:thumb</span> <span class="keyword">do</span> <span class="comment">#設同時切其他size的版本-thumb</span></span><br><span class="line"></span><br><span class="line">+    process <span class="symbol">resize_to_fill:</span> [<span class="number">200</span>,<span class="number">200</span>]</span><br><span class="line">+  <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">+ version <span class="symbol">:medium</span> <span class="keyword">do</span> <span class="comment">#設同時切其他size的版本-medium</span></span><br><span class="line"></span><br><span class="line">+    process <span class="symbol">resize_to_fill:</span> [<span class="number">400</span>,<span class="number">400</span>]</span><br><span class="line">+  <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="Step-7"><a href="#Step-7" class="headerlink" title="Step 7"></a>Step 7</h4><p>設定.gitignore (選擇性步驟，但建議作)</p>
+<p>上傳處理後的圖片自動存放在public/uploads底下，而建議將public/uploaders 資料夾放入 .gitignore，因為commit這些上傳圖片的變更，事實上也不太有用。</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.gitignore</span><br><span class="line">   …(略)</span><br><span class="line">+ public/uploads</span><br></pre></td></tr></table></figure>
+
+<h4 id="Step-8"><a href="#Step-8" class="headerlink" title="Step 8"></a>Step 8</h4><p>修改Controller與頁面</p>
+<p>完成以上步驟後，接下來就只要在Controller與頁面加入對應的上傳欄位就可以啦～<br>以我練習的專案來說，是在新增商品的步驟做圖片上傳，所以在Product#new底下，除了原本的@product之外，多宣告一個@photo，並且在product_params的底下允許存取image這個欄位，像這樣：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">new</span></span></span><br><span class="line">    @product = Product.new</span><br><span class="line">    @photo = @product.photos.new</span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">…(略)</span><br><span class="line"></span><br><span class="line">private</span><br><span class="line"> <span class="function"><span class="keyword">def</span> <span class="title">product_params</span></span></span><br><span class="line">    params.<span class="keyword">require</span>(<span class="symbol">:product</span>).</span><br><span class="line">    permit(<span class="symbol">:title</span>, <span class="symbol">:description</span>, <span class="symbol">:quantity</span>, <span class="symbol">:price</span>, <span class="symbol">photos_attributes:</span> [<span class="symbol">:image</span>]) </span><br><span class="line">    <span class="comment"># 配合先前在Product model中的設定，使用nested_attributes的設定方式，通過驗證。</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<p>然後在對應的new.html.erb，加入該上傳欄位：</p>
+<figure class="highlight ruby"><figcaption><span>new.html.erb</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">…(略)</span><br><span class="line"></span><br><span class="line">  &lt;div class="form-group"&gt;</span><br><span class="line">    &lt;%= f.simple_fields_for <span class="symbol">:photos</span> <span class="keyword">do</span> <span class="params">|c|</span> %&gt;</span><br><span class="line">      &lt;%= c.input <span class="symbol">:image</span>, <span class="symbol">as:</span> <span class="symbol">:file</span> %&gt;</span><br><span class="line">    &lt;% <span class="keyword">end</span> %&gt;</span><br><span class="line">  &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp"># 這邊是用我自己在練習的專案作說明，使用simple_form，</span></span><br><span class="line"><span class="regexp"># 然後是在已有的表單底下，增加額外的欄位，所以用的是fields_for指令，</span></span><br><span class="line"><span class="regexp"># 而要從本地端電腦上傳圖片，所以是as: :file。</span></span><br></pre></td></tr></table></figure>
+
+<p>或者你也可以給定圖片所在的遠端URL，來上傳圖片，CarrierWave已經很貼心的幫我們做好整合，也有固定的命名方式，所以只要更改上傳欄位的名稱為 :remote_xxx_url，並在product_params的底下允許存取remote_xxxx_url這個欄位，就OK啦，像這樣：</p>
+<figure class="highlight ruby"><figcaption><span>new.html.erb</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">…(略)</span><br><span class="line"></span><br><span class="line">  &lt;div class="form-group"&gt;</span><br><span class="line">    &lt;%= f.simple_fields_for <span class="symbol">:photos</span> <span class="keyword">do</span> <span class="params">|c|</span> %&gt;</span><br><span class="line">      &lt;%= c.input <span class="symbol">:image</span>, <span class="symbol">as:</span> <span class="symbol">:file</span> %&gt; <span class="comment"># 使用本地端上傳，手動更改type為File</span></span><br><span class="line">      &lt;%= c.input <span class="symbol">:remote_image_url%&gt;</span>  <span class="comment"># 使用遠端url上傳，使用預設type即可(String)</span></span><br><span class="line">    &lt;% <span class="keyword">end</span> %&gt;</span><br><span class="line">  &lt;<span class="regexp">/div&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="Step-9"><a href="#Step-9" class="headerlink" title="Step 9"></a>Step 9</h4><p>在頁面中選擇其中一種方式上傳後，專案底下public/uploads/photos/image應該就會有三張不同尺寸的圖片囉～</p>
+<p>之後如果要在頁面中使用圖片路徑，像下面使用就可以指向圖片所在位置把對應圖片叫出來囉～</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"> Photo.first.image.url        =&gt;<span class="string">"/uploads/photo/image/1/xxx.jpg"</span>        <span class="comment"># size: 800x800</span></span><br><span class="line"></span><br><span class="line">Photo.first.image.thumb.url   =&gt;<span class="string">"/uploads/photo/image/1/thumb_xxx.jpg"</span> <span class="comment"># size: 200x200</span></span><br><span class="line"></span><br><span class="line">Photo.first.image.medium.url =&gt;<span class="string">"/uploads/photo/image/1/medium_xxx.jpg"</span>  <span class="comment"># size: 400x400</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#以Photo的第一張圖片舉例。</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h4><p>我在实现实现上传和显示是最终使用的是如下的语句</p>
+<figure class="highlight ruby"><figcaption><span>app/controller/admin/templates.rb</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">new</span></span></span><br><span class="line">  @template = Template.new</span><br><span class="line">  @templatephoto = @template.templatephotos.build</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">create</span></span></span><br><span class="line">  @template = Template.new(template_params)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> @template.save</span><br><span class="line">    <span class="keyword">if</span> params[<span class="symbol">:templatephotos</span>] != <span class="literal">nil</span></span><br><span class="line">      params[<span class="symbol">:templatephotos</span>][<span class="string">'image'</span>].each <span class="keyword">do</span> <span class="params">|a|</span></span><br><span class="line">        @templatephoto = @template.templatephotos.create(<span class="symbol">:image</span> =&gt; a)</span><br><span class="line">      <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">    redirect_to admin_templates_path</span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">    render <span class="symbol">:new</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line">  private</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">template_params</span></span></span><br><span class="line">  params.<span class="keyword">require</span>(<span class="symbol">:template</span>).permit(<span class="symbol">:title</span>, <span class="symbol">:description</span>, <span class="symbol">:price</span>, <span class="symbol">:version</span>, <span class="symbol">:proportion</span>, <span class="symbol">templatephoto_attributes:</span> [<span class="symbol">:image</span>, <span class="symbol">:id</span>])</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight ruby"><figcaption><span>new.html.erb</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">...(略)</span><br><span class="line">  &lt;div class="group"&gt;</span><br><span class="line">    &lt;%= f.file_field <span class="symbol">:image</span>, <span class="symbol">:multiple</span> =&gt; <span class="literal">true</span>, <span class="symbol">name:</span> <span class="string">"templatephotos[image][]"</span> %&gt;（<span class="string">"请上传5张图片"</span>）&lt;br&gt;</span><br><span class="line">  &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">  </span></span><br><span class="line"><span class="regexp">&lt;%= f.submit "Submit", data: &#123; disable_with: "Submitting..." &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight ruby"><figcaption><span>edit.html.erb</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;% <span class="keyword">if</span> @template.templatephotos.present? %&gt;</span><br><span class="line">  &lt;span&gt;目前商品图&lt;<span class="regexp">/span&gt;&lt;br&gt;</span></span><br><span class="line"><span class="regexp">  &lt;% @template.templatephotos.each do |p| %&gt;</span></span><br><span class="line"><span class="regexp">    &lt;%= image_tag p.image.thumb.url %&gt;&lt;br /</span>&gt;</span><br><span class="line">  &lt;% <span class="keyword">end</span> %&gt;</span><br><span class="line">&lt;% <span class="keyword">end</span> %&gt;</span><br><span class="line"></span><br><span class="line">&lt;div class="group"&gt;</span><br><span class="line">  &lt;%= f.file_field <span class="symbol">:image</span>, <span class="symbol">:multiple</span> =&gt; <span class="literal">true</span>, <span class="symbol">name:</span> <span class="string">"templatephotos[image][]"</span> %&gt;（<span class="string">"请上传5张图片"</span>）&lt;br&gt;</span><br><span class="line">&lt;<span class="regexp">/div&gt;</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.hanwei.ink/2017/02/25/programming-routine-ror-steps-towards-product-upload/" data-id="cjymdzyti005ko1x1sc8b8cqq" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-error-bundle-install-did-not-reopen-after-rails-s" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/02/25/error-bundle-install-did-not-reopen-after-rails-s/" class="article-date">
@@ -99,7 +209,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/02/25/error-bundle-install-did-not-reopen-after-rails-s/" data-id="cjylb1hc5005k54x1vkmt74y2" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2017/02/25/error-bundle-install-did-not-reopen-after-rails-s/" data-id="cjymdzyth005io1x1hp0f9wva" class="article-share-link">Share</a>
       
       
     </footer>
@@ -154,7 +264,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/02/24/1461324/" data-id="cjylb1hc3005g54x1avx3693c" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2017/02/24/1461324/" data-id="cjymdzyth005go1x1hve05ghs" class="article-share-link">Share</a>
       
       
     </footer>
@@ -196,7 +306,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/02/23/2017-7th-week-summary/" data-id="cjylb1hc1005c54x1gpevcv7e" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2017/02/23/2017-7th-week-summary/" data-id="cjymdzytf005ao1x13cpkbodv" class="article-share-link">Share</a>
       
       
     </footer>
@@ -251,7 +361,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/02/23/1457325/" data-id="cjylb1hc0005a54x1bxqfrcqs" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2017/02/23/1457325/" data-id="cjymdzytf005co1x1fu7u0gwk" class="article-share-link">Share</a>
       
       
     </footer>
@@ -306,7 +416,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/02/23/20170220-learning-record/" data-id="cjylb1hc2005e54x119guq9gl" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2017/02/23/20170220-learning-record/" data-id="cjymdzyte0058o1x1jr9mbij4" class="article-share-link">Share</a>
       
       
     </footer>
@@ -356,7 +466,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/02/20/20170219-learning-record/" data-id="cjylb1hc0005854x1z9edun01" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2017/02/20/20170219-learning-record/" data-id="cjymdzytg005eo1x15j9w6ezb" class="article-share-link">Share</a>
       
       
     </footer>
@@ -406,7 +516,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/02/19/1432581/" data-id="cjylb1hbz005654x1s8gre0ly" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2017/02/19/1432581/" data-id="cjymdzytd0056o1x15xz07o39" class="article-share-link">Share</a>
       
       
     </footer>
@@ -456,7 +566,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/02/17/1426149/" data-id="cjylb1hby005454x1oy36h9t8" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2017/02/17/1426149/" data-id="cjymdzytc0054o1x10lmhnzvc" class="article-share-link">Share</a>
       
       
     </footer>
@@ -506,57 +616,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/02/16/20170215-learning-record/" data-id="cjylb1hbx005254x19qkojxoz" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-20170214-learning-record" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/02/15/20170214-learning-record/" class="article-date">
-  <time datetime="2017-02-14T18:32:00.000Z" itemprop="datePublished">2017-02-15</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/编程技术/">编程技术</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/15/20170214-learning-record/">20170214学习纪录</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><h3 id="关于今天的课程，你记得什么？"><a href="#关于今天的课程，你记得什么？" class="headerlink" title="关于今天的课程，你记得什么？"></a>关于今天的课程，你记得什么？</h3><p>1、permit一个model时，它对应的对象也会获得相应的权限吗？（指教材中的product_list)；<br>2、token这个保护数据隐私的方法；<br>3、在controller里面定义调用一个网页前的数据钥匙，以后在所有需要调用这个网页前都需要使用这个钥匙；<br>4、find一般使用的是:id来查找数据，find_by则灵活得多；<br>5、@product_lists.each和order.product_lists在使用上还是有所不同；<br>6、安装了awesome_rails_console这个GEM;<br>7、在meetup伙伴的督促下安装了google环聊及skype，这两个远程写作神器；<br>8、class=”col-md-12”这个bootstrap类基本是满屏的意思；<br>9、views页面里基本是以”row”定义一个大块，然后在接着col-md-12内容块，在具体内容；<br>10、li class=”divider”是列表的分割线；<br>11、生成product_list的controller后，在文件里显示的是ProductListController，下横杠去掉了，而且首字母大写，下横杠的意义还需要学习一下；<br>12、SecureRandom.uuid这个ruby随机生成字符串的方法；</p>
-<h3 id="完成了什么？"><a href="#完成了什么？" class="headerlink" title="完成了什么？"></a>完成了什么？</h3><p>1、完成了购物网站第三部分订单实作的练习；</p>
-<h2 id="Reflective"><a href="#Reflective" class="headerlink" title="Reflective"></a>Reflective</h2><h3 id="你要如何形容今天的情绪？"><a href="#你要如何形容今天的情绪？" class="headerlink" title="你要如何形容今天的情绪？"></a>你要如何形容今天的情绪？</h3><p>今天学习比较顺利，多次进入了心流状态，再次对学习上瘾了，保持这个学习的初速度真的很重要，成就感满满的，再一次对自己充满了信心。</p>
-<h3 id="今天的高峰是什么？"><a href="#今天的高峰是什么？" class="headerlink" title="今天的高峰是什么？"></a>今天的高峰是什么？</h3><p>自己能根据教材的步骤大致判断出来下面要如何做，及怎么做；</p>
-<h3 id="今天的低点是什么？"><a href="#今天的低点是什么？" class="headerlink" title="今天的低点是什么？"></a>今天的低点是什么？</h3><p>在查看所有订单时显示相关的物品清单这个功能没能实现；</p>
-<h2 id="Interpretive"><a href="#Interpretive" class="headerlink" title="Interpretive"></a>Interpretive</h2><h3 id="我们今天学到了什么？"><a href="#我们今天学到了什么？" class="headerlink" title="我们今天学到了什么？"></a>我们今天学到了什么？</h3><p>1、领悟了model、controller、views的三层空间模型，用来理解数据流动及关系及动作触发；<br>2、学习上瘾的核心在于保持一定的“过关”速度，还有适当的难度；<br>3、学习到什么可用的新东西要做的第一件事情就是去用，像今天安装的awesome_rails_console花了半天的时间去找来安装，要是YY老师第一次上课分享的时候就安装了能避免很多麻烦；<br>4、抖腿有利于写ORID。。。。。。；<br>5、CURD没事要多默写，不但是记住它，对于理解其他东西也重要，最好每天写一遍；<br>6、查bug的一个方法是将过程中的量的数值通过&lt;%= %&gt;显示在网页里；<br>7、rails g model可以在后面跟着参数直接生成数据项和类型，也可以在后面的migration文件里生成；<br>8、打开网页显示内部链接出错是因为网页在生成的过程中会进行ruby计算把相关变量编程确定地链接放在网页里，而不是用的时候再计算，所以即便说一个因错误无法生成的链接你还没有点，但其实在生成网页的时候这个问题已经发生了，所以无法继续生成网页；</p>
-<h3 id="今天一个重要的领悟是什么？"><a href="#今天一个重要的领悟是什么？" class="headerlink" title="今天一个重要的领悟是什么？"></a>今天一个重要的领悟是什么？</h3><p>####学习方法<br>在周日的线上meetup分享后，跳出了沉迷于坑里的毛病，一段时间不能解出就找方法看后面教材找求。所以之后的今天再一次找到了上瘾的感觉，心流再次源源不断。总结就是，学习的本质目的是最短时间拼上最多的图，独立解出是牢固，但是也要考虑时间成本和情绪成本，所以在短时间获得大量拼图再上orid来巩固和独立解决牢固记忆之间要设定一个平衡点，我现在设置的就是20~30分钟，不能忘了学习的优先目的是拼出大图，而后再粘好它，而不是反过来。然后，进入心流表示状态好，所以在这种情况下就不用采用劳逸结合的学习方式，因为那会打断心流。两种方式视状态而定，没状态的时候小步快跑，有状态的时候直接飞，具体情况可以根据是否能进入心流来调整，另外，貌似古典音乐更容易帮我进入心流，而the piano guys只能调动我的情绪而不能让我专注做事。</p>
-<p>####编程知识<br>三层架构空间模型，用来理解程序非常好用</p>
-<h2 id="Decisional"><a href="#Decisional" class="headerlink" title="Decisional"></a>Decisional</h2><h3 id="我们会如何用一句话形容今天的工作？"><a href="#我们会如何用一句话形容今天的工作？" class="headerlink" title="我们会如何用一句话形容今天的工作？"></a>我们会如何用一句话形容今天的工作？</h3><p>不沉迷与坑里后，又找回了获得上瘾及进入心流的方法，高效学习；</p>
-<h3 id="有哪些工作需要明天继续努力？"><a href="#有哪些工作需要明天继续努力？" class="headerlink" title="有哪些工作需要明天继续努力？"></a>有哪些工作需要明天继续努力？</h3><p>1、完成第二周的学习内容及复盘；<br>2、争取完成第四部分的学习；</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/02/15/20170214-learning-record/" data-id="cjylb1hbw005054x19nb5f1l5" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2017/02/16/20170215-learning-record/" data-id="cjymdzyt90050o1x1q9uvifne" class="article-share-link">Share</a>
       
       
     </footer>
@@ -609,6 +669,10 @@
       <ul>
         
           <li>
+            <a href="/2019/07/28/make-explore-of-await/">make-explore-of-await</a>
+          </li>
+        
+          <li>
             <a href="/2019/07/24/how-to-build-a-blog-quickly/">如何快速搭建一个博客</a>
           </li>
         
@@ -622,10 +686,6 @@
         
           <li>
             <a href="/2019/07/21/how-about-typescript-future/">typescript未来会如何？</a>
-          </li>
-        
-          <li>
-            <a href="/2019/07/11/learning-experience-of-dida-reading/">水滴阅读学习体验</a>
           </li>
         
       </ul>
