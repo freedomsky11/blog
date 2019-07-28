@@ -1097,6 +1097,10 @@ a.article-title:hover {
   line-height: 1.6em;
   font-size: 0.85em;
 }
+#footer-info #heart {
+  font-size: 1.5em;
+  vertical-align: bottom;
+}
 .article-entry pre,
 .article-entry .highlight {
   background: #2d2d2d;
