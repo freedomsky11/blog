@@ -69,6 +69,135 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-1343846" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/01/22/1343846/" class="article-date">
+  <time datetime="2017-01-21T19:17:00.000Z" itemprop="datePublished">2017-01-22</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/编程技术/">编程技术</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/01/22/1343846/">20170121学习纪录</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><h3 id="关于今天的课程，你记得什么？"><a href="#关于今天的课程，你记得什么？" class="headerlink" title="关于今天的课程，你记得什么？"></a>关于今天的课程，你记得什么？</h3><p>1、不需要git跟踪的文件可以在.gitignore中设置；<br>2、html中的button这个元素；<br>3、carriwave这个实用工具；<br>4、awesome这个符号工具及网站；<br>5、在代码重复三次及以上的时候就可以考虑用scope简化了；<br>6、rake routes和rails routes都可以查到路由路径；<br>7、在本例中可以先生成controller再生成model；<br>8、在没有exiting的情况下，不小心把iterm2/terminal关掉，可能不一定会关闭线程。若没有关闭，重新打开的时候需要杀到原来的进程；<br>9、做用户故事时，要多想实际操作时候的细节，想得越多，想得越细，后面做出来的产品也就越清晰；<br>10、在页面上的点击操作不单能打开另一个页面，也可以触发操作，比如删除、参数传递；<br>11、课程里第一次出现了条件选择语句；<br>12、可以在controller里面设置layout使用的页面；<br>13、在本专案中，指向性的赋值不需要require操作，而储存类的则一定需要；<br>14、使用rake db:drop命令时需要关闭rails server，否则命令无法执行；<br>15、类似的，使用git branch -D 命令时，不能删除当前分支，需要跳出到其他分支才能操作；</p>
+<h3 id="完成了什么？"><a href="#完成了什么？" class="headerlink" title="完成了什么？"></a>完成了什么？</h3><p>1、完成了招聘网站第二周的基本作业。</p>
+<h2 id="Reflective"><a href="#Reflective" class="headerlink" title="Reflective"></a>Reflective</h2><h3 id="你要如何形容今天的情绪？"><a href="#你要如何形容今天的情绪？" class="headerlink" title="你要如何形容今天的情绪？"></a>你要如何形容今天的情绪？</h3><p>今天除去下午有事，其余要大巴的时间进行课程，因为时间充裕，自己的状态也比较自然。期间虽然会对自己的进度焦虑，但是想到往后几天的假已经请好了，所以也没有太大的焦虑，只是时不时的心中有股躁动需要安顿。step7的提示里有错误，因为这个错误苦恼了半天，还好后面偷瞄了下教材才不至于继续苦恼下去。总的来说还是比较平稳的情绪。</p>
+<h3 id="今天的高峰是什么？"><a href="#今天的高峰是什么？" class="headerlink" title="今天的高峰是什么？"></a>今天的高峰是什么？</h3><p>通过网站自己完成了uploader attachment的设置及相关功能实现；</p>
+<h3 id="今天的低点是什么？"><a href="#今天的低点是什么？" class="headerlink" title="今天的低点是什么？"></a>今天的低点是什么？</h3><p>教材中说attachment是在job中实现的，因为这个卡住了半天，后面偷瞄教材发现其实是在resume中实现的，真是个大坑。</p>
+<h2 id="Interpretive"><a href="#Interpretive" class="headerlink" title="Interpretive"></a>Interpretive</h2><h3 id="我们今天学到了什么？"><a href="#我们今天学到了什么？" class="headerlink" title="我们今天学到了什么？"></a>我们今天学到了什么？</h3><p>1、通过awesome为网页设置精美小图标的方法；<br>2、安装carriwave的方法，以及使用注意事项；<br>3、具体的就是要安装gem、设置model及controller，最后还需要布置uploader，另外bootstrap也是必须的；<br>4、上传的文件默认是追踪的，通过.gitignore可以设置不追踪，追踪的话在public中可以看到上传的文件；<br>5、程序中援引的path地址，其实是routes中的地址加上_path，如果需要参数的还需要在后面安排参数；<br>6、在设置html及css参数时，如果掌握不好就少设置些参数，这样更利于优化；<br>7、程序的实现方法其实有很多种，不一定是单一的代码，最后效果出来其实可以一样，但代码质量确有很多的不同；<br>8、貌似可以在html 中通过style来直接设置参数？<br>9、rake db三兄弟本质上重置数据库，这样就有一个问题，那就是数据丢失，所以如何维护好数据库也是很大的一块问题；<br>10、有的简化代码的操作适合一开始就设置，比如simply_form,另一些比如scope就需要编号在进行优化，目前就我自己使用scope及render会降低代码的可读性，需要改善；<br>11、YY老师之前说的google搜索logdown加遇到的问题真是个好办法；<br>12、类似上面的，其实编程就是打破时空不不同时空中的不同个体合作；<br>13、如果你遇到的问题是前面没有的，真就是你developer的一个好时刻了；<br>14、编程思维其实和xdite老师的套路思维其实是一致的啊，把小功能集成，然后模块化调用，然后小模块又合成大模块，进一步的，大模块之间又组合在一起。硬件、程序语言、套路其实本质都一样啊！</p>
+<h3 id="今天一个重要的领悟是什么？"><a href="#今天一个重要的领悟是什么？" class="headerlink" title="今天一个重要的领悟是什么？"></a>今天一个重要的领悟是什么？</h3><p>硬件也好，软件也好，套路也好，都是把小的集合起来整块调用，然后在上一层在集成起来再整块调用，以此类推，有种打通过去未来的感觉。</p>
+<h2 id="Decisional"><a href="#Decisional" class="headerlink" title="Decisional"></a>Decisional</h2><h3 id="我们会如何用一句话形容今天的工作？"><a href="#我们会如何用一句话形容今天的工作？" class="headerlink" title="我们会如何用一句话形容今天的工作？"></a>我们会如何用一句话形容今天的工作？</h3><p>不错不错，计划进度完成90%。</p>
+<h3 id="有哪些工作需要明天继续努力？"><a href="#有哪些工作需要明天继续努力？" class="headerlink" title="有哪些工作需要明天继续努力？"></a>有哪些工作需要明天继续努力？</h3><p>1.完成招聘网站的学习；<br>2.开始魔改大赛；<br>3.开始学习购物网站的学习；</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.hanwei.ink/2017/01/22/1343846/" data-id="ck5w0ts660036s9x1ibmsc0qn" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-1341398" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/01/21/1341398/" class="article-date">
+  <time datetime="2017-01-21T07:15:00.000Z" itemprop="datePublished">2017-01-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/编程技术/">编程技术</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/01/21/1341398/">报错纪录：A server is already running.</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="错误日期：2017年1月21日"><a href="#错误日期：2017年1月21日" class="headerlink" title="错误日期：2017年1月21日"></a>错误日期：2017年1月21日</h1><h1 id="具体情况："><a href="#具体情况：" class="headerlink" title="具体情况："></a>具体情况：</h1><pre><code>在iterm2输入命令的时候不小心把跑服务的窗口给关了，之后再打开就显示A server is already running.之后使用了YY老师的google小技巧：logdown + 问题，很快在其他同学那里找到了答案。</code></pre><h1 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h1><pre><code>执行命令：kill -9 $(lsof -i tcp:3000 -t)   若不行则先执行：rm tmp/pids/server.pid，在执行上面的命令。</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.hanwei.ink/2017/01/21/1341398/" data-id="ck5w0ts650034s9x11jg5mnp0" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-1341060" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/01/21/1341060/" class="article-date">
+  <time datetime="2017-01-21T05:35:00.000Z" itemprop="datePublished">2017-01-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/编程技术/">编程技术</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/01/21/1341060/">报错纪录：使用rake需要关闭rails serve</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="错误时间：2017年01月21日"><a href="#错误时间：2017年01月21日" class="headerlink" title="错误时间：2017年01月21日"></a>错误时间：2017年01月21日</h1><h1 id="错误内容："><a href="#错误内容：" class="headerlink" title="错误内容："></a>错误内容：</h1><pre><code>使用rake db:drop时，没有关闭rails serve，导致无法执行命令，进一步的，rake db:migrate也无法使用。</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.hanwei.ink/2017/01/21/1341060/" data-id="ck5w0ts640032s9x1rx2k6yve" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-1335915" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/01/20/1335915/" class="article-date">
@@ -103,7 +232,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/01/20/1335915/" data-id="cjymt6r6m0030v6x1u898wgda" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2017/01/20/1335915/" data-id="ck5w0ts630030s9x1y5pqbi80" class="article-share-link">Share</a>
       
       
     </footer>
@@ -152,7 +281,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/01/20/20170120-learning-record/" data-id="cjymt6r6l002yv6x1v2v393n3" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2017/01/20/20170120-learning-record/" data-id="ck5w0ts61002ys9x1poq93y24" class="article-share-link">Share</a>
       
       
     </footer>
@@ -201,7 +330,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/01/19/1332011/" data-id="cjymt6r6k002wv6x19ozbabo8" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2017/01/19/1332011/" data-id="ck5w0ts61002ws9x1ltdhzlif" class="article-share-link">Share</a>
       
       
     </footer>
@@ -250,7 +379,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/01/17/1322888/" data-id="cjymt6r6i002sv6x1fogvgzf3" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2017/01/17/1322888/" data-id="ck5w0ts60002us9x1y2lg7bw4" class="article-share-link">Share</a>
       
       
     </footer>
@@ -300,7 +429,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/01/17/1322792/" data-id="cjymt6r6h002qv6x13iegkuj1" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2017/01/17/1322792/" data-id="ck5w0ts5z002ss9x1nwuhs6hj" class="article-share-link">Share</a>
       
       
     </footer>
@@ -349,7 +478,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/01/15/1315166/" data-id="cjymt6r6g002ov6x12bcfcmfu" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2017/01/15/1315166/" data-id="ck5w0ts5y002qs9x1ufc4n00g" class="article-share-link">Share</a>
       
       
     </footer>
@@ -391,149 +520,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/01/15/1315124/" data-id="cjymt6r6f002mv6x1k3majzl1" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-1315086" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/01/15/1315086/" class="article-date">
-  <time datetime="2017-01-15T06:01:00.000Z" itemprop="datePublished">2017-01-15</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/编程技术/">编程技术</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/15/1315086/">编程作业：HTML 自学作业</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="div-span-的不同"><a href="#div-span-的不同" class="headerlink" title="div / span 的不同"></a>div / span 的不同</h2><p>div是块元素，span是内联元素。使用div会在内容的前后产生空行，而span不会。div用于将不同的元素链接组合在一起并可设定格式，而span是用于修正文本的格式。</p>
-<h2 id="class-与-id-的不同"><a href="#class-与-id-的不同" class="headerlink" title="class 与 id 的不同"></a>class 与 id 的不同</h2><p>对于div/span而言，class属性表示该设定对于内部的某类元素生效，而id则是具体的那个一个元素生效。如果不使用则是全部元素都应用该设定。</p>
-<h2 id="p-与-br-的不同"><a href="#p-与-br-的不同" class="headerlink" title="p 与 br 的不同"></a>p 与 br 的不同</h2><p>p是块元素，br是内联元素。p有开始标签和结束标签，而br只有开始标签且在开始标签内结束。</p>
-<h2 id="如何使用-table-排版"><a href="#如何使用-table-排版" class="headerlink" title="如何使用 table 排版"></a>如何使用 table 排版</h2><p>相当于使用table创建了一个表格，然后在各个表格数据里面在放其他元素，加上对表的设定，行的设定，标题的设定，数据格的设定来实现排版的目的。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/01/15/1315086/" data-id="cjymt6r6e002kv6x1psqg0ym5" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-1311324" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/01/14/1311324/" class="article-date">
-  <time datetime="2017-01-14T09:58:00.000Z" itemprop="datePublished">2017-01-14</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/编程技术/">编程技术</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/14/1311324/">20170114学习纪录</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><h3 id="关于今天的课程，你记得什么？"><a href="#关于今天的课程，你记得什么？" class="headerlink" title="关于今天的课程，你记得什么？"></a>关于今天的课程，你记得什么？</h3><p>1、hash对象，它有两个量，一个是key,另一个是value。这两个是关联的，但是也只保存关联，并不纪录顺序；<br>2、hash的创建方法有两种，一种是{}，另一种是.hash.new();<br>3、block指的是程序中的一段代码；<br>4、to_a,to_s,to_i等三个转换命令；<br>5、chlaining命令的使用方法；<br>6、【】在变量名称后面相当于锁定功能；</p>
-<h3 id="完成了什么？"><a href="#完成了什么？" class="headerlink" title="完成了什么？"></a>完成了什么？</h3><p>1、招聘网站7-3的作业；<br>2、codeschool ruby基础教程的前四小节；</p>
-<h2 id="Reflective"><a href="#Reflective" class="headerlink" title="Reflective"></a>Reflective</h2><h3 id="你要如何形容今天的情绪？"><a href="#你要如何形容今天的情绪？" class="headerlink" title="你要如何形容今天的情绪？"></a>你要如何形容今天的情绪？</h3><p>今天调整了电脑的位置，整体的学习环境比之前好了很多，心情也是很平静，这周辞职的是闹心，不过因为流程的问题，暂时搁置了，再多考虑考虑吧。学习try ruby全部是英语，所以学习的时间有些慢，好在一字不差的都阅读完了。</p>
-<h3 id="今天的高峰是什么？"><a href="#今天的高峰是什么？" class="headerlink" title="今天的高峰是什么？"></a>今天的高峰是什么？</h3><p>学习ruby的内容，拼凑了很多知识。</p>
-<h3 id="今天的低点是什么？"><a href="#今天的低点是什么？" class="headerlink" title="今天的低点是什么？"></a>今天的低点是什么？</h3><p>学习的太晚。</p>
-<h2 id="Interpretive"><a href="#Interpretive" class="headerlink" title="Interpretive"></a>Interpretive</h2><h3 id="我们今天学到了什么？"><a href="#我们今天学到了什么？" class="headerlink" title="我们今天学到了什么？"></a>我们今天学到了什么？</h3><p>没有学到什么特别的</p>
-<h3 id="今天一个重要的领悟是什么？"><a href="#今天一个重要的领悟是什么？" class="headerlink" title="今天一个重要的领悟是什么？"></a>今天一个重要的领悟是什么？</h3><p>睡眠的本质是质量，如何提高质量比安排时间总要得多了。<br>程序语言其实是一层层语言的调用，汇编语言调用机器语言，c语言调用汇编语言，其他语言又调用c语言，就这样一层层的简化。这里只是举例，也可能某高级语言到机器语言只是经过了三层而已。</p>
-<h2 id="Decisional"><a href="#Decisional" class="headerlink" title="Decisional"></a>Decisional</h2><h3 id="我们会如何用一句话形容今天的工作？"><a href="#我们会如何用一句话形容今天的工作？" class="headerlink" title="我们会如何用一句话形容今天的工作？"></a>我们会如何用一句话形容今天的工作？</h3><p>暂缓辞职，学习再出发。</p>
-<h3 id="有哪些工作需要明天继续努力？"><a href="#有哪些工作需要明天继续努力？" class="headerlink" title="有哪些工作需要明天继续努力？"></a>有哪些工作需要明天继续努力？</h3><p>完成第一周剩下的作业，开始第二周的学习任务。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/01/14/1311324/" data-id="cjymt6r6j002uv6x1c9jjj93a" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-1304680" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/01/13/1304680/" class="article-date">
-  <time datetime="2017-01-13T07:27:00.000Z" itemprop="datePublished">2017-01-13</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/编程技术/">编程技术</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/13/1304680/">20170113学习纪录</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><h3 id="关于今天的课程，你记得什么？"><a href="#关于今天的课程，你记得什么？" class="headerlink" title="关于今天的课程，你记得什么？"></a>关于今天的课程，你记得什么？</h3><p>1、隔天的提取练习遗忘率高</p>
-<h3 id="完成了什么？"><a href="#完成了什么？" class="headerlink" title="完成了什么？"></a>完成了什么？</h3><p>1、补写了之前两天的ORID日记</p>
-<h2 id="Reflective"><a href="#Reflective" class="headerlink" title="Reflective"></a>Reflective</h2><h3 id="你要如何形容今天的情绪？"><a href="#你要如何形容今天的情绪？" class="headerlink" title="你要如何形容今天的情绪？"></a>你要如何形容今天的情绪？</h3><p>准备辞职了，很多朋友跑来劝诫，但是自己还是比较平静，毕竟是经过长时间的心理准备，并且也把相关的实际准备工作基本完成了。</p>
-<h3 id="今天的高峰是什么？"><a href="#今天的高峰是什么？" class="headerlink" title="今天的高峰是什么？"></a>今天的高峰是什么？</h3><p>回忆昨天的直播内容，还是能回忆的起来。</p>
-<h3 id="今天的低点是什么？"><a href="#今天的低点是什么？" class="headerlink" title="今天的低点是什么？"></a>今天的低点是什么？</h3><p>回忆大前天的内容，已经回忆不起来了。</p>
-<h2 id="Interpretive"><a href="#Interpretive" class="headerlink" title="Interpretive"></a>Interpretive</h2><h3 id="我们今天学到了什么？"><a href="#我们今天学到了什么？" class="headerlink" title="我们今天学到了什么？"></a>我们今天学到了什么？</h3><p>没有学到什么特别的</p>
-<h3 id="今天一个重要的领悟是什么？"><a href="#今天一个重要的领悟是什么？" class="headerlink" title="今天一个重要的领悟是什么？"></a>今天一个重要的领悟是什么？</h3><p>ORID一定要每天写，学了多少都得写，可以少学点，但是一定要写。</p>
-<h2 id="Decisional"><a href="#Decisional" class="headerlink" title="Decisional"></a>Decisional</h2><h3 id="我们会如何用一句话形容今天的工作？"><a href="#我们会如何用一句话形容今天的工作？" class="headerlink" title="我们会如何用一句话形容今天的工作？"></a>我们会如何用一句话形容今天的工作？</h3><p>写的迟，效率低。</p>
-<h3 id="有哪些工作需要明天继续努力？"><a href="#有哪些工作需要明天继续努力？" class="headerlink" title="有哪些工作需要明天继续努力？"></a>有哪些工作需要明天继续努力？</h3><p>完成第一周剩下的作业，开始第二周的学习任务。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/01/13/1304680/" data-id="cjymt6r6e002iv6x1pnlj144y" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2017/01/15/1315124/" data-id="ck5w0ts5v002is9x1qr0gvqek" class="article-share-link">Share</a>
       
       
     </footer>
@@ -573,7 +560,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">七月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">五月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">四月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">二月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">九月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">五月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">六月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">七月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">五月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">四月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">二月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">九月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">五月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">六月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a></li></ul>
     </div>
   </div>
 
@@ -617,7 +604,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2019 <span id="heart">♥</span> Han Wei<br>
+      &copy; 2020 <span id="heart">♥</span> Han Wei<br>
       Email: i@hanwei.ink<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>

@@ -69,6 +69,141 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-programming-assignment-what-is-a-session" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/03/27/programming-assignment-what-is-a-session/" class="article-date">
+  <time datetime="2017-03-27T01:18:00.000Z" itemprop="datePublished">2017-03-27</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/编程技术/">编程技术</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/27/programming-assignment-what-is-a-session/">编程作业：什么是session</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在计算机科学领域来说，尤其是在网络领域，会话（session）是一种持久网络协议，在用户（或用户代理）端和服务器端之间创建关联，从而起到交换数据包的作用机制，session在网络协议（例如telnet或FTP）中是非常重要的部分。</p>
+<p>在不包含会话层（例如UDP）或者是无法长时间驻留会话层（例如HTTP）的传输协议中，会话的维持需要依靠在传输数据中的高级别程序。例如，在浏览器和远程主机之间的HTTP传输中，HTTP cookie就会被用来包含一些相关的信息，例如session ID，参数和权限信息等。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.hanwei.ink/2017/03/27/programming-assignment-what-is-a-session/" data-id="ck5w0ts810076s9x1glmxhby4" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-1606964" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/03/18/1606964/" class="article-date">
+  <time datetime="2017-03-17T22:37:00.000Z" itemprop="datePublished">2017-03-18</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/编程技术/">编程技术</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/18/1606964/">2017年第11周总结</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-“本周学到的最棒概念-工具”"><a href="#1-“本周学到的最棒概念-工具”" class="headerlink" title="1.“本周学到的最棒概念/工具”"></a>1.“本周学到的最棒概念/工具”</h2><p>本周学到的最棒的工具是轻松冥想，上周李思成分享的工具，使用以后发现坐享效果很好，真的好。</p>
+<h2 id="2-“本周遇到最大的坑”"><a href="#2-“本周遇到最大的坑”" class="headerlink" title="2.“本周遇到最大的坑”"></a>2.“本周遇到最大的坑”</h2><p>本周遇到的最大的坑是ORID的情绪纪录，周一在Xdite老师的直播里老师提到有个同学通过两个月写orid纪录情绪后，对自己的情绪掌控提高了很多，才发现自己之前写的orid忽略了感知情绪的这一块。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.hanwei.ink/2017/03/18/1606964/" data-id="ck5w0ts7x006ws9x1f299o2xv" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-1585602" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/03/15/1585602/" class="article-date">
+  <time datetime="2017-03-15T00:33:00.000Z" itemprop="datePublished">2017-03-15</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/编程技术/">编程技术</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/15/1585602/">编程套路：Rename heroku repo的方法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>###重命名heroku repo名称的方法有两种，一种是在网页里设置，另一种是在command里设置，方法来源：<a href="https://devcenter.heroku.com/articles/renaming-apps#updating-git-remotes。具体如下：" target="_blank" rel="noopener">https://devcenter.heroku.com/articles/renaming-apps#updating-git-remotes。具体如下：</a></p>
+<p>####一、在网页里设置<br>1、现在heroku对应的专案页面中的settings的name中修改；<br>2、因为远端的名称修改，本地的远方地址需要重新设置；<br>3、执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git remote rm heroku</span><br><span class="line">git remote -v</span><br><span class="line">git remote add heroku https://git.heroku.com/XXXXX.git（XXXXX是heroku名字，在heroku网页中可以查）</span><br></pre></td></tr></table></figure>
+
+<p>4、或者可以执行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote rm heroku</span><br><span class="line">heroku git:remote -a newname</span><br></pre></td></tr></table></figure>
+
+<p>####二、在iterm里设置<br>使用命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">heroku apps:rename newname</span><br></pre></td></tr></table></figure>
+
+<p>如果不行，可再执行一中的步骤4；</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.hanwei.ink/2017/03/15/1585602/" data-id="ck5w0ts7x006us9x1gibvbafe" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-1577480" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/03/14/1577480/" class="article-date">
@@ -117,7 +252,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/03/14/1577480/" data-id="cjymt6r8i006qv6x1lnwcsx0g" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2017/03/14/1577480/" data-id="ck5w0ts7w006ss9x1d4e7snep" class="article-share-link">Share</a>
       
       
     </footer>
@@ -175,7 +310,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/03/13/1567670/" data-id="cjymt6r8j006sv6x1915121ni" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2017/03/13/1567670/" data-id="ck5w0ts7v006qs9x18ybrbsek" class="article-share-link">Share</a>
       
       
     </footer>
@@ -217,7 +352,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/03/12/1552778/" data-id="cjymt6r8h006ov6x1drsb6e6a" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2017/03/12/1552778/" data-id="ck5w0ts7t006ms9x1j2clbruo" class="article-share-link">Share</a>
       
       
     </footer>
@@ -264,7 +399,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/03/12/1552686/" data-id="cjymt6r8h006mv6x1zunyzj8k" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2017/03/12/1552686/" data-id="ck5w0ts7u006os9x1blnkuplt" class="article-share-link">Share</a>
       
       
     </footer>
@@ -311,7 +446,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/03/12/1552614/" data-id="cjymt6r8g006kv6x19njkf653" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2017/03/12/1552614/" data-id="ck5w0ts7s006ks9x1juqjh848" class="article-share-link">Share</a>
       
       
     </footer>
@@ -369,7 +504,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/03/11/1538502/" data-id="cjymt6r8e006gv6x1l2exf81d" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2017/03/11/1538502/" data-id="ck5w0ts7r006gs9x14ioa0i3y" class="article-share-link">Share</a>
       
       
     </footer>
@@ -416,184 +551,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/03/11/1538143/" data-id="cjymt6r8d006ev6x17nng11ef" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-20170306-learning-record" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/03/11/20170306-learning-record/" class="article-date">
-  <time datetime="2017-03-11T01:59:00.000Z" itemprop="datePublished">2017-03-11</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/编程技术/">编程技术</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/11/20170306-learning-record/">20170306学习纪录</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>##Objective</p>
-<p>###关于今天的课程，你记得什么？</p>
-<p>####新旧知识<br>1、Xdite老师说了下，接下来的课程安排；<br>2、5月份会开线下班；<br>3、后期会有api的课程；<br>4、后期也会教大家如何编写ios的程序；</p>
-<p>####遗留问题<br>赶上课程进度。。。</p>
-<p>####涉及资源<br>1、《软技能》<br>2、《Ruby refecting》<br>3、《师傅》<br>4、《发布》</p>
-<p>###完成了什么？<br>1、看了Xdite老师的直播；</p>
-<p>##Reflective</p>
-<p>###你要如何形容今天的情绪？<br>还没有创意大赛的低迷中走出来；</p>
-<p>###今天的高峰是什么？<br>无</p>
-<p>###今天的低点是什么？<br>情绪低迷。</p>
-<p>##Interpretive</p>
-<p>###我们今天学到了什么？<br>主线的课程已经学完了，后面的是支线任务，老师会不断完善课程；</p>
-<p>###今天一个重要的领悟是什么？</p>
-<p>####学习方法<br>无</p>
-<p>####编程知识<br>无</p>
-<p>##Decisional</p>
-<p>###我们会如何用一句话形容今天的工作？<br>不行了，连老师直播的鸡血都无法拯救低迷的情绪；</p>
-<p>###有哪些工作需要明天继续努力？<br>调整好状态，写个创意大赛总结；</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/03/11/20170306-learning-record/" data-id="cjymt6r8f006iv6x13qxigg2m" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-20170305-study-summary-report-meetup-harvest" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/03/07/20170305-study-summary-report-meetup-harvest/" class="article-date">
-  <time datetime="2017-03-07T08:59:00.000Z" itemprop="datePublished">2017-03-07</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/编程技术/">编程技术</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/07/20170305-study-summary-report-meetup-harvest/">20170305学习总结（附Meetup收获）</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>##Objective</p>
-<p>###关于今天的学习，你记得什么？</p>
-<p>####新旧知识<br>1、深圳这个城市的氛围更适合创业者和打拼的人；<br>2、深圳的办事效率很高；<br>3、广州的社保停缴以后才能转到深圳；</p>
-<p>####遗留问题</p>
-<p>####涉及资源<br>1、Github desktop</p>
-<p>###完成了什么？<br>1、参加了广州线下meetup；<br>2、为网页加入了伪搜索框；</p>
-<p>##Reflective</p>
-<p>###你要如何形容今天的情绪？<br>第二次参加了广州的meetup，和小伙伴们的熟悉度加强，本想逼演示十分钟抄别人功能，结果发现别人的是伪功能导致装逼失败…和小伙伴们分享了很多看法，发现在这个过程中自己也激发出了新的理解，分享真是个好东西。第二场参加meetup，就知道两个早起一起策划meetup的小伙伴一个去了上海，一个去了深圳，下次再见不知何时，心理及替他们高兴，又有些小小的失落。</p>
-<p>###今天的高峰是什么？<br>和meetup的伙伴们愉快的聊天。</p>
-<p>###今天的低点是什么？<br>想实现三个功能，结果只实现了一个，还是伪的。。。</p>
-<p>##Interpretive</p>
-<p>###我们今天学到了什么？<br>1、抽象和具象是相对的两个过程；<br>2、影像阅读其实是具象的能力；<br>3、用语言文字其实无法完整的描绘图像；<br>4、过目不忘和影像阅读其实是两种能力；<br>5、到后期，若果logdown设计到一些项目秘密的话，就应该设为私有；</p>
-<p>###今天一个重要的领悟是什么？</p>
-<p>####学习方法<br>具象化这个概念，同抽象化的概念，以及他们两者的不同用途；</p>
-<p>####编程知识<br>可以通过网页定制网站找前端素材；</p>
-<p>##Decisional</p>
-<p>###我们会如何用一句话形容今天的工作？<br>分享到头疼。</p>
-<p>###有哪些工作需要明天继续努力？<br>1、惯例看直播；<br>2、补作业；</p>
-<p>##Meetup</p>
-<p>###从陈颖君那知道了关于深圳的大量信息，并且为我提供了一些因为自己执念而没有正视的实际情况；</p>
-<p>###本周从郭建这里知道了一个重要的工具githubdesktop，惊为神器；</p>
-<p>###从崔世瑞的购物网站上收获了不少快乐，真是个神奇的网站；</p>
-<p>###看了罗慧仪演示了下她是如何使用的w3cscholl实现一个功能的；</p>
-<p>###另外本周还新认识了两个小伙伴，黄小茜，陈玲敏，感觉也是非常有趣的人；</p>
-<p>###因为陈颖君下周移步深圳了，以后队长任务就由我和崔世瑞和郭建来兼任了；</p>
-<p>###由于大家都在赶比赛，所以没有太多的干货分享，考虑以后发展下多样化形式让大家共同成长；</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/03/07/20170305-study-summary-report-meetup-harvest/" data-id="cjymt6r8c006av6x1ik0ny2jq" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-i-play-journey-and-harvest" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/03/07/i-play-journey-and-harvest/" class="article-date">
-  <time datetime="2017-03-07T06:18:00.000Z" itemprop="datePublished">2017-03-07</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/编程技术/">编程技术</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/07/i-play-journey-and-harvest/">我参赛的心路历程与收获</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>###心路历程<br>商店大赛终于结束了，没错，终于。作为一名上班之余学习的人，我也算是松了一口气。相信有很多的上班族同学也是这样的感觉，自参赛以来，注意力就完全被吸干了，生活一团乱麻。然而在这个痛苦的过程中终究还是有所收获，一笔不小的收获。<br>比赛开始之初，因为自己的学习进度和教材的进度有了一小段的距离，加之家里发生了些事情，本打算就此作罢，后期自己再琢磨着自己完善自己的购物网站。然而，在看了Xdite老师在2月20号的演讲后，我意识到了自己这个观念的错误。首先，比赛的首要目的是锻炼协作能力，而这个和最新的课程进度实际上是关联不大的；其次，参加比赛的过程同实际的项目过程是非常相似的，边学边做，争分夺秒，是个很好的模拟实战机会；最后，如果打算进行职业转换，拿出一个像样的合作作品非常重要，而这时自己一个人捣鼓很难有的效果。羞愧的我直播一结束就广州meetup群求组，要知道这时比赛已经开始了一个星期。很巧，另一个刚看完直播也在羞愧的罗慧仪同学也萌生了组队的想法，于是我们就在这样的状态下组队开始了比赛。<br>相信通过网络合作完成具体编程项目很多人都是第一次，我们当然也不例外。组队当天，简单讨论了以后发现一切都是毫无章法，完全是懵逼的状态。而后的两天也处于模模糊糊的讨论状态，实际上讨论了些东西，但感觉上好像又没有讨论什么。一直到第四天，大家通过微信通话，才开始了真正有效的交流，选题、model的设置、功能实现顺序等等。<br>由于组队的两人都是上班族，所以合作的时间只能是晚上和周末，所以在剩下的时间里，就是一点一点的加功能、一点一点的改界面，虽然比起其他同学我们进步缓慢，而且也不能说花了全部可用的时间，但是我们确确实实耗费了很大的精力。然而，这也是理所当然地事情，只要是一个认真工作的人，一个认真对待家人的人。在上班之余，在陪同家人之后，即便你还有时间，你的精力也大打折扣。所以，比起那些开足全部马力参赛的同学，我们最终的成果确实相当的初级与不完善。<br>比赛过程中每当看到其他同学漂亮的页面、强大的功能、以及快速的迭代，我们的心中充满了自卑与焦虑。这种对比的心态从参赛开始蔓延的比赛结束的前两天，那时的我们生活已经是糟得不能再糟了，对于爱干净的我来说，从比赛开始家务就已经没有再做了，面对脏乱的环境，我的内心也混乱不堪。而罗慧仪同学也因为连续一种熬夜整个人完全掉线了。所幸，在比赛结束前的周六，大家坦诚的交流了下自己的进度，发现都已经停滞了一两天。进一步的，发现我们都已经因为前期的无计划赶进度产生了严重的厌恶情绪。面对这样的情况，商量之下决定暂停比赛了。其实，仔细想来，这场比赛本身就是一场投入时间和精力的比拼。而面对待业党与学生党，我们上班族显然天然处于劣势，在这样的情况下，更明智的对比，应该是自己和自己比，而不是去和别人比。当意识到这点的时候，发现我们已经不知不觉由进步型变成了表现型，而且是那种表现失败的表现型。试想，你做出了一个新功能，你和自己比，是+1。而你做出了一个新功能，别人做出了3个新功能，你和别人比就是-2，多么强大的负反馈啊。<br>暂停了比赛的当天下午，发现自己神奇的又恢复了兴趣，而后又开始琢磨起了新功能，只是这次我已经换了一个心态，认清了自己的状况，也就明白那些奖品与名次其实已经与自己无关，而我要做的就是学习学习再学习。比赛结束前我又给网页加了个伪功能，虽然已经无足轻重，但是它是整个过程里我做得最开心一个。^o^</p>
-<p>###收获</p>
-<p>####做事心态<br>做事情定好战略或者调整好战略以后，就要和自己比，看看自己的执行情况，而不是去和别人比，要通过和自己比不断激励自己；而是否能拿第一，既看自己的实力与把控能力，也看serendipity；</p>
-<p>####比赛策略<br>做什么事情，制定策略与项目管理是第一件应该做的事情，虽然看了Xdite老师的敏捷项目管理课程，也知道它获得hack松的精力，但是在这次的比赛中我们并没有能自觉按照这个方法进行比赛策略的制定，及项目管理，对于教材里面提及的githubproject管理工具也没有好好使用，造成比赛过程无限发散，根本不在可把控的范围内。</p>
-<p>####有效交流<br>在比赛开始的几天了，我们只是通过微信文字交流，直到第四天我们才开始真正通过微信语音通话进行高质量的交流，所以交流的实时性非常重要，比起文字，语言与视频的交互质量更高；</p>
-<p>####分工科学<br>要科学的规划项目合作过程的开发顺序。虽然我和队友一人负责功能一人负责前端，但在实际过程中我们并没有安排好具体的合作时间分配，造成前端完成后，而相应的后端还没有完成，导致队友的项目开发时间白白浪费；</p>
-<p>####GitHub<br>通过组队体会到了Github真是提供了一个非常牛逼的合作功能，这是只使用过excel/word多人共享工作模式的人未体验过的，其背后是思想相当有意思，Github的官方工具github desktop更是学习别人功能的利器；</p>
-<p>####javescript<br>在实现show页面小图点击大图变化功能时，学习到了一些js的知识，发现js其实是本质上也是程序，其实通过动作出发而已；</p>
-<p>####学习别人的功能代码<br>在学习的过程中，学会了通过commit及blass来追踪其他同学实现某个功能代码的脉络，进一步提供了进一步学习的可能；</p>
-<p>####landingpage<br>在学习过程中，发现其实网页的核心是让别人想买你的产品服务，而不是你的页面多么漂亮；</p>
-<p>####正确评估一个功能所需要的工作量<br>在设计产品的时候，我们使用了两个model类，一开始以为只需要价格model就可以了，后面发现cart要改，再后面发现order也该，后来发现mailer也要改；而别人知识通过一个category和对应的column就可以实现了相关的功能。。</p>
-<p>####加深了对gem的理解<br>gem就是代码集合，知识打包了而已，可以拆开来用，也可是制定知己的gem；</p>
-<p>####互联网服务<br>通过部署heroku及邮件服务，了解到了其实本质上，晚上的各个功能都是不同模块的整合，小的可以叫gem,大的可以叫云服务，互相之间通过交互语言来实现协作；</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.hanwei.ink/2017/03/07/i-play-journey-and-harvest/" data-id="cjymt6r8d006cv6x1gob02ghn" class="article-share-link">Share</a>
+      <a data-url="http://www.hanwei.ink/2017/03/11/1538143/" data-id="ck5w0ts7q006es9x1ncno3oww" class="article-share-link">Share</a>
       
       
     </footer>
@@ -633,7 +591,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">七月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">五月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">四月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">二月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">九月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">五月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">六月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">七月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">五月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">四月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">二月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">九月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">五月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">六月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a></li></ul>
     </div>
   </div>
 
@@ -677,7 +635,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2019 <span id="heart">♥</span> Han Wei<br>
+      &copy; 2020 <span id="heart">♥</span> Han Wei<br>
       Email: i@hanwei.ink<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
