@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>typescript未来会如何？ | 码字空间</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="日前，阮一峰老师公开发表了对typescript(后简称TS)未来的不看好的观点。  阮一峰老师的核心逻辑是这样的：1，未来任何语言都可以写前端；2，在此前提下，为了解决js类型问题的ts本身作为js的超集并不具备天生的类型优势；由此两条得出一个结论，既然能用诸如java等强类型语言来写，为何还要用ts呢？  那阮一峰老师的观点如何呢？我们来分析一下。  未来任何语言都能写前端？其实准备的说，是未">
+<meta property="og:type" content="article">
+<meta property="og:title" content="typescript未来会如何？">
+<meta property="og:url" content="http://www.hanwei.ink/2019/07/21/how-about-typescript-future/index.html">
+<meta property="og:site_name" content="码字空间">
+<meta property="og:description" content="日前，阮一峰老师公开发表了对typescript(后简称TS)未来的不看好的观点。  阮一峰老师的核心逻辑是这样的：1，未来任何语言都可以写前端；2，在此前提下，为了解决js类型问题的ts本身作为js的超集并不具备天生的类型优势；由此两条得出一个结论，既然能用诸如java等强类型语言来写，为何还要用ts呢？  那阮一峰老师的观点如何呢？我们来分析一下。  未来任何语言都能写前端？其实准备的说，是未">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-07-12T04:36:32.493Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="typescript未来会如何？">
+<meta name="twitter:description" content="日前，阮一峰老师公开发表了对typescript(后简称TS)未来的不看好的观点。  阮一峰老师的核心逻辑是这样的：1，未来任何语言都可以写前端；2，在此前提下，为了解决js类型问题的ts本身作为js的超集并不具备天生的类型优势；由此两条得出一个结论，既然能用诸如java等强类型语言来写，为何还要用ts呢？  那阮一峰老师的观点如何呢？我们来分析一下。  未来任何语言都能写前端？其实准备的说，是未">
+  
+    <link rel="alternate" href="/atom.xml" title="码字空间" type="application/atom+xml">
+  
+  
+    <link href="/favicon.ico" rel="icon" type="image/x-icon">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">码字空间</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">韩巍的一点墨水</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.hanwei.ink"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-how-about-typescript-future" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/07/21/how-about-typescript-future/" class="article-date">
+  <time datetime="2019-07-21T15:53:00.000Z" itemprop="datePublished">2019-07-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/编程技术/">编程技术</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      typescript未来会如何？
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>日前，阮一峰老师公开发表了对typescript(后简称TS)未来的不看好的观点。 </p>
+<p>阮一峰老师的核心逻辑是这样的：1，未来任何语言都可以写前端；2，在此前提下，为了解决js类型问题的ts本身作为js的超集并不具备天生的类型优势；由此两条得出一个结论，既然能用诸如java等强类型语言来写，为何还要用ts呢？ </p>
+<p>那阮一峰老师的观点如何呢？我们来分析一下。 </p>
+<p>未来任何语言都能写前端？其实准备的说，是未来会有更多的语言至此WebAssembly(后简称WA)。浏览器目前的主流工作方式是，通过V8引擎将js代码进行编译，之后交由浏览器更底层的内核来执行。而WA，则是由多种语言转换成字节码交由WA虚拟机执行，而WA虚拟机则对接浏览器底层，其工作原理类似JAVA。从性能上，WA的执行比JS快很多。就像在服务端的JAVA的执行优于JS。 </p>
+<p>这么说来，好像JS会被淘汰一样。但事实是，就目前来说，WA还不能直接操作DOM。现有的方法都是通过间接调用JS实现，就使用和性能上说，还不如直接使用呢。WA与其看做是JS的颠覆者，倒不如看成是JS的补充者。在强计算的场景下，利用各语言的特长来对客户端的能力进行进一步的扩展。 </p>
+<p>这么看来，即使很多语言能参与到浏览器中来，但核心地位的JS短期还是不会变化的，而且就目前的实现方案来看。现阶段的.wasm文件还是需要通过JS引入执行就很好的说明了问题。 </p>
+<p>即便你通过JAVA写了WA，你还是得使用JS。而有JS的地方，自然也就还有TS。 </p>
+<p>从另一个角度讲，微软背书的TS未来是否也会成为支撑WA的语言呢？如果可以，那也不是一种选择？ </p>
+<p>另一方面，JAVA的类型系统更加全面，但也更加复杂。就类型而言，很多人认为JS是自由的，在写代码的时候，不用考虑那么多东西，专注在业务逻辑上，某种角度来说，动态弱类型反而是JS的优良特性。而TS的出现，可以认为正好在JAVA和JS的中间建立了一个桥梁。一方面我们可以用any类型享受到JS的自由，另一方面我们又可以通过明确的类型在编译阶段扫除掉弱类型带来的潜在问题。阮一峰老师认为TS的类型系统不如JAVA就不如写JAVA这一点显然是不对的，因为若如此JS就不会有今天的发展。 </p>
+<p>JAVA的发展和JS的发展源于他们在不同领域的特长发挥，脱离场景谈语言优劣是没意义的。 </p>
+<p>typescript未来会如何？ </p>
+<p>我觉得就类型系统和WA的发展来判断是不足以得出具体结论的。我更倾向于详细人类群体的惯性。我不认为未来会有很多后端会转职成前端，特别是使用它们现有的技术语言写前端。我更倾向于认为，未来写前端的还是前端。而要它们放弃现有的语言去学习新的语言来写前端也是不太可能的。所以，JS在前端领域依旧会是霸主，而WA的支持语言也并不会把JS、TS排除在外。而在前端项目复杂度越来越高的前提下，TS无疑是前端同学应对复杂工程最优的选择。 </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.hanwei.ink/2019/07/21/how-about-typescript-future/" data-id="ckj87hdrz009ngrjxmb4wq1dw" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/07/21/arts-first-week/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          ARTS第一周
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/07/11/learning-experience-of-dida-reading/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">水滴阅读学习体验</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/个人轨迹/">个人轨迹</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/生活感悟/">生活感悟</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/编程技术/">编程技术</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/英语学习/">英语学习</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/诗词歌赋/">诗词歌赋</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/读书心得/">读书心得</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/闲谈趣事/">闲谈趣事</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">一月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">七月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">五月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">四月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">二月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">九月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">五月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">六月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/01/28/hello-to-new-year-2020/">辞旧迎新（己亥）</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/28/arts-second-week/">ARTS第二周</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/28/make-explore-of-await/">await探究</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/24/how-to-build-a-blog-quickly/">如何快速搭建一个博客</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/23/my-blog-formally-lauched/">我的博客终于正式上线啦！</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 <span id="heart">♥</span> Han Wei<br>
+      Email: i@hanwei.ink<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a><br>
+      网站备案号：<a href="http://www.beian.miit.gov.cn" target="_blank">粤ICP备17145155号-1</a><br>
+      工信部网站：<a href="http://www.beian.miit.gov.cn" target="_blank">http://www.beian.miit.gov.cn</a>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

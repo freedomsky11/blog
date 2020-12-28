@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>20170615学习纪录 | 码字空间</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="##Objective ###今天做了什么？  写ORID 看了全栈营二期的创意大赛比赛总结直播 学了Rails第三课：Rails101第四章 重点学习了下RESTful的概念  ###关于今天的学习，你记得什么？ ####新旧知识  routes里面的resources是一组资源的意思 RESTful概念是指，将CRUD封装起来，然后在外面对应着四个基本verb：POST、GET、UPDATE、">
+<meta property="og:type" content="article">
+<meta property="og:title" content="20170615学习纪录">
+<meta property="og:url" content="http://www.hanwei.ink/2017/06/16/20170615-learning-record/index.html">
+<meta property="og:site_name" content="码字空间">
+<meta property="og:description" content="##Objective ###今天做了什么？  写ORID 看了全栈营二期的创意大赛比赛总结直播 学了Rails第三课：Rails101第四章 重点学习了下RESTful的概念  ###关于今天的学习，你记得什么？ ####新旧知识  routes里面的resources是一组资源的意思 RESTful概念是指，将CRUD封装起来，然后在外面对应着四个基本verb：POST、GET、UPDATE、">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-07-12T04:36:32.493Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="20170615学习纪录">
+<meta name="twitter:description" content="##Objective ###今天做了什么？  写ORID 看了全栈营二期的创意大赛比赛总结直播 学了Rails第三课：Rails101第四章 重点学习了下RESTful的概念  ###关于今天的学习，你记得什么？ ####新旧知识  routes里面的resources是一组资源的意思 RESTful概念是指，将CRUD封装起来，然后在外面对应着四个基本verb：POST、GET、UPDATE、">
+  
+    <link rel="alternate" href="/atom.xml" title="码字空间" type="application/atom+xml">
+  
+  
+    <link href="/favicon.ico" rel="icon" type="image/x-icon">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">码字空间</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">韩巍的一点墨水</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.hanwei.ink"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-20170615-learning-record" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/06/16/20170615-learning-record/" class="article-date">
+  <time datetime="2017-06-15T22:39:00.000Z" itemprop="datePublished">2017-06-16</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/编程技术/">编程技术</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      20170615学习纪录
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>##Objective</p>
+<p>###今天做了什么？</p>
+<ol>
+<li>写ORID</li>
+<li>看了全栈营二期的创意大赛比赛总结直播</li>
+<li>学了Rails第三课：Rails101第四章</li>
+<li>重点学习了下RESTful的概念</li>
+</ol>
+<p>###关于今天的学习，你记得什么？</p>
+<p>####新旧知识</p>
+<ol>
+<li>routes里面的resources是一组资源的意思</li>
+<li>RESTful概念是指，将CRUD封装起来，然后在外面对应着四个基本verb：POST、GET、UPDATE、DELETE，里面则是基本的七个acion和四个页面</li>
+<li>rails就是按照RESTful概念设计的，所以在编程的时候只要重点写好CRUD其他功能rails基本就已经帮我们完成了，只需要在进行参数设置、数据限制、页面设计就可以</li>
+<li>path路径其实就是helper的一个简写，在生产网页的时候还是会转换回基本的url的</li>
+<li>在controller中定义的变量，带@的这些基本可以理解成中间量，他们只在controller中运算，在传送给view或者model后就会失效了。</li>
+<li>浏览器真是一个重要的角色</li>
+<li>人和浏览器之间的交互就两个，分别是request和response。</li>
+<li>response分两种，可见、不可见。可见的就是在views上、不可见的就是在model里。</li>
+<li>request面向controller，这里就用到了RESTful概念了，request原先用GET和POST两种，在RESTful里面有四个verb如上所述。而，request是通过调用url来实现的，这个功能的背后就是routing也是我们在config/routes里面的设置。</li>
+<li>Controller收到request后，对应四个动作，有七个响应（行动）及四个页面。他们通过Verb（动作、方法）和path（helpler、路径）来选择。</li>
+<li>不同的对象会有不同的controller文件和views，在rails里生成controller的时候会生产对应的controller文件及views文件夹，七个响应在controller里是有固定名字的，对应其中的四个会有相应的四个自动调用的页面，他们的命名也是有规则的。</li>
+<li>如果需要数据，则需要在controller中定义@变量，controller在model和view之间传输数据就是靠@变量。</li>
+<li>Controller的@变量和view之间只是数据传递关系，@变量和model之间则是运算关系。</li>
+<li>model和数据库之间使用的是数据库语言，但是controller和model之间使用的则是method方法，controller通过method方法完成和model的对话，这类方法本质上应该是属于model的方法（这点需要确认），但看上去对数据库的操作是使用model的method。而@变量和数据之间的关系，就像word应用程序与doc文件的具体关系，在CRUD后，C与U还需要进行保存操作，而D则不用。R就相当于用word打开doc，C相当于在word上新建doc，之后还需要保存到数据库，U相当于更改R或C后的doc，同样需要保存。D则相当于直接在word里删除doc。</li>
+<li>params[:id]的意思可能是，从当前的参数列表中提取id这个参数</li>
+<li>render是返回某个页面但是不刷新数据，就是不会重新进行一遍controller里面的取值操作的意思，也可以理解成不重新从model里面拿object的意思。</li>
+<li>默写的CRUD前面四个是给views传参数用的，后面几个是对model传参数用的。</li>
+<li>validates是表示model接受数据时候的限制，这个并不限制controller的输出，而是限制model的输入</li>
+<li>render “form”是 &lt;%= render :partial =&gt; “form” %&gt; 的“缩写”，意思是要引用 Partial (局部）页面的方式。大量重复的程式码可以用这样的方式收纳。它的规则是同目录底下的 _xxxx.html.erb，要是其他地址则需写全，比如：”common/footer”或”common/navbar”</li>
+<li>&lt;%= f.label “title”, :class =&gt; “string optional control-label” %&gt;和 &lt;%= f.text_field :title, :class =&gt; “string optional form-control” %&gt;中，f.xxx表示显示类型，第二个的title表示接受数据对象，后面的class是样式。f,是前面复制的group</li>
+<li>gem 不是动态载入 Rails 环境的，只有“在 app/ 下开发的程式码”是动态载入，所以当有 <code>app</code> 外的档案被修改，都应该“重开”治百病。动态载入可以这么理解，就是这类动态载入的内容在程序运行期间是会不断发生变化，也就是刷新的。所以，新的变动会立马发生变化，但是类似GEM这些在程序一开始运行的时候载入后，后面就不会变动了。</li>
+<li>在 Restful 的概念里把这个 groups 叫做 resources，“一组资源”的意思。</li>
+<li>为了要控制它的运作，我们会创建一个新的 Controller文件 叫做 groups_controller.rb、</li>
+<li>这七个 action ，是每个CRUD功能里最基本的动作。只要我们在 controller.rb 里定义 (def) 好这七个方法当作动作 (action)。其他的部分 Rails 就会帮我们处理了。</li>
+<li>比如，设定 Routing (路由) 只需要简单一行: resources :groups,就可以了，所以我们定义好这七个action就算是完成了最基本的后端工作。这样不管浏览器端跑来什么样的请求 (request) ，Routing都会聪明地帮我们导向正确的 action 去运作后续流程。</li>
+<li>因为 CRUD 是常见的操作行为，但是大家实作的方式、与网址设计方式不一样。造成很多维护上的困扰。后来就有人发明 RESTful 这个概念，希望用 HTTP 的动作 ( Verb）一起去封装 CRUD 的行为。所以，RESTful实际上相当于一个打包好的CRUD，适用于不同的浏览器。</li>
+<li>而CRUD是指四种面向浏览器的四类操作，涉及七个Action，也可以理解为七个动作，以及四个页面。</li>
+<li>所以，我们只要做好这七个ACTION，其他的工作rails会帮我们处理，因为其他部分的实际上是通用的程序。只需要进行一些通用设定就可以。</li>
+<li>所以，本质上来看ROR就是写好CRUD，设置到config（routes），规定好model，设计好views，再加上一些其他的设置。</li>
+<li>使用封装过后的RESTful，CRUD在外部看来就是四个HTTP request。所以提高了兼容性。</li>
+<li>resources就是一组资源的意思，在routes中就是表示这是一组restful资源，也即是一组规定格式的CRUD。</li>
+</ol>
+<p>####遗留问题</p>
+<ol>
+<li>能否不适用@而直接对数据库操作？</li>
+</ol>
+<p>####涉及资源</p>
+<ol>
+<li>网站：LOGDOWN；</li>
+<li>网站：全栈营</li>
+<li>网页：Rails 还有很多内建验质函式，你可以看这里：<a href="http://guides.rubyonrails.org/active_record_validations.html" target="_blank" rel="noopener">http://guides.rubyonrails.org/active_record_validations.html</a></li>
+</ol>
+<p>##Reflective</p>
+<p>###你要如何形容今天的情绪？</p>
+<ol>
+<li>学习RESTful的时候大脑有过载的感觉，边调整呼吸边喝水坚持学习完了。感觉还是有些理解的不够透彻。</li>
+</ol>
+<p>###今天的高峰是什么？</p>
+<ul>
+<li>加深了对RESTful的理解</li>
+</ul>
+<p>###今天的低点是什么？</p>
+<ul>
+<li>学习的时间长了会有疲惫感。</li>
+</ul>
+<p>##Interpretive</p>
+<p>###我们今天学到了什么？</p>
+<ol>
+<li>大脑有过载的感觉时，边调整呼吸边喝水坚持学习完了。</li>
+<li>scaffold也许是早起rails内置的，后面虽然功能完善，但一直保留，貌似后面建立程序就不是这么用了。</li>
+<li>全栈营的论坛就像个矿场，没事可以去挖一挖。</li>
+<li>有五个对象的MVC模型图貌似比四层空间模型好用，在加一个浏览器对象做中介效果更佳。最后画了个六个对象的关系图。</li>
+<li>Rails MVC架构、CRUDRails的RESTful是重点内容，要多回顾。</li>
+</ol>
+<p>###今天有什么重要的领悟？</p>
+<p>####编程知识</p>
+<ul>
+<li>本质上来看ROR就是写好CRUD，设置到config（routes），规定好model，设计好views，再加上一些其他的设置。</li>
+</ul>
+<p>##Decisional</p>
+<p>###我们会如何用几句话形容今天？</p>
+<ul>
+<li>加深了对RESTful的理解。</li>
+</ul>
+<p>###明天有什么计划？</p>
+<ol>
+<li>写ORID</li>
+<li>学全栈营</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.hanwei.ink/2017/06/16/20170615-learning-record/" data-id="ckj87hdr8007qgrjxy1xwl222" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/06/17/20170616-learning-record/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          20170616学习纪录
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/06/15/an-error-record-app-helpers-flashes-helper-a-app-helpers-flasher-helper-rb-rb/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">报错纪录：将app/helpers/flashes_helper.rb 打成 app/helpers/flasher_helper.rb</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/个人轨迹/">个人轨迹</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/生活感悟/">生活感悟</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/编程技术/">编程技术</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/英语学习/">英语学习</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/诗词歌赋/">诗词歌赋</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/读书心得/">读书心得</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/闲谈趣事/">闲谈趣事</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">一月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">七月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">五月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">四月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">二月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">九月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">五月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">六月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/01/28/hello-to-new-year-2020/">辞旧迎新（己亥）</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/28/arts-second-week/">ARTS第二周</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/28/make-explore-of-await/">await探究</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/24/how-to-build-a-blog-quickly/">如何快速搭建一个博客</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/23/my-blog-formally-lauched/">我的博客终于正式上线啦！</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 <span id="heart">♥</span> Han Wei<br>
+      Email: i@hanwei.ink<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a><br>
+      网站备案号：<a href="http://www.beian.miit.gov.cn" target="_blank">粤ICP备17145155号-1</a><br>
+      工信部网站：<a href="http://www.beian.miit.gov.cn" target="_blank">http://www.beian.miit.gov.cn</a>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
