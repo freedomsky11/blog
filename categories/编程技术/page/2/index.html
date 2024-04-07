@@ -1,0 +1,773 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="robots" content="noindex"><meta><title>分类: 编程技术 - 码字空间</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="码字空间"><meta name="msapplication-TileImage" content="/img/favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="码字空间"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="韩巍的博客"><meta property="og:type" content="blog"><meta property="og:title" content="码字空间"><meta property="og:url" content="https://www.hanwei.ink/"><meta property="og:site_name" content="码字空间"><meta property="og:description" content="韩巍的博客"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://www.hanwei.ink/img/og_image.png"><meta property="article:author" content="Han Wei"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://www.hanwei.ink/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.hanwei.ink"},"headline":"码字空间","image":["https://www.hanwei.ink/img/og_image.png"],"author":{"@type":"Person","name":"Han Wei"},"publisher":{"@type":"Organization","name":"码字空间","logo":{"@type":"ImageObject","url":{"text":"首页"}}},"description":"韩巍的博客"}</script><link rel="alternate" href="/atom.xml" title="码字空间" type="application/atom+xml"><link rel="icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/6.0.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><script src="https://www.googletagmanager.com/gtag/js?id=G-D3QCK6R4PV" async></script><script>window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'G-D3QCK6R4PV');</script><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.2"></head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/">首页</a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a><a class="navbar-item" target="_blank" rel="noopener" href="https://happiness.hanwei.ink/">&lt;&lt;幸福主义&gt;&gt;</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/freedomsky11/blog"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/categories">分类</a></li><li class="is-active"><a href="#" aria-current="page">编程技术</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2017-06-21T02:16:00.000Z" title="6/21/2017, 10:16:00 AM">2017-06-21</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/">编程技术</a></span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2017/06/21/20170620-learning-record/">20170620学习纪录</a></p><div class="content"><p>##Objective<br>###今天做了什么？</p>
+<ol>
+<li>完成了rails101附加作业</li>
+</ol>
+<p>###关于今天的学习，你记得什么？<br>####新旧知识</p>
+<ol>
+<li>namespace就是域名空间，和资源不同，它没有具体的action，知识一个名字，所以和同层级的资源是并列关系。</li>
+<li>调用经过中间表连接的数据时，使用的不是source名称，使用的是在model里面定义的名称。</li>
+<li>will_paginate的使用方法有三步，安装、controller使用，页面加上页标。</li>
+<li>面向对象的话，可以理解视觉限制和行为限制还有数据结构控制，分别通过view和controller还有model设限制。</li>
+</ol>
+<p>####遗留问题</p>
+<ol>
+<li>无</li>
+</ol>
+<p>####涉及资源</p>
+<ol>
+<li>网站：全栈营</li>
+</ol>
+<p>##Interpretive<br>###我们今天学到了什么？</p>
+<ol>
+<li>要注意区分push github和heroku 的命令。</li>
+</ol>
+<p>###今天有什么重要的领悟？<br>####编程知识</p>
+<ul>
+<li>总结will_paginate的使用方法有三步，安装、controller使用，页面加上页标。</li>
+</ul>
+<p>##Reflective<br>###你要如何形容今天的情绪？</p>
+<ol>
+<li>晚上头疼，已经有段时间没有这感觉了，可能需要休息了。</li>
+</ol>
+<p>###今天的高峰是什么？</p>
+<ul>
+<li>完成了作业。</li>
+</ul>
+<p>###今天的低点是什么？</p>
+<ul>
+<li>头疼，学习学不下去。</li>
+</ul>
+<p>##Decisional<br>###我们会如何用几句话形容今天？</p>
+<ul>
+<li>在解决了一件脱了很久的事情，把作业完成了。。</li>
+</ul>
+<p>###明天有什么计划？</p>
+<ol>
+<li>写ORID</li>
+<li>学习全栈营。</li>
+</ol>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2017-06-21T01:58:00.000Z" title="6/21/2017, 9:58:00 AM">2017-06-21</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/">编程技术</a></span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2017/06/21/20170619-learning-record/">20170619学习纪录</a></p><div class="content"><p>##Objective<br>###今天做了什么？</p>
+<ol>
+<li>写ORID</li>
+<li>学习全栈营</li>
+<li>开始做rails101的附加作业。</li>
+</ol>
+<p>###关于今天的学习，你记得什么？<br>####新旧知识</p>
+<ol>
+<li>无</li>
+</ol>
+<p>####遗留问题</p>
+<ol>
+<li>无</li>
+</ol>
+<p>####涉及资源</p>
+<ol>
+<li>网站：LOGDOWN；</li>
+<li>网站：全栈营</li>
+</ol>
+<p>##Interpretive<br>###我们今天学到了什么？</p>
+<ol>
+<li>理财的重点不在具体花了多少钱，而在于你还有多少钱，大体花了多少钱。</li>
+<li>涉及到新安装GEM的，不止在bundle install后重开 rails s，在设计到相关安装的命令的时候也一样要重开rails s。</li>
+<li>教材里的“before_action 后面加的往往是一个 controller 内的 method”说明了controller的action也叫controller的method</li>
+<li>.destroy_all和delete_all是alixs</li>
+<li>把“权限检查”的代码，套用到 update / destroy 上说明两个问题，第一是可以不通过edit来启动update因为前面edit已经设置权限了，这表明可以伪造表单来传送。第二，说明在程序码里面还是按顺序来进行运算的，因为这段代码在保存的那段之上。</li>
+<li>在生成post的new的时候需要group是因为，的后面的create的时候需要页面提供group来确定关系，所以虽然在显示这一步不需要，但还是要提供。</li>
+<li>拿数据是ror的一个重要内容。</li>
+<li>has_many :participated_groups和has_many :members的红色字部分实测可以自己任意取名字。</li>
+</ol>
+<p>###今天有什么重要的领悟？<br>####编程知识</p>
+<ul>
+<li>拿数据是ror的一个重要内容。</li>
+</ul>
+<p>##Reflective<br>###你要如何形容今天的情绪？</p>
+<ol>
+<li>今天出门办事虽然过程复杂，但是情绪平稳。</li>
+</ol>
+<p>###今天的高峰是什么？</p>
+<ul>
+<li>做附加作业的时候速度很快</li>
+</ul>
+<p>###今天的低点是什么？</p>
+<ul>
+<li>做的太快，过程中出现了一些小bug，后已修复。</li>
+</ul>
+<p>##Decisional<br>###我们会如何用几句话形容今天？</p>
+<ul>
+<li>办事的缘故，今天的进度不多。</li>
+</ul>
+<p>###明天有什么计划？</p>
+<ol>
+<li>全栈营</li>
+<li>ORID</li>
+</ol>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2017-06-18T23:19:00.000Z" title="6/19/2017, 7:19:00 AM">2017-06-19</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/">编程技术</a></span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2017/06/19/20170618-learning-record/">20170618学习纪录</a></p><div class="content"><p>##Objective<br>###今天做了什么？</p>
+<ol>
+<li>写ORID</li>
+<li>全栈营<br>###关于今天的学习，你记得什么？<br>####新旧知识</li>
+<li>current_user是devise接入的user的model方法，所以能不能被model使用需要验证呢。</li>
+<li>Model里面定义的methodview也可使用，比如：.is_member_of?</li>
+<li>在一个对象的下面加入action，等于在它的这组资源上加入动作，这除了写代码，需要设置，调用路径和使用方法，这句是在routes里面设置的，”resurces :group do — member do — post :join — post :quit — end — end”</li>
+<li>member表示这个动作在groups资源名下且是对groups的单个对象进行的操作，post 表示使用方法，join和quit表示的是函数名称。有一个疑问就是，为什么是POST?试了发现在这个程序了，post、get、put、delete都可以，而另外用的abc则不行。难道这个方法名称和地址只是用来启动controller里面的函数用的吗？这个问题先留着，免得混乱</li>
+<li>这和groups名下的posts只表示从属关系不同，member涉及到对group的操作，而posts只是在对自己操作，而且是在自己的controller文件里，它只是需要group的相应id而已。</li>
+<li>脑袋模拟功能的时候要想到：动作、页面、数据。对应的来设计自己的网页。</li>
+<li>运行rails g controller account/groups时，表示了两个信息，一个是我们要形成一个关于group的account，第二个就是我们需要对group对象进行动作。</li>
+<li>在routes写入“ namespace :account do – resources :groups – end”只是设定了触发设定的链路，而并不是表示有两个groups，实际上他们操作的对象是同样的group，只不过形成两个controller文件及对应的动作和触发链路。</li>
+<li>bootstrap真是提供了不少样式啊。</li>
+<li>.participated_groups不用加.All表明，集合量和Group.All还是有区别的，后者相当于对一个抽象的概念进行运算才能拿数据。</li>
+<li>如果对应一个url只有一个verb则可以省略verb，比如edit，但如果有多个的话，就需要，比如destroy、update和show这类公用地址的。</li>
+<li>几个th和td是默认等间距安排位置的，所以他们的位置会随着网页大小的变化而变化。</li>
+<li>在实现destroy功能的时候，漏了   @group = Group.find(params[:id])这一句，居然也能删除。。搞不懂。啊，是因为find_group_and_check_permit这个before_action里面已经有了。</li>
+<li>current_user是系统参数信息，所以不用像在group里面打开posts那样还需要送group的值。</li>
+<li>虽然附加作业在调用delete和edit的时候有传送group的数据，但是在controller里面并没有用到他们，试了一下，不使用@group来接受也没问题。</li>
+<li>simple_format用来修饰网页的，所以它属于helper。或者它本来就是程序提供的helper功能，不过是本身自带还，还是bootstrap带的，还是simple_from带的这个就需要去验证才行了。</li>
+<li>后面教材解释了，simple_format 是 Rails 内建的 Helper，可以在生成网页时帮忙把 \r\n 翻译成为<br>。</li>
+<li>Helper 就是用 Ruby 写的“View 装饰的小方法”，你也可以自己定义。自制 Helper 都会放在 app/helpers 下。</li>
+<li>partial 还可以用在循环上。例：“&lt;%= render :partial =&gt; “group_item”, :collection =&gt; @groups, :as =&gt; :group %&gt;”另外一个_group_item.html.erb</li>
+<li>要注意区分“git push -u origin master”和“git push —all origin”的区别</li>
+<li>和前面不一样，这课要选择推送分支“ git push heroku ch08:master”如果退主分支的话，“ch08：”省略就行了。</li>
+<li>  root ‘welcome#index’是指root指定到welcome的index</li>
+</ol>
+<p>####遗留问题</p>
+<ol>
+<li>member表示这个动作在groups资源名下且是对groups的单个对象进行的操作，post 表示使用方法，join和quit表示的是函数名称。有一个疑问就是，为什么是POST?试了发现在这个程序了，post、get、put、delete都可以，而另外用的abc则不行。难道这个方法名称和地址只是用来启动controller里面的函数用的吗？这个问题先留着，免得混乱。</li>
+<li>右边的下拉菜单在窗口横向分辨率小于768时，如何正确显示。</li>
+</ol>
+<p>####涉及资源</p>
+<ol>
+<li>网站：LOGDOWN；</li>
+<li>网站：全栈营</li>
+<li>Helper 的意思是“小方法”，View 用的小方法，Rails 内建很多这种有趣的小东西。这里有更多小方法：<a target="_blank" rel="noopener" href="http://api.rubyonrails.org/classes/ActionView/Helpers/TextHelper.html">http://api.rubyonrails.org/classes/ActionView/Helpers/TextHelper.html</a></li>
+</ol>
+<p>##Interpretive<br>###我们今天学到了什么？</p>
+<ol>
+<li>知识的迁移本质上就是从上一个知识提取出框架，然后将相应的具体对象换掉。</li>
+<li>貌似只有带挑战而且能快速闯关（不停的活动小反馈）的事情才能进入心流</li>
+<li>优化了下ORID的顺序，不知道这个顺序最初是由哪里传出来的</li>
+<li>学习过程的理解，可以理解也是一种“中翻中”，或者说翻译，不断将未知的东西翻译成已知的东西，将他们连接起来，最开始的就是观察到的现象和图片、文字连接起来。这么看起来，除了最单一的感受外，其他所有的记忆都是复合体，并不是单一的一个记忆点，而是一个记忆集合，只不过用一个概念把他们连接起来，你在使用的时候连接了这个概念，并且相当于建立了通过连接这个概念而连接它被后其他关联量的链路。</li>
+<li>大脑学习的时候可能会出现疲劳感，坚持到它消退，和换个内容学习来消退其实本质是一样的，但坚持下去还是有不会消退的风险，就是疲劳感和厌恶感加深。所以，一定要注意自己的状态，累的时候或者厌倦的时候换个事情做来缓解一下或许是个更好的方法。这个方法应该也可以用在看书上。</li>
+<li>有很多拓展工具也，回头一定要细细研究下。</li>
+<li>helper有自带的、接入的、自定义的三种。</li>
+</ol>
+<p>###今天有什么重要的领悟？<br>####学习方法</p>
+<ul>
+<li>学习过程的理解，可以理解也是一种“中翻中”，或者说翻译，不断将未知的东西翻译成已知的东西，将他们连接起来，最开始的就是观察到的现象和图片、文字连接起来。这么看起来，除了最单一的感受外，其他所有的记忆都是复合体，并不是单一的一个记忆点，而是一个记忆集合，只不过用一个概念把他们连接起来，你在使用的时候连接了这个概念，并且相当于建立了通过连接这个概念而连接它被后其他关联量的链路。</li>
+</ul>
+<p>####编程知识</p>
+<ul>
+<li>知识的迁移本质上就是从上一个知识提取出框架，然后将相应的具体对象换掉。</li>
+</ul>
+<p>##Reflective<br>###你要如何形容今天的情绪？</p>
+<ol>
+<li>今天情绪平稳，无大的波动。</li>
+</ol>
+<p>###今天的高峰是什么？</p>
+<ul>
+<li>做附加题作业的时候思路清新动作飞快。</li>
+</ul>
+<p>###今天的低点是什么？</p>
+<ul>
+<li>学习的过程中有些地方理解不够透彻。</li>
+</ul>
+<p>##Decisional<br>###我们会如何用几句话形容今天？</p>
+<ul>
+<li>用回了交叉学习法，英语时间不减少的情况下，编程时间大幅加大。</li>
+</ul>
+<p>###明天有什么计划？</p>
+<ol>
+<li>学习全栈营</li>
+<li>写ORID</li>
+</ol>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2017-06-17T21:31:00.000Z" title="6/18/2017, 5:31:00 AM">2017-06-18</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/">编程技术</a></span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2017/06/18/20170617-learning-record/">20170617学习纪录</a></p><div class="content"><p>##Objective<br>###今天做了什么？</p>
+<ol>
+<li>写ORID</li>
+<li>全栈营学习：Rails第三课：Rails101的第六章和部分第七章</li>
+<li>和广州Meetup的小伙伴们进行购书交流</li>
+</ol>
+<p>###关于今天的学习，你记得什么？<br>####新旧知识</p>
+<ol>
+<li>关于数据的method是在model里面定义的，并且在view里面又可以使用，比如我们的群成员判断功能。</li>
+<li>当要定义多对多关系是一定要使用中间表，通过中间表的两个一对多完成多对多功能</li>
+<li>在完成好了多对多的关联后，还要写清楚多对多的两个量的关系，也就是谁是谁的成员，又是谁加入了谁</li>
+<li>No route matches [GET] “/groups/1/posts/new”，如前面说的，方法+路径。</li>
+<li>教材题目是设计 Post 的 model 架构，设计model就是设计架构吗？</li>
+<li>routes是定义资源调用地址的，资源需要你写，但写出来要使用的话还要给他们赋予一个地址</li>
+<li>  resources :groups do  –  resources :posts   –   end就是一种定义地址的方式</li>
+<li>数据关联是在model里面设置的，action在controller里面也已经有了，view也是匹配的controller，而controller的文件夹，gourps和posts是并列的，所以这个路径地址实际上影响的只是url。</li>
+<li>数据关联的另一个意义，可能还是在于参数绑定，比如：group和post的id同时获取，那么就是post的id在group的id的名下。</li>
+<li>命名规则相当于用group_post替代了group</li>
+<li>另外还有第八个动作PATCH，但它和PUT一样都是update功能。是同名还是同功能？</li>
+<li>命令git commit -m “add posts nested route”中的，nested意思就是数据关联其实就是巢状链接？nested route的意思是，这个uri了带有关联关系吧？</li>
+<li>:only =&gt; [:new, :create]和only: [:new, :create]等效。多参数就加上中括号，若果只有一个参数就不用中括号，其他的一样。</li>
+<li>在post里@group = Group.find(params[:group_id])的写法是:group_id，而在group里的写法是:id。是否在每个对象里:id默认是自己model的id，而XXX_id则是你要调用的其他model的标准写法？</li>
+<li>可能在@post.group = @group及@post.user = current_user这类写法里，group和user和group_id和user_id是等效的吧，就像人和身份证号。</li>
+<li>用group_path(@group)而不用group_posts_path(@group)，那是因为前者的页面已经包含了我们的信息，而且这样可以少一个post的index的action。</li>
+<li>  @posts = @group.posts表示一旦建立了数据关联，就可以轻松调用。</li>
+<li>method除了是“程序语句”，还可以同时是“功能叙述”。比如，.order(“created_at DESC”)用.recent代替。</li>
+<li>Scope是Rails 里面的一个内建 API可以用来包装一些查询式，让代码更直观一些。你可以想像成，拿来包装“常用 query”的方法。 </li>
+<li>scope是在model里面定义，表明controller里面使用的关于数据的方法应该就是model的方法。</li>
+<li>教材的解释，应征了前面关于model和dababase交互的理解。rails的ActiveRecord框架帮我们完成了翻译，下面一句话摘自教材。</li>
+<li>教材：“实际上呢，Model 里面的所有语句，看起来是“Ruby 语句”，实际上是 Rails 帮我们“翻译”成为了数据库语句。（这一套叫 ActiveRecord 框架）”</li>
+<li>不单单是命令窗的指令输入的返回文字有意义，rails s的运行log也有很多有用信息。</li>
+<li>“因为数据库语句也是个“巨坑”，Rails 开发的目的，在于希望程序员专注于“产品”的逻辑设计，而花上少一点时间去纠缠非常底层的细节。在刚开始学习过程中，其实你是不太需要去纠结数据库语句的，大部份你想要捞的数据，ActiveRecord 都能帮你搞定，而且可以“形容”的非常“口语”。”</li>
+<li>推送上heroku的程序，不需要bundle install，但是需要heroku run rake db:migrate</li>
+<li>要去哪里才能知道，我想要的功能要用什么 gem 呢？*各种功能的gem一览： “RubyToolbox”</li>
+<li>涉及到多对多的关系是，就需要建立个中间表，明确完三个表之间的关系后。还要通过命令明确主从关系，比如，教材：“has_many :participated_groups, :through =&gt; :group_relationships, :source =&gt; :group”和“has_many :members, through: :group_relationships, source: :user”，分别先后在model的user.rb和group.rb里面明确关系。这样当捞 user.participated_groups 时，就会捞出“参与的所有群”。如果只执行上面两句命令中的一句，那么只能捞出members或者participated_groups的。</li>
+<li>建立联系后，就可以通过activerecord去捞出数据。这个实现了比主从键直接捞数据更复杂的功能。</li>
+<li>“=&gt; #&lt;Group id: 8, title: “Board 1”, description: “Board 1 body”, created_at: “2017-06-17 06:37:08”, updated_at: “2017-06-17 06:37:08”, user_id: 2&gt;”和“ =&gt; #&lt;ActiveRecord::Associations::CollectionProxy [#&lt;Group id: 8, title: “Board 1”, description: “Board 1 body”, created_at: “2017-06-17 06:37:08”, updated_at: “2017-06-17 06:37:08”, user_id: 2&gt;]&gt;”的区别在于前者是直接从数据库读出来，后者需要通过ActiveRecord去捞出来。</li>
+<li>这个与“2.3.1 :004 &gt; g.user — User Load (0.1ms)  SELECT  “users”.* FROM “users” WHERE “users”.”id” = ? LIMIT ?  [[“id”, 2], [“LIMIT”, 1]] – =&gt; #&lt;User id: 2, email: “<a href="mailto:&#x32;&#64;&#x71;&#113;&#x2e;&#x63;&#111;&#109;">&#x32;&#64;&#x71;&#113;&#x2e;&#x63;&#111;&#109;</a>“, created_at: “2017-06-16 13:01:10”, updated_at: “2017-06-16 13:01:10”&gt;”的命令直接捞出的User还不一样，更复杂也更强大。</li>
+<li>“2.3.1 :004 &gt; g.user — User Load (0.1ms)  SELECT  “users”.* FROM “users” WHERE “users”.”id” = ? LIMIT ?  [[“id”, 2], [“LIMIT”, 1]] — =&gt; #&lt;User id: 2, email: “<a href="mailto:&#x32;&#x40;&#113;&#113;&#46;&#x63;&#x6f;&#109;">&#x32;&#x40;&#113;&#113;&#46;&#x63;&#x6f;&#109;</a>“, created_at: “2017-06-16 13:01:10”, updated_at: “2017-06-16 13:01:10”&gt;” 还有 “2.3.1 :005 &gt; g.members — User Load (0.1ms)  SELECT “users”.* FROM “users” INNER JOIN “group_relationships” ON “users”.”id” = “group_relationships”.”user_id” WHERE “group_relationships”.”group_id” = ?  [[“group_id”, 8]] — =&gt; #&lt;ActiveRecord::Associations::CollectionProxy [#&lt;User id: 1, email: “<a href="mailto:&#49;&#64;&#x71;&#113;&#46;&#x63;&#x6f;&#x6d;">&#49;&#64;&#x71;&#113;&#46;&#x63;&#x6f;&#x6d;</a>“, created_at: “2017-06-16 12:08:50”, updated_at: “2017-06-16 13:00:39”&gt;]&gt;”</li>
+<li>关于数据的方法要在model里面定义，教材上的另一种解释：“is_member_of?(group) 为什么这一段要放在 User 的 model 里？因为它是要被 user 所使用的判断式”</li>
+<li>所以要看对象选择写函数的地方，比如join!和quit!就写在user的model里，因为这个是user要进行的操作，而且是设计到数据库数据的操作。</li>
+<li>在model的里定义了方法后，还要思考方法启动方式，这个工作是在controller里完成的，如果默认的7个action都不能作为调用途径的话，那么就需要新建另外的action，则需要设置routes和在controller写出对应的action。虽然使用rails console可以使用，但还是要考虑到网站作为面向对象的程序怎么给用户触发的问题。</li>
+</ol>
+<p>####遗留问题</p>
+<ol>
+<li>render在Controller里和view里是否一样？</li>
+</ol>
+<p>####涉及资源</p>
+<ol>
+<li>网站：LOGDOWN；</li>
+<li>网站：全栈营</li>
+<li>网址：<a target="_blank" rel="noopener" href="http://localhost:3000/rails/info/routes">http://localhost:3000/rails/info/routes</a></li>
+<li>网址：更多 scope 的用法：<a target="_blank" rel="noopener" href="http://guides.rubyonrails.org/active_record_querying.html">http://guides.rubyonrails.org/active_record_querying.html</a>  和之前Rails第二课提供的查class的method的页面是一样的。果然method就是针对针对method的，也就是active_record。</li>
+<li>网址：要去哪里才能知道，我想要的功能要用什么 gem 呢？*各种功能的gem一览： “RubyToolbox”：<a target="_blank" rel="noopener" href="https://www.ruby-toolbox.com/">https://www.ruby-toolbox.com/</a></li>
+</ol>
+<p>##Interpretive<br>###我们今天学到了什么？</p>
+<ol>
+<li>rails console本质上其实是不需要view和controller而直接使用函数和对数据进行操作的地方。</li>
+<li>render的意义，在于回到前页，且数据保留不刷新，包括已经填写的表单数据。</li>
+<li>可以不使用@而直接对数据库操作，比如Group.delete_all</li>
+<li>在把上面的命令放在@groups = Group.all的下面，在主页依然没有数据，反映两个问题，要么@groups只是指向Group而已，要么程序运行顺序不是按语句从上到下的。</li>
+<li>学习的速度感很重要，因为写ORID降低了学习的速度感是很不好的一件事情。</li>
+<li>做事永远比总结重要，不要让总结影响做事的效率，要掌握好度。</li>
+<li>SQL语句可能倒着读能协助理解。</li>
+<li>遇到程序问题是先想着有没有现场的解决方案，如果没有再分解再找，依次进行下去，最后的结果就是自己解决问题。</li>
+</ol>
+<p>###今天有什么重要的领悟？<br>####编程知识</p>
+<ul>
+<li>遇到程序问题是先想着有没有现场的解决方案，如果没有再分解再找，依次进行下去，最后的结果就是自己解决问题。</li>
+</ul>
+<p>##Reflective<br>###你要如何形容今天的情绪？</p>
+<ol>
+<li>写ORID写到有点厌烦，然后就不写了，毕竟心情愉快对坚持学习很重要。</li>
+</ol>
+<p>###今天的高峰是什么？</p>
+<ul>
+<li>加深了对model的理解</li>
+</ul>
+<p>###今天的低点是什么？</p>
+<ul>
+<li>学习过程中容易疲劳，导致总学习时长不长。</li>
+</ul>
+<p>##Decisional<br>###我们会如何用几句话形容今天？</p>
+<ul>
+<li>上午还行，下午开始感觉没有什么节奏感。</li>
+</ul>
+<p>###明天有什么计划？</p>
+<ol>
+<li>ORID</li>
+<li>全栈营</li>
+</ol>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2017-06-16T19:50:00.000Z" title="6/17/2017, 3:50:00 AM">2017-06-17</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/">编程技术</a></span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2017/06/17/20170616-learning-record/">20170616学习纪录</a></p><div class="content"><p>##Objective<br>###今天做了什么？</p>
+<ol>
+<li>写ORID</li>
+<li>学习Rails第三课：Rails101第五章</li>
+</ol>
+<p>###关于今天的学习，你记得什么？<br>####新旧知识</p>
+<ol>
+<li>devise的使用知识在command line上面显示的很清楚</li>
+<li>两个量建立连接其实是先给一个量插入另一个的主键，之后在设置对应的关联</li>
+<li>method分内建的功能和后建的，内建的又包括rails原有的以及GEM接入的。</li>
+<li>current_user 是 Devise 提供的“正在登入的当前用户”，你可以在 controller 或 view 里面使用它。model不能使用。</li>
+<li>!在函数或值前表示不等于，!current_user 表示“现在没有登入的用户”</li>
+<li>要想在两个数据间建立关联，首先要选好主键，之后再设置外键，具体就是给被关联量插入主键XXX_id。先产生migration文件，再写入待插入列，最后rake db:migrate</li>
+<li>建立关联需要在model里声明，通过has_many :xxxs 和 belongs_to :xxx。</li>
+<li>model里面是定义数据结构和数据method（供controller使用）</li>
+<li> @group.user = current_user里的.user不是.user_id，导致能有两者理解，第一种是.user_id可以省略_id。第二种是.user中的点表示关联，这个命令的意思是关联的用户是当前用户。</li>
+<li>在使用url的时候，同时要送出verb类型，这个是routes的必须的，而且在不指定的时候，是有默认verb的，可能是get，就好比在浏览器直接输入地址。</li>
+<li>而送出表单的时候，额外的，还需要同时传输表单数据吧？</li>
+<li>创建者确认不需要在new和create中，因为不涉及确认问题啊。</li>
+<li>“ = ”是指派，“ == ”是等于“!= ”是不等于。</li>
+</ol>
+<p>####遗留问题</p>
+<ol>
+<li>PUT和POST这个动作及数据传输在views页面上具体是怎么完成的？？？</li>
+<li>有没有办法绕过views，直接create、update、destroy数据？</li>
+</ol>
+<p>####涉及资源</p>
+<ol>
+<li>网站：LOGDOWN；</li>
+<li>网站：全栈营</li>
+</ol>
+<p>##Reflective<br>###你要如何形容今天的情绪？</p>
+<ol>
+<li>写ORID的时候感觉有些疲惫，可能过度提取了，这样会产生厌恶感，要控制好这个分寸，不然会影响学习的热情。</li>
+<li>安装devise的时候，意外的体会到其实命令窗已经给我们很多信息了，只是我们习惯性的往下走而不去看它。</li>
+</ol>
+<p>###今天的高峰是什么？</p>
+<ul>
+<li>加深了对devise的理解</li>
+</ul>
+<p>###今天的低点是什么？</p>
+<ul>
+<li>学习的过程中感觉RESTful的应用还有些细节没弄明白。</li>
+</ul>
+<p>##Interpretive<br>###我们今天学到了什么？</p>
+<ol>
+<li>知道什么是Action后，before_action就很好理解了。</li>
+<li>devise的安装提示里面就写了，要修改页面运行命令 rails g devise:views即可，命令窗还是给了我们很多信息的，这些显示出来的信息之所以会显示出来，是有原因的。</li>
+<li>devise安装好就可以用了，后面的只是设置权限和按钮页面等工作。</li>
+<li>当年看电影还在想那些黑客怎么输入代码这么快，怎么记的？现在想明白了，他们就是在打英语啊，类似我们聊天那样，只不过他们是和及其聊天。</li>
+<li>从find_group_and_check_permission的使用来看，private函数的声明是在先的，而且在before_action之前，不然他们将不能被before_action及action调用。</li>
+</ol>
+<p>###今天有什么重要的领悟？<br>####编程知识</p>
+<ul>
+<li>命令窗口其实给了我们大量的信息。</li>
+</ul>
+<p>##Decisional<br>###我们会如何用一句话形容今天？</p>
+<ul>
+<li>学习有点吃力。</li>
+</ul>
+<p>###明天有什么计划？</p>
+<ol>
+<li>写ORID</li>
+<li>学习全栈营</li>
+</ol>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2017-06-15T22:39:00.000Z" title="6/16/2017, 6:39:00 AM">2017-06-16</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/">编程技术</a></span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2017/06/16/20170615-learning-record/">20170615学习纪录</a></p><div class="content"><p>##Objective<br>###今天做了什么？</p>
+<ol>
+<li>写ORID</li>
+<li>看了全栈营二期的创意大赛比赛总结直播</li>
+<li>学了Rails第三课：Rails101第四章</li>
+<li>重点学习了下RESTful的概念</li>
+</ol>
+<p>###关于今天的学习，你记得什么？<br>####新旧知识</p>
+<ol>
+<li>routes里面的resources是一组资源的意思</li>
+<li>RESTful概念是指，将CRUD封装起来，然后在外面对应着四个基本verb：POST、GET、UPDATE、DELETE，里面则是基本的七个acion和四个页面</li>
+<li>rails就是按照RESTful概念设计的，所以在编程的时候只要重点写好CRUD其他功能rails基本就已经帮我们完成了，只需要在进行参数设置、数据限制、页面设计就可以</li>
+<li>path路径其实就是helper的一个简写，在生产网页的时候还是会转换回基本的url的</li>
+<li>在controller中定义的变量，带@的这些基本可以理解成中间量，他们只在controller中运算，在传送给view或者model后就会失效了。</li>
+<li>浏览器真是一个重要的角色</li>
+<li>人和浏览器之间的交互就两个，分别是request和response。</li>
+<li>response分两种，可见、不可见。可见的就是在views上、不可见的就是在model里。</li>
+<li>request面向controller，这里就用到了RESTful概念了，request原先用GET和POST两种，在RESTful里面有四个verb如上所述。而，request是通过调用url来实现的，这个功能的背后就是routing也是我们在config/routes里面的设置。</li>
+<li>Controller收到request后，对应四个动作，有七个响应（行动）及四个页面。他们通过Verb（动作、方法）和path（helpler、路径）来选择。</li>
+<li>不同的对象会有不同的controller文件和views，在rails里生成controller的时候会生产对应的controller文件及views文件夹，七个响应在controller里是有固定名字的，对应其中的四个会有相应的四个自动调用的页面，他们的命名也是有规则的。</li>
+<li>如果需要数据，则需要在controller中定义@变量，controller在model和view之间传输数据就是靠@变量。</li>
+<li>Controller的@变量和view之间只是数据传递关系，@变量和model之间则是运算关系。</li>
+<li>model和数据库之间使用的是数据库语言，但是controller和model之间使用的则是method方法，controller通过method方法完成和model的对话，这类方法本质上应该是属于model的方法（这点需要确认），但看上去对数据库的操作是使用model的method。而@变量和数据之间的关系，就像word应用程序与doc文件的具体关系，在CRUD后，C与U还需要进行保存操作，而D则不用。R就相当于用word打开doc，C相当于在word上新建doc，之后还需要保存到数据库，U相当于更改R或C后的doc，同样需要保存。D则相当于直接在word里删除doc。</li>
+<li>params[:id]的意思可能是，从当前的参数列表中提取id这个参数</li>
+<li>render是返回某个页面但是不刷新数据，就是不会重新进行一遍controller里面的取值操作的意思，也可以理解成不重新从model里面拿object的意思。</li>
+<li>默写的CRUD前面四个是给views传参数用的，后面几个是对model传参数用的。</li>
+<li>validates是表示model接受数据时候的限制，这个并不限制controller的输出，而是限制model的输入</li>
+<li>render “form”是 &lt;%= render :partial =&gt; “form” %&gt; 的“缩写”，意思是要引用 Partial (局部）页面的方式。大量重复的程式码可以用这样的方式收纳。它的规则是同目录底下的 _xxxx.html.erb，要是其他地址则需写全，比如：”common/footer”或”common/navbar”</li>
+<li><pre><code>   &lt;%= f.label &quot;title&quot;, :class =&gt; &quot;string optional control-label&quot; %&gt;和 &lt;%= f.text_field :title, :class =&gt; &quot;string optional form-control&quot; %&gt;中，f.xxx表示显示类型，第二个的title表示接受数据对象，后面的class是样式。f,是前面复制的group
+</code></pre>
+</li>
+<li>gem 不是动态载入 Rails 环境的，只有“在 app/ 下开发的程式码”是动态载入，所以当有 <code>app</code> 外的档案被修改，都应该“重开”治百病。动态载入可以这么理解，就是这类动态载入的内容在程序运行期间是会不断发生变化，也就是刷新的。所以，新的变动会立马发生变化，但是类似GEM这些在程序一开始运行的时候载入后，后面就不会变动了。</li>
+<li>在 Restful 的概念里把这个 groups 叫做 resources，“一组资源”的意思。</li>
+<li>为了要控制它的运作，我们会创建一个新的 Controller文件 叫做 groups_controller.rb、</li>
+<li>这七个 action ，是每个CRUD功能里最基本的动作。只要我们在 controller.rb 里定义 (def) 好这七个方法当作动作 (action)。其他的部分 Rails 就会帮我们处理了。</li>
+<li>比如，设定 Routing (路由) 只需要简单一行: resources :groups,就可以了，所以我们定义好这七个action就算是完成了最基本的后端工作。这样不管浏览器端跑来什么样的请求 (request) ，Routing都会聪明地帮我们导向正确的 action 去运作后续流程。</li>
+<li>因为 CRUD 是常见的操作行为，但是大家实作的方式、与网址设计方式不一样。造成很多维护上的困扰。后来就有人发明 RESTful 这个概念，希望用 HTTP 的动作 ( Verb）一起去封装 CRUD 的行为。所以，RESTful实际上相当于一个打包好的CRUD，适用于不同的浏览器。</li>
+<li>而CRUD是指四种面向浏览器的四类操作，涉及七个Action，也可以理解为七个动作，以及四个页面。</li>
+<li>所以，我们只要做好这七个ACTION，其他的工作rails会帮我们处理，因为其他部分的实际上是通用的程序。只需要进行一些通用设定就可以。</li>
+<li>所以，本质上来看ROR就是写好CRUD，设置到config（routes），规定好model，设计好views，再加上一些其他的设置。</li>
+<li>使用封装过后的RESTful，CRUD在外部看来就是四个HTTP request。所以提高了兼容性。</li>
+<li>resources就是一组资源的意思，在routes中就是表示这是一组restful资源，也即是一组规定格式的CRUD。</li>
+</ol>
+<p>####遗留问题</p>
+<ol>
+<li>能否不适用@而直接对数据库操作？</li>
+</ol>
+<p>####涉及资源</p>
+<ol>
+<li>网站：LOGDOWN；</li>
+<li>网站：全栈营</li>
+<li>网页：Rails 还有很多内建验质函式，你可以看这里：<a target="_blank" rel="noopener" href="http://guides.rubyonrails.org/active_record_validations.html">http://guides.rubyonrails.org/active_record_validations.html</a></li>
+</ol>
+<p>##Reflective<br>###你要如何形容今天的情绪？</p>
+<ol>
+<li>学习RESTful的时候大脑有过载的感觉，边调整呼吸边喝水坚持学习完了。感觉还是有些理解的不够透彻。</li>
+</ol>
+<p>###今天的高峰是什么？</p>
+<ul>
+<li>加深了对RESTful的理解</li>
+</ul>
+<p>###今天的低点是什么？</p>
+<ul>
+<li>学习的时间长了会有疲惫感。</li>
+</ul>
+<p>##Interpretive<br>###我们今天学到了什么？</p>
+<ol>
+<li>大脑有过载的感觉时，边调整呼吸边喝水坚持学习完了。</li>
+<li>scaffold也许是早起rails内置的，后面虽然功能完善，但一直保留，貌似后面建立程序就不是这么用了。</li>
+<li>全栈营的论坛就像个矿场，没事可以去挖一挖。</li>
+<li>有五个对象的MVC模型图貌似比四层空间模型好用，在加一个浏览器对象做中介效果更佳。最后画了个六个对象的关系图。</li>
+<li>Rails MVC架构、CRUDRails的RESTful是重点内容，要多回顾。</li>
+</ol>
+<p>###今天有什么重要的领悟？<br>####编程知识</p>
+<ul>
+<li>本质上来看ROR就是写好CRUD，设置到config（routes），规定好model，设计好views，再加上一些其他的设置。</li>
+</ul>
+<p>##Decisional<br>###我们会如何用几句话形容今天？</p>
+<ul>
+<li>加深了对RESTful的理解。</li>
+</ul>
+<p>###明天有什么计划？</p>
+<ol>
+<li>写ORID</li>
+<li>学全栈营</li>
+</ol>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2017-06-14T18:54:00.000Z" title="6/15/2017, 2:54:00 AM">2017-06-15</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/">编程技术</a></span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2017/06/15/an-error-record-app-helpers-flashes-helper-a-app-helpers-flasher-helper-rb-rb/">报错纪录：将app/helpers/flashes_helper.rb 打成 app/helpers/flasher_helper.rb</a></p><div class="content"><p>在生成flashes功能时，<br>将</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">app/helpers/flashes_helper.rb </span><br></pre></td></tr></table></figure>
+<p>打成了</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">app/helpers/flasher_helper.rb</span><br></pre></td></tr></table></figure>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2017-06-14T18:53:00.000Z" title="6/15/2017, 2:53:00 AM">2017-06-15</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/">编程技术</a></span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2017/06/15/20170614-learning-record/">20170614学习纪录</a></p><div class="content"><p>##Objective<br>###今天做了什么？</p>
+<ol>
+<li>写ORID</li>
+<li>完成了Rails第三课：Rails101，前两节。</li>
+</ol>
+<p>###关于今天的学习，你记得什么？<br>####新旧知识</p>
+<ol>
+<li>写ORID的时候还是要做一个当日笔记把闪念、知识点记下来</li>
+<li>emmet用得好的话可以提高效率</li>
+<li>emmet的基本符号有：&gt; + ^ $ ( ) [  ]  {  } . # </li>
+<li>emmet中的#和.对应了css中的id和类</li>
+<li>emmet中通过tab键替换，加上返回键基本完善了编辑功能</li>
+<li>emmet过程中重点是要理解各个元素间的包含关系</li>
+<li>Dash这个应用可以作为常驻一屏来使用</li>
+<li>Spectacle让笔记本的屏幕起到了多屏的使用效率</li>
+<li>bootstrap是一个套件框架，包含了css和js</li>
+<li>要使用bootstrap的css功能和js功能先要安装gem，之后在将相应的模块接入project的css和js里</li>
+<li>helpers里面的功能及代码</li>
+<li>Bootstrap是Web设计圈有名的CSS框架，提供了开发项目快速便利的元件素材，如按钮、下拉选单、表格等等样式。</li>
+<li>在Rails上要帮项目穿上Bootstrap，用的是bootstrap-sass这个套件。</li>
+<li>option+G能快速输入©符号。</li>
+<li>bootstrap/alert是bootstrap的js提示套件</li>
+<li>生成MVC的时候，从底层开始，即：M→C→V</li>
+</ol>
+<p>####遗留问题</p>
+<ol>
+<li>按票数排序，先插入票数column，设置初始值为零（这个没想好怎么做），之后票数变化对应的进行值更新，用教材的公司，update_attribute</li>
+<li>lash_class(key)的函数原理，以及怎么在rails c中测试它的值，及to_sym</li>
+<li>emmet有几个功能按照dash的说明没能成功。</li>
+</ol>
+<p>####涉及资源</p>
+<ol>
+<li>网站：LOGDOWN；</li>
+<li>网站：全栈营</li>
+<li>网站：heroku</li>
+<li>App：Dash</li>
+<li>Atom package：emmet</li>
+</ol>
+<p>##Reflective<br>###你要如何形容今天的情绪？</p>
+<ol>
+<li>在学习使用emmet的时候，感慨自己之前怎么没有专门安排时间来学习一个它的使用。</li>
+</ol>
+<p>###今天的高峰是什么？</p>
+<ul>
+<li>理解了flashes_helper的原理</li>
+</ul>
+<p>###今天的低点是什么？</p>
+<ul>
+<li>emmet有几个功能按照dash的说明没能成功。</li>
+</ul>
+<p>##Interpretive<br>###我们今天学到了什么？</p>
+<ol>
+<li>我们现在学习的工具和套件最简便的学习方式就是去他们的官网或者github上面查看使用说明，而dash就是把这些工具拉到本地来使用，反而特别好用。</li>
+<li>很多工具朋友们之前都介绍了，但是没有自己真正消化，其实它们和自己一点关系都没有。</li>
+</ol>
+<p>###今天有什么重要的领悟？</p>
+<ul>
+<li>我们现在学习的工具和套件最简便的学习方式就是去他们的官网或者github上面查看使用说明，而dash就是把这些工具拉到本地来使用，反而特别好用。</li>
+</ul>
+<p>##Decisional<br>###我们会如何用几句话形容今天？</p>
+<ul>
+<li>为了提高效率学习了一些工具的使用。</li>
+</ul>
+<p>###明天有什么计划？</p>
+<ol>
+<li>写ORID；</li>
+<li>学习全栈营；</li>
+</ol>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2017-06-13T19:46:00.000Z" title="6/14/2017, 3:46:00 AM">2017-06-14</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/">编程技术</a></span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2017/06/14/error-records-belongs-to-topic-a-belongs-to-topics/">报错纪录：belongs_to :topic 打成belongs_to :topics</a></p><div class="content"><figure class="highlight ruby"><figcaption><span>app/models/vote.rb</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Vote</span> &lt; <span class="title class_ inherited__">ApplicationRecord</span></span><br><span class="line">  belongs_to <span class="symbol">:topic</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<p>错误打成了</p>
+<figure class="highlight ruby"><figcaption><span>app/models/vote.rb</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Vote</span> &lt; <span class="title class_ inherited__">ApplicationRecord</span></span><br><span class="line">  belongs_to <span class="symbol">:topics</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2017-06-13T19:32:00.000Z" title="6/14/2017, 3:32:00 AM">2017-06-14</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/">编程技术</a></span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2017/06/14/20170613-learning-record/">20170613学习纪录</a></p><div class="content"><p>##Objective<br>###今天做了什么？</p>
+<ol>
+<li>写ORID</li>
+<li>完成了Rails第二课：初级练习</li>
+</ol>
+<p>###关于今天的学习，你记得什么？<br>####新旧知识</p>
+<ol>
+<li>在rails里面，model对应active_record、controller对应action_controller、views对应action_view，而后两个合并起来又叫action_ pakge</li>
+<li>model是用来对数据库操作的</li>
+<li>class和集合类的命令都是适用于群体的</li>
+<li>@media是设置在不同的显示环境下适用的css</li>
+<li>youtube上面有很多的原理解释视频，简直是学习的宝库</li>
+<li>IRB（Interactive Ruby Shell）</li>
+<li>:pluralize前面的冒号表示这是一个方法或者函数，总之可以调用或是接上的意思</li>
+<li>method会取参数parameters（参数），表示它们要对那些参数操作。</li>
+<li>method也可以return（回传）资料。在Ruby里面，method会回传最后一行的结果，无论该结果是什么。</li>
+<li>scaffold（包括modle、view、controller）。可以理解成是database和人之间的操作媒介。</li>
+<li>generate scaffold 相当于打包了generate model,generate controller, generate view了。</li>
+<li>空间模型应该理解有四成，加入database</li>
+<li>View会产生html来显示在浏览器，view档案是用ERB写的，它是一种样板语言（tamplate language），里面是html加上内嵌的ruby程序码。views里面的ruby的变数便是当使用者要浏览该页面的时候，所要填入的内容。（还有别样的样板语言，但是在railsbridge我们只用ERB。）</li>
+<li>Controller把objects在Model和View之间传来传去。</li>
+<li>每一个URL都对应到Controller里面的某一个特定的method。</li>
+<li>在这一步骤以后，当你打开你应用程式里面的任何一个页面，该请求（request）会被某个Controller的method处理。</li>
+<li>当我们把Model、Views、Controllers放在一起的时候，他们会遵循以下的模式：</li>
+<li>给一个Url，Rails会去检查要使用哪一个Controller里面的method（又称为“Action”）。Controller Action会去呼叫Model里面对应的methods。Model会去读写资料库，然后把包含资料的object回传到Controller。Controller会拿到这个object并且丢到View里面。Action通常会有对应的View档案，Rails会自动寻找并使用它。）</li>
+<li>Scaffold展示的就是一个最基础的CRUD（new topic, show, edit, destroy）</li>
+<li>root “topics#index” 中的除了#index的写法外还有没有其他的参数？</li>
+<li>routes定义的是启动controller(action)的名称、调用路径、使用方法及需要的参数列表。</li>
+<li><td><%= link_to topic.title, topic %></td>也可以打成<td><%= link_to topic.title, topic_path(topic) %></td>，后一种方式更好理解（我的自己想出来的做法），前一种简洁（教材上的做法），貌似路径名和当前的object名相同的时候才能使用后一种方法，而且默认方法是GET，因为edit_topic就不能用后一种方法写。</li>
+<li>View的文件夹是生成controller时候同时生成的，touch只是创建里面的子文件。</li>
+</ol>
+<p>####遗留问题</p>
+<ol>
+<li>按票数排序，先插入票数column，设置初始值为零（这个没想好怎么做），之后票数变化对应的进行值更新，用教材的公司，update_attribute</li>
+</ol>
+<p>####涉及资源</p>
+<ol>
+<li>网站：LOGDOWN；</li>
+<li>网站：全栈营</li>
+<li>网站：heroku</li>
+<li>网页：Active Record Query Interface的资源页</li>
+</ol>
+<p>##Reflective<br>###你要如何形容今天的情绪？</p>
+<ol>
+<li>早上没吃早饭，明显感觉到在写ORID的时候的缺能量感</li>
+<li>吃完饭后，觉得有点疲劳，然后来了罐可乐开始学习很快疲劳感就没了</li>
+<li>下午连着学几个小时的程序后，感觉有些恶心感，就安排了休息。</li>
+</ol>
+<p>###今天的高峰是什么？</p>
+<ul>
+<li>程序学习的时候效率非常高</li>
+</ul>
+<p>###今天的低点是什么？</p>
+<ul>
+<li>下午连着学几个小时的程序后，感觉有些恶心感</li>
+</ul>
+<p>##Interpretive<br>###我们今天学到了什么？</p>
+<ol>
+<li>解决程序问题的时候重要是解决问题，不要太执着与一定要用什么办法解决，先把问题解决了，再来完善方法。</li>
+</ol>
+<p>###今天有什么重要的领悟？</p>
+<ul>
+<li>解决程序问题的时候重要是解决问题，不要太执着与一定要用什么办法解决，先把问题解决了，再来完善方法。</li>
+</ul>
+<p>##Decisional<br>###我们会如何用几句话形容今天？</p>
+<ul>
+<li>有计划、有意外，保持平静才能更好的应对突发状况，不然很容易放飞情绪。</li>
+</ul>
+<p>###明天有什么计划？</p>
+<ol>
+<li>写ORID；</li>
+<li>学习全栈营；</li>
+</ol>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2017-06-12T18:36:00.000Z" title="6/13/2017, 2:36:00 AM">2017-06-13</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/">编程技术</a></span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2017/06/13/20170610-learning-record/">20170610学习纪录</a></p><div class="content"><p>##Objective<br>###今天做了什么？</p>
+<ol>
+<li>复习了全栈营VIP入学手册和Rails第一课：环境建置</li>
+<li>写ORID</li>
+</ol>
+<p>###关于今天的学习，你记得什么？<br>####新旧知识</p>
+<ol>
+<li>Rails是通过rubygems.org安装的，这么算来rails是当作gem来被ruby使用咯？而且rubygems的地址是通过RVM来指定？在安装ruby时是通过RVM，而并非GEM，但教材中出现若ruby安装不成功是，则将ruby源改成改成中国的，意思就是安装ruby的来源其实也还是gem。</li>
+<li>而ruby是通过RVM安装的，而不是通过ruby官网，因为需要版本控制。</li>
+<li>Homebrew和rvm的安装方式相似，很像是从远处拷贝过来，然后在本地安装。</li>
+<li>通过 herouku logs 命令可以查看错误heroku上面运行的错误信息。</li>
+</ol>
+<p>####遗留问题</p>
+<ol>
+<li>无</li>
+</ol>
+<p>####涉及资源</p>
+<ol>
+<li>网站：全栈营</li>
+<li>网站：LOGDOWN；</li>
+</ol>
+<p>##Reflective<br>###你要如何形容今天的情绪？</p>
+<ol>
+<li>因为是复习旧知识所以比较轻松，初始加速度较快，感觉进入了状态。</li>
+<li>学习完rails第一课的时候有些疲劳，就开了个电影放松，就想着不长，结果一看两个半小时。。想了想看就看了，就看完吧，结果后面梁璐打电话过来，最后还是没看完。</li>
+</ol>
+<p>###今天的高峰是什么？</p>
+<ul>
+<li>复习的时候很快回想起了原来学习过的知识。</li>
+</ul>
+<p>###今天的低点是什么？</p>
+<ul>
+<li>学习完两个全栈课程后，有点疲劳，状态下降。</li>
+</ul>
+<p>##Interpretive<br>###我们今天学到了什么？</p>
+<ol>
+<li>流利说可以一天学一个新课，复习一个卡片，然后刷一个满星。</li>
+<li>Homebrew确实是一个便利的工具。</li>
+</ol>
+<p>###今天有什么重要的领悟？</p>
+<ul>
+<li>英语的提高对编程学习确实有很大的帮助作用。</li>
+</ul>
+<p>##Decisional<br>###我们会如何用几句话形容今天？</p>
+<ul>
+<li>从头开始复习全栈的课程，发现学习的速度比之前确实快了很多。</li>
+</ul>
+<p>###明天有什么计划？</p>
+<ol>
+<li>写ORID；</li>
+<li>学习全栈营；</li>
+</ol>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2017-06-09T18:37:00.000Z" title="6/10/2017, 2:37:00 AM">2017-06-10</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/">编程技术</a></span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2017/06/10/20170609-learning-record/">20170609学习纪录</a></p><div class="content"><p>##Objective<br>###今天做了什么？</p>
+<ol>
+<li>看完了LOGDOWN的笔记</li>
+<li>整理了下印象云笔记</li>
+<li>整理的下近段时间的ORID。</li>
+</ol>
+<p>###关于今天的学习，你记得什么？<br>####新旧知识</p>
+<ol>
+<li>无</li>
+</ol>
+<p>####遗留问题</p>
+<ol>
+<li>无</li>
+</ol>
+<p>####涉及资源</p>
+<ol>
+<li>网页：LOGDOWN；</li>
+<li>APP：印象云笔记</li>
+</ol>
+<p>##Reflective<br>###你要如何形容今天的情绪？</p>
+<ol>
+<li>花了几天终于把LOGDOWN的内容看了一遍，算是继续学习编程的热身，不得不说一下看这么多文章还怪挺累，看的过程中经常会有厌烦的情绪，碰到这种情况，只能暂停下来，等一会再接着看。</li>
+</ol>
+<p>###今天的高峰是什么？</p>
+<ul>
+<li>在看到logdown最新的几篇时，心流了。</li>
+</ul>
+<p>###今天的低点是什么？</p>
+<ul>
+<li>看文章过程中有几次脑袋空白，看不下去。</li>
+</ul>
+<p>##Interpretive<br>###我们今天学到了什么？</p>
+<ol>
+<li>ORID可以写一份总的，然后把技术部分提出来放到技术博客上面去。</li>
+<li>ORID可以分两天写，当天写主要部分，第二天再补充，包括当天写完后面的事情，还有一些另外的想法。</li>
+<li>即便是写ORID也不能代表不用复习。</li>
+</ol>
+<p>###今天有什么重要的领悟？</p>
+<ul>
+<li>即便是写ORID也不能代表不用复习。</li>
+</ul>
+<p>##Decisional<br>###我们会如何用几句话形容今天？</p>
+<ul>
+<li>完成了之前的学习博客的阅读，回到学习编程的正轨上来，正是进入辞职后的第三阶段——就业技能储备阶段。</li>
+</ul>
+<p>###明天有什么计划？</p>
+<ol>
+<li>从头开始过一遍全栈营的课程</li>
+<li>写ORID</li>
+</ol>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2017-03-27T03:47:00.000Z" title="3/27/2017, 11:47:00 AM">2017-03-27</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/">编程技术</a></span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2017/03/27/2017-12th-week-summary/">2017年第12周总结</a></p><div class="content"><h2 id="1-“本周学到的最棒概念-工具”"><a href="#1-“本周学到的最棒概念-工具”" class="headerlink" title="1.“本周学到的最棒概念/工具”"></a>1.“本周学到的最棒概念/工具”</h2><p>本周学到的最棒的工具是流利说，之前在玩swiftplayground的时候，屡屡被解说的英文打断积极性，在使用了一周的流利说后，轻松完成swiftplayground的学习任务；</p>
+<h2 id="2-“本周遇到最大的坑”"><a href="#2-“本周遇到最大的坑”" class="headerlink" title="2.“本周遇到最大的坑”"></a>2.“本周遇到最大的坑”</h2><p>本周遇到的最大的坑是没运动、没运动、没运动。从开始学习全栈营后，就停止了原先的跑步习惯，第一个月的时候身体出现了神经衰弱，以为是没休息好。之后，睡眠时间越来越长，但是白天的状态也越来越差，直到最近才意识到这个问题，自己可能是因为没运动亚健康了，之后运动了一晚，果然第二天状态就好了很多，再之后有时像以前一样有时谁6个小时也没什么大问题。</p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2017-03-27T03:30:00.000Z" title="3/27/2017, 11:30:00 AM">2017-03-27</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/">编程技术</a></span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2017/03/27/programming-jobs-securerandomuuid/">编程作业：SecureRandom.uuid的作用</a></p><div class="content"><p>SecureRandom.uuid 是 Ruby 内建的随机生成器。</p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2017-03-27T03:29:00.000Z" title="3/27/2017, 11:29:00 AM">2017-03-27</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/">编程技术</a></span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2017/03/27/programming-assignment-meaning/">编程作业：?号的意义</a></p><div class="content"><p>在方法/函数后面带上？表示执行这个方法后，得到的值是true或false。</p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2017-03-27T03:20:00.000Z" title="3/27/2017, 11:20:00 AM">2017-03-27</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/">编程技术</a></span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2017/03/27/1647697/">编程作业：什么是ActiveJob</a></p><div class="content"><p>####1 简介<br>Active Job 是用来声明任务，并把任务放到多种多样的队列后台中执行的框架。从定期地安排清理，费用账单到发送邮件，任何事情都可以是任务。任何可以切分为小的单元和并行执行的任务都可以用 Active Job 来执行。</p>
+<p>####2 Active Job 的目标<br>主要是确保所有的 Rails 程序有一致任务框架，即便是以 “立即执行”的形式存在。然后可以基于 Active Job 来新建框架功能和其他的 RubyGems， 而不用担心多种任务后台，比如 Dalayed Job 和 Resque 之间 API 的差异。之后，选择队列后台更多会变成运维方面的考虑，这样就能切换后台而无需重写任务代码。</p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2017-03-27T02:59:00.000Z" title="3/27/2017, 10:59:00 AM">2017-03-27</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/">编程技术</a></span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2017/03/27/1647655/">编程作业：什么是巢状表单</a></p><div class="content"><p>指的是在一个model里面添加数据的时候，相关的其他model里面也会增加几笔数据，这几个model间就是巢状关联，我们形成的数据表就是巢状表单。</p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2017-03-27T01:18:00.000Z" title="3/27/2017, 9:18:00 AM">2017-03-27</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/">编程技术</a></span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2017/03/27/programming-assignment-what-is-a-session/">编程作业：什么是session</a></p><div class="content"><p>在计算机科学领域来说，尤其是在网络领域，会话（session）是一种持久网络协议，在用户（或用户代理）端和服务器端之间创建关联，从而起到交换数据包的作用机制，session在网络协议（例如telnet或FTP）中是非常重要的部分。</p>
+<p>在不包含会话层（例如UDP）或者是无法长时间驻留会话层（例如HTTP）的传输协议中，会话的维持需要依靠在传输数据中的高级别程序。例如，在浏览器和远程主机之间的HTTP传输中，HTTP cookie就会被用来包含一些相关的信息，例如session ID，参数和权限信息等。</p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2017-03-17T22:37:00.000Z" title="3/18/2017, 6:37:00 AM">2017-03-18</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/">编程技术</a></span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2017/03/18/1606964/">2017年第11周总结</a></p><div class="content"><h2 id="1-“本周学到的最棒概念-工具”"><a href="#1-“本周学到的最棒概念-工具”" class="headerlink" title="1.“本周学到的最棒概念/工具”"></a>1.“本周学到的最棒概念/工具”</h2><p>本周学到的最棒的工具是轻松冥想，上周李思成分享的工具，使用以后发现坐享效果很好，真的好。</p>
+<h2 id="2-“本周遇到最大的坑”"><a href="#2-“本周遇到最大的坑”" class="headerlink" title="2.“本周遇到最大的坑”"></a>2.“本周遇到最大的坑”</h2><p>本周遇到的最大的坑是ORID的情绪纪录，周一在Xdite老师的直播里老师提到有个同学通过两个月写orid纪录情绪后，对自己的情绪掌控提高了很多，才发现自己之前写的orid忽略了感知情绪的这一块。</p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2017-03-15T00:33:00.000Z" title="3/15/2017, 8:33:00 AM">2017-03-15</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/">编程技术</a></span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2017/03/15/1585602/">编程套路：Rename heroku repo的方法</a></p><div class="content"><p>###重命名heroku repo名称的方法有两种，一种是在网页里设置，另一种是在command里设置，方法来源：<a target="_blank" rel="noopener" href="https://devcenter.heroku.com/articles/renaming-apps#updating-git-remotes%E3%80%82%E5%85%B7%E4%BD%93%E5%A6%82%E4%B8%8B%EF%BC%9A">https://devcenter.heroku.com/articles/renaming-apps#updating-git-remotes。具体如下：</a><br>####一、在网页里设置<br>1、现在heroku对应的专案页面中的settings的name中修改；<br>2、因为远端的名称修改，本地的远方地址需要重新设置；<br>3、执行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git remote rm heroku</span><br><span class="line">git remote -v</span><br><span class="line">git remote add heroku https://git.heroku.com/XXXXX.git（XXXXX是heroku名字，在heroku网页中可以查）</span><br></pre></td></tr></table></figure>
+
+<p>4、或者可以执行：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote rm heroku</span><br><span class="line">heroku git:remote -a newname</span><br></pre></td></tr></table></figure>
+
+<p>####二、在iterm里设置<br>使用命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">heroku apps:rename newname</span><br></pre></td></tr></table></figure>
+<p>如果不行，可再执行一中的步骤4；</p>
+</div></article></div><nav class="pagination" role="navigation" aria-label="pagination"><div class="pagination-previous"><a href="/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/">上一页</a></div><div class="pagination-next"><a href="/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/page/3/">下一页</a></div><ul class="pagination-list is-hidden-mobile"><li><a class="pagination-link" href="/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/">1</a></li><li><a class="pagination-link is-current" href="/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/page/2/">2</a></li><li><a class="pagination-link" href="/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/page/3/">3</a></li><li><span class="pagination-ellipsis">&hellip;</span></li><li><a class="pagination-link" href="/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/page/9/">9</a></li></ul></nav></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="/img/olio.jpg" alt="Han Wei"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Han Wei</p><p class="is-size-6 is-block">Developer, Art lover, Runner</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Guangzhou, China</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">218</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">10</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">3</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/freedomsky11" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/freedomsky11"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com/freedomsky1111"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/atom.xml"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/%E4%B8%AA%E4%BA%BA%E8%BD%A8%E8%BF%B9/"><span class="level-start"><span class="level-item">个人轨迹</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile" href="/categories/%E4%BF%A1%E6%81%AF%E6%91%98%E5%BD%95/"><span class="level-start"><span class="level-item">信息摘录</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/"><span class="level-start"><span class="level-item">生活感悟</span></span><span class="level-end"><span class="level-item tag">26</span></span></a></li><li><a class="level is-mobile" href="/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/"><span class="level-start"><span class="level-item">编程技术</span></span><span class="level-end"><span class="level-item tag">165</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%87%AA%E6%88%91%E7%AE%A1%E7%90%86/"><span class="level-start"><span class="level-item">自我管理</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/"><span class="level-start"><span class="level-item">英语学习</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%99%9A%E6%9E%84/"><span class="level-start"><span class="level-item">虚构</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%AF%97%E8%AF%8D%E6%AD%8C%E8%B5%8B/"><span class="level-start"><span class="level-item">诗词歌赋</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/%E8%AF%BB%E4%B9%A6%E5%BF%83%E5%BE%97/"><span class="level-start"><span class="level-item">读书心得</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile" href="/categories/%E9%97%B2%E8%B0%88%E8%B6%A3%E4%BA%8B/"><span class="level-start"><span class="level-item">闲谈趣事</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/tips/"><span class="tag">tips</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%93%B2%E5%AD%A6/"><span class="tag">哲学</span><span class="tag">18</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%AE%A4%E7%9F%A5%E5%BF%83%E7%90%86%E5%AD%A6/"><span class="tag">认知心理学</span><span class="tag">1</span></a></div></div></div></div></div><div class="column-right-shadow is-hidden-widescreen"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3"><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-04-07T05:11:49.000Z">2024-04-07</time></p><p class="title"><a href="/2024/04/07/AI-and-Brain/">AI与大脑</a></p><p class="categories"><a href="/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/">生活感悟</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-12-12T01:54:00.000Z">2023-12-12</time></p><p class="title"><a href="/2023/12/12/basic-use-of-postgresql/">postgresql快速上手</a></p><p class="categories"><a href="/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/">编程技术</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-11-17T04:05:03.000Z">2023-11-17</time></p><p class="title"><a href="/2023/11/17/happiness/">幸福主义</a></p><p class="categories"><a href="/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/">生活感悟</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-11-16T04:37:06.000Z">2023-11-16</time></p><p class="title"><a href="/2023/11/16/half-galss-of-water/">半杯水的现象</a></p><p class="categories"><a href="/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/">生活感悟</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-11-09T08:07:05.000Z">2023-11-09</time></p><p class="title"><a href="/2023/11/09/energy-of-mind/">心的能量</a></p><p class="categories"><a href="/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/">生活感悟</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2024/04/"><span class="level-start"><span class="level-item">四月 2024</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2023/12/"><span class="level-start"><span class="level-item">十二月 2023</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2023/11/"><span class="level-start"><span class="level-item">十一月 2023</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/archives/2023/10/"><span class="level-start"><span class="level-item">十月 2023</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2023/09/"><span class="level-start"><span class="level-item">九月 2023</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2023/08/"><span class="level-start"><span class="level-item">八月 2023</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2023/07/"><span class="level-start"><span class="level-item">七月 2023</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2023/06/"><span class="level-start"><span class="level-item">六月 2023</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2023/05/"><span class="level-start"><span class="level-item">五月 2023</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2023/01/"><span class="level-start"><span class="level-item">一月 2023</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/12/"><span class="level-start"><span class="level-item">十二月 2022</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/07/"><span class="level-start"><span class="level-item">七月 2022</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/05/"><span class="level-start"><span class="level-item">五月 2022</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/04/"><span class="level-start"><span class="level-item">四月 2022</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/12/"><span class="level-start"><span class="level-item">十二月 2021</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/10/"><span class="level-start"><span class="level-item">十月 2021</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/archives/2020/01/"><span class="level-start"><span class="level-item">一月 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/07/"><span class="level-start"><span class="level-item">七月 2019</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/05/"><span class="level-start"><span class="level-item">五月 2019</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/04/"><span class="level-start"><span class="level-item">四月 2019</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/03/"><span class="level-start"><span class="level-item">三月 2019</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/02/"><span class="level-start"><span class="level-item">二月 2019</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/09/"><span class="level-start"><span class="level-item">九月 2018</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/05/"><span class="level-start"><span class="level-item">五月 2018</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/04/"><span class="level-start"><span class="level-item">四月 2018</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/03/"><span class="level-start"><span class="level-item">三月 2018</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/02/"><span class="level-start"><span class="level-item">二月 2018</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/01/"><span class="level-start"><span class="level-item">一月 2018</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2017/10/"><span class="level-start"><span class="level-item">十月 2017</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2017/09/"><span class="level-start"><span class="level-item">九月 2017</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li><li><a class="level is-mobile" href="/archives/2017/06/"><span class="level-start"><span class="level-item">六月 2017</span></span><span class="level-end"><span class="level-item tag">13</span></span></a></li><li><a class="level is-mobile" href="/archives/2017/03/"><span class="level-start"><span class="level-item">三月 2017</span></span><span class="level-end"><span class="level-item tag">26</span></span></a></li><li><a class="level is-mobile" href="/archives/2017/02/"><span class="level-start"><span class="level-item">二月 2017</span></span><span class="level-end"><span class="level-item tag">37</span></span></a></li><li><a class="level is-mobile" href="/archives/2017/01/"><span class="level-start"><span class="level-item">一月 2017</span></span><span class="level-end"><span class="level-item tag">48</span></span></a></li><li><a class="level is-mobile" href="/archives/2016/12/"><span class="level-start"><span class="level-item">十二月 2016</span></span><span class="level-end"><span class="level-item tag">24</span></span></a></li><li><a class="level is-mobile" href="/archives/2006/08/"><span class="level-start"><span class="level-item">八月 2006</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/">首页</a><p class="is-size-7"><span>&copy; 2024 Han Wei</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>

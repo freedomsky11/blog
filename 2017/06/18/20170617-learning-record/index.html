@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>20170617学习纪录 - 码字空间</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="码字空间"><meta name="msapplication-TileImage" content="/img/favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="码字空间"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="##Objective###今天做了什么？  写ORID 全栈营学习：Rails第三课：Rails101的第六章和部分第七章 和广州Meetup的小伙伴们进行购书交流  ###关于今天的学习，你记得什么？####新旧知识  关于数据的method是在model里面定义的，并且在view里面又可以使用，比如我们的群成员判断功能。 当要定义多对多关系是一定要使用中间表，通过中间表的两个一对多完成多对多"><meta property="og:type" content="blog"><meta property="og:title" content="20170617学习纪录"><meta property="og:url" content="https://www.hanwei.ink/2017/06/18/20170617-learning-record/"><meta property="og:site_name" content="码字空间"><meta property="og:description" content="##Objective###今天做了什么？  写ORID 全栈营学习：Rails第三课：Rails101的第六章和部分第七章 和广州Meetup的小伙伴们进行购书交流  ###关于今天的学习，你记得什么？####新旧知识  关于数据的method是在model里面定义的，并且在view里面又可以使用，比如我们的群成员判断功能。 当要定义多对多关系是一定要使用中间表，通过中间表的两个一对多完成多对多"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://www.hanwei.ink/img/og_image.png"><meta property="article:published_time" content="2017-06-17T21:31:00.000Z"><meta property="article:modified_time" content="2024-04-07T02:51:29.985Z"><meta property="article:author" content="Han Wei"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://www.hanwei.ink/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.hanwei.ink/2017/06/18/20170617-learning-record/"},"headline":"20170617学习纪录","image":["https://www.hanwei.ink/img/og_image.png"],"datePublished":"2017-06-17T21:31:00.000Z","dateModified":"2024-04-07T02:51:29.985Z","author":{"@type":"Person","name":"Han Wei"},"publisher":{"@type":"Organization","name":"码字空间","logo":{"@type":"ImageObject","url":{"text":"首页"}}},"description":"##Objective###今天做了什么？  写ORID 全栈营学习：Rails第三课：Rails101的第六章和部分第七章 和广州Meetup的小伙伴们进行购书交流  ###关于今天的学习，你记得什么？####新旧知识  关于数据的method是在model里面定义的，并且在view里面又可以使用，比如我们的群成员判断功能。 当要定义多对多关系是一定要使用中间表，通过中间表的两个一对多完成多对多"}</script><link rel="canonical" href="https://www.hanwei.ink/2017/06/18/20170617-learning-record/"><link rel="alternate" href="/atom.xml" title="码字空间" type="application/atom+xml"><link rel="icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/6.0.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><script src="https://www.googletagmanager.com/gtag/js?id=G-D3QCK6R4PV" async></script><script>window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'G-D3QCK6R4PV');</script><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.2"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/">首页</a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a><a class="navbar-item" target="_blank" rel="noopener" href="https://happiness.hanwei.ink/">&lt;&lt;幸福主义&gt;&gt;</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/freedomsky11/blog"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2017-06-17T21:31:00.000Z" title="6/18/2017, 5:31:00 AM">2017-06-18</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/">编程技术</a></span></div></div><h1 class="title is-3 is-size-4-mobile">20170617学习纪录</h1><div class="content"><p>##Objective<br>###今天做了什么？</p>
+<ol>
+<li>写ORID</li>
+<li>全栈营学习：Rails第三课：Rails101的第六章和部分第七章</li>
+<li>和广州Meetup的小伙伴们进行购书交流</li>
+</ol>
+<p>###关于今天的学习，你记得什么？<br>####新旧知识</p>
+<ol>
+<li>关于数据的method是在model里面定义的，并且在view里面又可以使用，比如我们的群成员判断功能。</li>
+<li>当要定义多对多关系是一定要使用中间表，通过中间表的两个一对多完成多对多功能</li>
+<li>在完成好了多对多的关联后，还要写清楚多对多的两个量的关系，也就是谁是谁的成员，又是谁加入了谁</li>
+<li>No route matches [GET] “/groups/1/posts/new”，如前面说的，方法+路径。</li>
+<li>教材题目是设计 Post 的 model 架构，设计model就是设计架构吗？</li>
+<li>routes是定义资源调用地址的，资源需要你写，但写出来要使用的话还要给他们赋予一个地址</li>
+<li>  resources :groups do  –  resources :posts   –   end就是一种定义地址的方式</li>
+<li>数据关联是在model里面设置的，action在controller里面也已经有了，view也是匹配的controller，而controller的文件夹，gourps和posts是并列的，所以这个路径地址实际上影响的只是url。</li>
+<li>数据关联的另一个意义，可能还是在于参数绑定，比如：group和post的id同时获取，那么就是post的id在group的id的名下。</li>
+<li>命名规则相当于用group_post替代了group</li>
+<li>另外还有第八个动作PATCH，但它和PUT一样都是update功能。是同名还是同功能？</li>
+<li>命令git commit -m “add posts nested route”中的，nested意思就是数据关联其实就是巢状链接？nested route的意思是，这个uri了带有关联关系吧？</li>
+<li>:only =&gt; [:new, :create]和only: [:new, :create]等效。多参数就加上中括号，若果只有一个参数就不用中括号，其他的一样。</li>
+<li>在post里@group = Group.find(params[:group_id])的写法是:group_id，而在group里的写法是:id。是否在每个对象里:id默认是自己model的id，而XXX_id则是你要调用的其他model的标准写法？</li>
+<li>可能在@post.group = @group及@post.user = current_user这类写法里，group和user和group_id和user_id是等效的吧，就像人和身份证号。</li>
+<li>用group_path(@group)而不用group_posts_path(@group)，那是因为前者的页面已经包含了我们的信息，而且这样可以少一个post的index的action。</li>
+<li>  @posts = @group.posts表示一旦建立了数据关联，就可以轻松调用。</li>
+<li>method除了是“程序语句”，还可以同时是“功能叙述”。比如，.order(“created_at DESC”)用.recent代替。</li>
+<li>Scope是Rails 里面的一个内建 API可以用来包装一些查询式，让代码更直观一些。你可以想像成，拿来包装“常用 query”的方法。 </li>
+<li>scope是在model里面定义，表明controller里面使用的关于数据的方法应该就是model的方法。</li>
+<li>教材的解释，应征了前面关于model和dababase交互的理解。rails的ActiveRecord框架帮我们完成了翻译，下面一句话摘自教材。</li>
+<li>教材：“实际上呢，Model 里面的所有语句，看起来是“Ruby 语句”，实际上是 Rails 帮我们“翻译”成为了数据库语句。（这一套叫 ActiveRecord 框架）”</li>
+<li>不单单是命令窗的指令输入的返回文字有意义，rails s的运行log也有很多有用信息。</li>
+<li>“因为数据库语句也是个“巨坑”，Rails 开发的目的，在于希望程序员专注于“产品”的逻辑设计，而花上少一点时间去纠缠非常底层的细节。在刚开始学习过程中，其实你是不太需要去纠结数据库语句的，大部份你想要捞的数据，ActiveRecord 都能帮你搞定，而且可以“形容”的非常“口语”。”</li>
+<li>推送上heroku的程序，不需要bundle install，但是需要heroku run rake db:migrate</li>
+<li>要去哪里才能知道，我想要的功能要用什么 gem 呢？*各种功能的gem一览： “RubyToolbox”</li>
+<li>涉及到多对多的关系是，就需要建立个中间表，明确完三个表之间的关系后。还要通过命令明确主从关系，比如，教材：“has_many :participated_groups, :through =&gt; :group_relationships, :source =&gt; :group”和“has_many :members, through: :group_relationships, source: :user”，分别先后在model的user.rb和group.rb里面明确关系。这样当捞 user.participated_groups 时，就会捞出“参与的所有群”。如果只执行上面两句命令中的一句，那么只能捞出members或者participated_groups的。</li>
+<li>建立联系后，就可以通过activerecord去捞出数据。这个实现了比主从键直接捞数据更复杂的功能。</li>
+<li>“=&gt; #&lt;Group id: 8, title: “Board 1”, description: “Board 1 body”, created_at: “2017-06-17 06:37:08”, updated_at: “2017-06-17 06:37:08”, user_id: 2&gt;”和“ =&gt; #&lt;ActiveRecord::Associations::CollectionProxy [#&lt;Group id: 8, title: “Board 1”, description: “Board 1 body”, created_at: “2017-06-17 06:37:08”, updated_at: “2017-06-17 06:37:08”, user_id: 2&gt;]&gt;”的区别在于前者是直接从数据库读出来，后者需要通过ActiveRecord去捞出来。</li>
+<li>这个与“2.3.1 :004 &gt; g.user — User Load (0.1ms)  SELECT  “users”.* FROM “users” WHERE “users”.”id” = ? LIMIT ?  [[“id”, 2], [“LIMIT”, 1]] – =&gt; #&lt;User id: 2, email: “<a href="mailto:&#x32;&#64;&#x71;&#113;&#x2e;&#x63;&#111;&#109;">&#x32;&#64;&#x71;&#113;&#x2e;&#x63;&#111;&#109;</a>“, created_at: “2017-06-16 13:01:10”, updated_at: “2017-06-16 13:01:10”&gt;”的命令直接捞出的User还不一样，更复杂也更强大。</li>
+<li>“2.3.1 :004 &gt; g.user — User Load (0.1ms)  SELECT  “users”.* FROM “users” WHERE “users”.”id” = ? LIMIT ?  [[“id”, 2], [“LIMIT”, 1]] — =&gt; #&lt;User id: 2, email: “<a href="mailto:&#x32;&#x40;&#113;&#113;&#46;&#x63;&#x6f;&#109;">&#x32;&#x40;&#113;&#113;&#46;&#x63;&#x6f;&#109;</a>“, created_at: “2017-06-16 13:01:10”, updated_at: “2017-06-16 13:01:10”&gt;” 还有 “2.3.1 :005 &gt; g.members — User Load (0.1ms)  SELECT “users”.* FROM “users” INNER JOIN “group_relationships” ON “users”.”id” = “group_relationships”.”user_id” WHERE “group_relationships”.”group_id” = ?  [[“group_id”, 8]] — =&gt; #&lt;ActiveRecord::Associations::CollectionProxy [#&lt;User id: 1, email: “<a href="mailto:&#49;&#64;&#x71;&#113;&#46;&#x63;&#x6f;&#x6d;">&#49;&#64;&#x71;&#113;&#46;&#x63;&#x6f;&#x6d;</a>“, created_at: “2017-06-16 12:08:50”, updated_at: “2017-06-16 13:00:39”&gt;]&gt;”</li>
+<li>关于数据的方法要在model里面定义，教材上的另一种解释：“is_member_of?(group) 为什么这一段要放在 User 的 model 里？因为它是要被 user 所使用的判断式”</li>
+<li>所以要看对象选择写函数的地方，比如join!和quit!就写在user的model里，因为这个是user要进行的操作，而且是设计到数据库数据的操作。</li>
+<li>在model的里定义了方法后，还要思考方法启动方式，这个工作是在controller里完成的，如果默认的7个action都不能作为调用途径的话，那么就需要新建另外的action，则需要设置routes和在controller写出对应的action。虽然使用rails console可以使用，但还是要考虑到网站作为面向对象的程序怎么给用户触发的问题。</li>
+</ol>
+<p>####遗留问题</p>
+<ol>
+<li>render在Controller里和view里是否一样？</li>
+</ol>
+<p>####涉及资源</p>
+<ol>
+<li>网站：LOGDOWN；</li>
+<li>网站：全栈营</li>
+<li>网址：<a target="_blank" rel="noopener" href="http://localhost:3000/rails/info/routes">http://localhost:3000/rails/info/routes</a></li>
+<li>网址：更多 scope 的用法：<a target="_blank" rel="noopener" href="http://guides.rubyonrails.org/active_record_querying.html">http://guides.rubyonrails.org/active_record_querying.html</a>  和之前Rails第二课提供的查class的method的页面是一样的。果然method就是针对针对method的，也就是active_record。</li>
+<li>网址：要去哪里才能知道，我想要的功能要用什么 gem 呢？*各种功能的gem一览： “RubyToolbox”：<a target="_blank" rel="noopener" href="https://www.ruby-toolbox.com/">https://www.ruby-toolbox.com/</a></li>
+</ol>
+<p>##Interpretive<br>###我们今天学到了什么？</p>
+<ol>
+<li>rails console本质上其实是不需要view和controller而直接使用函数和对数据进行操作的地方。</li>
+<li>render的意义，在于回到前页，且数据保留不刷新，包括已经填写的表单数据。</li>
+<li>可以不使用@而直接对数据库操作，比如Group.delete_all</li>
+<li>在把上面的命令放在@groups = Group.all的下面，在主页依然没有数据，反映两个问题，要么@groups只是指向Group而已，要么程序运行顺序不是按语句从上到下的。</li>
+<li>学习的速度感很重要，因为写ORID降低了学习的速度感是很不好的一件事情。</li>
+<li>做事永远比总结重要，不要让总结影响做事的效率，要掌握好度。</li>
+<li>SQL语句可能倒着读能协助理解。</li>
+<li>遇到程序问题是先想着有没有现场的解决方案，如果没有再分解再找，依次进行下去，最后的结果就是自己解决问题。</li>
+</ol>
+<p>###今天有什么重要的领悟？<br>####编程知识</p>
+<ul>
+<li>遇到程序问题是先想着有没有现场的解决方案，如果没有再分解再找，依次进行下去，最后的结果就是自己解决问题。</li>
+</ul>
+<p>##Reflective<br>###你要如何形容今天的情绪？</p>
+<ol>
+<li>写ORID写到有点厌烦，然后就不写了，毕竟心情愉快对坚持学习很重要。</li>
+</ol>
+<p>###今天的高峰是什么？</p>
+<ul>
+<li>加深了对model的理解</li>
+</ul>
+<p>###今天的低点是什么？</p>
+<ul>
+<li>学习过程中容易疲劳，导致总学习时长不长。</li>
+</ul>
+<p>##Decisional<br>###我们会如何用几句话形容今天？</p>
+<ul>
+<li>上午还行，下午开始感觉没有什么节奏感。</li>
+</ul>
+<p>###明天有什么计划？</p>
+<ol>
+<li>ORID</li>
+<li>全栈营</li>
+</ol>
+</div><div class="article-licensing box"><div class="licensing-title"><p>20170617学习纪录</p><p><a href="https://www.hanwei.ink/2017/06/18/20170617-learning-record/">https://www.hanwei.ink/2017/06/18/20170617-learning-record/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Han Wei</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2017-06-18</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2024-04-07</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2017/06/19/20170618-learning-record/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">20170618学习纪录</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2017/06/17/20170616-learning-record/"><span class="level-item">20170616学习纪录</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div id="comment-container"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css"><script src="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js"></script><script>var gitalk = new Gitalk({
+            id: "dd8d180a816ad1fa4ff32a7d3c37395e",
+            repo: "blog",
+            owner: "freedomsky11",
+            clientID: "97b0d4602f15ef2a938a",
+            clientSecret: "0df30f94ab8faa596b25651dee141512d9bc3daa",
+            admin: ["freedomsky11"],
+            createIssueManually: false,
+            distractionFreeMode: false,
+            perPage: 20,
+            pagerDirection: "last",
+            
+            
+            enableHotKey: true,
+            language: "zh-CN",
+        })
+        gitalk.render('comment-container')</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="/img/olio.jpg" alt="Han Wei"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Han Wei</p><p class="is-size-6 is-block">Developer, Art lover, Runner</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Guangzhou, China</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">218</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">10</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">3</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/freedomsky11" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/freedomsky11"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com/freedomsky1111"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/atom.xml"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-04-07T05:11:49.000Z">2024-04-07</time></p><p class="title"><a href="/2024/04/07/AI-and-Brain/">AI与大脑</a></p><p class="categories"><a href="/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/">生活感悟</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-12-12T01:54:00.000Z">2023-12-12</time></p><p class="title"><a href="/2023/12/12/basic-use-of-postgresql/">postgresql快速上手</a></p><p class="categories"><a href="/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/">编程技术</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-11-17T04:05:03.000Z">2023-11-17</time></p><p class="title"><a href="/2023/11/17/happiness/">幸福主义</a></p><p class="categories"><a href="/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/">生活感悟</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-11-16T04:37:06.000Z">2023-11-16</time></p><p class="title"><a href="/2023/11/16/half-galss-of-water/">半杯水的现象</a></p><p class="categories"><a href="/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/">生活感悟</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-11-09T08:07:05.000Z">2023-11-09</time></p><p class="title"><a href="/2023/11/09/energy-of-mind/">心的能量</a></p><p class="categories"><a href="/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/">生活感悟</a></p></div></article></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/">首页</a><p class="is-size-7"><span>&copy; 2024 Han Wei</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>

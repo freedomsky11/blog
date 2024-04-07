@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>20170216学习纪录 - 码字空间</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="码字空间"><meta name="msapplication-TileImage" content="/img/favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="码字空间"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="Objective关于今天的课程，你记得什么？1、session和cookie的工作机制；2、query的工作原理；3、form_tag的实用意义；4、params这个传递的参数的意义，以及获得的几种方法；5、routes的规则；6、rakoe routes生成的列表的三行分别代表了方法地址，url，对应的controller；7、routes里面有和没有s的区别，没有则少了index;8、rub"><meta property="og:type" content="blog"><meta property="og:title" content="20170216学习纪录"><meta property="og:url" content="https://www.hanwei.ink/2017/02/17/1426149/"><meta property="og:site_name" content="码字空间"><meta property="og:description" content="Objective关于今天的课程，你记得什么？1、session和cookie的工作机制；2、query的工作原理；3、form_tag的实用意义；4、params这个传递的参数的意义，以及获得的几种方法；5、routes的规则；6、rakoe routes生成的列表的三行分别代表了方法地址，url，对应的controller；7、routes里面有和没有s的区别，没有则少了index;8、rub"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://www.hanwei.ink/img/og_image.png"><meta property="article:published_time" content="2017-02-17T00:19:00.000Z"><meta property="article:modified_time" content="2024-04-07T02:51:29.970Z"><meta property="article:author" content="Han Wei"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://www.hanwei.ink/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.hanwei.ink/2017/02/17/1426149/"},"headline":"20170216学习纪录","image":["https://www.hanwei.ink/img/og_image.png"],"datePublished":"2017-02-17T00:19:00.000Z","dateModified":"2024-04-07T02:51:29.970Z","author":{"@type":"Person","name":"Han Wei"},"publisher":{"@type":"Organization","name":"码字空间","logo":{"@type":"ImageObject","url":{"text":"首页"}}},"description":"Objective关于今天的课程，你记得什么？1、session和cookie的工作机制；2、query的工作原理；3、form_tag的实用意义；4、params这个传递的参数的意义，以及获得的几种方法；5、routes的规则；6、rakoe routes生成的列表的三行分别代表了方法地址，url，对应的controller；7、routes里面有和没有s的区别，没有则少了index;8、rub"}</script><link rel="canonical" href="https://www.hanwei.ink/2017/02/17/1426149/"><link rel="alternate" href="/atom.xml" title="码字空间" type="application/atom+xml"><link rel="icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/6.0.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><script src="https://www.googletagmanager.com/gtag/js?id=G-D3QCK6R4PV" async></script><script>window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'G-D3QCK6R4PV');</script><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.2"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/">首页</a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a><a class="navbar-item" target="_blank" rel="noopener" href="https://happiness.hanwei.ink/">&lt;&lt;幸福主义&gt;&gt;</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/freedomsky11/blog"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2017-02-17T00:19:00.000Z" title="2/17/2017, 8:19:00 AM">2017-02-17</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/">编程技术</a></span></div></div><h1 class="title is-3 is-size-4-mobile">20170216学习纪录</h1><div class="content"><h2 id="Objective"><a href="#Objective" class="headerlink" title="Objective"></a>Objective</h2><h3 id="关于今天的课程，你记得什么？"><a href="#关于今天的课程，你记得什么？" class="headerlink" title="关于今天的课程，你记得什么？"></a>关于今天的课程，你记得什么？</h3><p>1、session和cookie的工作机制；<br>2、query的工作原理；<br>3、form_tag的实用意义；<br>4、params这个传递的参数的意义，以及获得的几种方法；<br>5、routes的规则；<br>6、rakoe routes生成的列表的三行分别代表了方法地址，url，对应的controller；<br>7、routes里面有和没有s的区别，没有则少了index;<br>8、ruby的parse这个转换代码的方法；<br>9、params也可以用来传数组；<br>10、ruby的.split这个分割方法；<br>11、传递参数时可以加入筛选条件，比如（”total &gt; ?”, params[:total]）;<br>12、传递参数名称只在传递时使用，所以可以自己灵活设定；<br>13、_url和_path的意义是一样的；<br>14、hash复制的另一个方法 :XXX =&gt; 值；<br>15、在routes甚至方法时比较灵活，比如：get “/foobar” =&gt; “welcome#index” 可以加上:as =&gt; ‘zoo’ ，也可以写成“/foobar/:a/:b/:c”;<br>16、params的来源可以，controller,views，地址后，表单里，理由里；<br>17、通过admin:: 可以把controller拆分成两部分；</p>
+<h3 id="完成了什么？"><a href="#完成了什么？" class="headerlink" title="完成了什么？"></a>完成了什么？</h3><p>听了ihower老师的直播</p>
+<h2 id="Reflective"><a href="#Reflective" class="headerlink" title="Reflective"></a>Reflective</h2><h3 id="你要如何形容今天的情绪？"><a href="#你要如何形容今天的情绪？" class="headerlink" title="你要如何形容今天的情绪？"></a>你要如何形容今天的情绪？</h3><p>昨天记得东西太多，今天大脑有点厌学了，因为晚上要听直播，所以没有安排太多任务，晚上听了ihower老师的直播，明白了很多以前不明白的东西，感觉基本打通了现阶段的一些内容，特别是将sesiion和cookie时，把一个困扰心中多年的概念给弄明白了。</p>
+<h3 id="今天的高峰是什么？"><a href="#今天的高峰是什么？" class="headerlink" title="今天的高峰是什么？"></a>今天的高峰是什么？</h3><p>ihower老师直播的内容很好的理解吸收了；</p>
+<h3 id="今天的低点是什么？"><a href="#今天的低点是什么？" class="headerlink" title="今天的低点是什么？"></a>今天的低点是什么？</h3><p>昨天强记的内容太多了，大脑今天有点厌学；</p>
+<h2 id="Interpretive"><a href="#Interpretive" class="headerlink" title="Interpretive"></a>Interpretive</h2><h3 id="我们今天学到了什么？"><a href="#我们今天学到了什么？" class="headerlink" title="我们今天学到了什么？"></a>我们今天学到了什么？</h3><p>1、routes的使用方法；<br>2、params的传递方式，及利用原理；<br>3、rake routes里面的元素使用方法；<br>4、query的方法；<br>5、session和cookie的原理；</p>
+<h3 id="今天一个重要的领悟是什么？"><a href="#今天一个重要的领悟是什么？" class="headerlink" title="今天一个重要的领悟是什么？"></a>今天一个重要的领悟是什么？</h3><p>####学习方法<br>缺乏学习动力的时候，一定要找一个学习的内在驱动力，它有两种，理性的和感性的。理性的是意义，感性的是能调动你奋斗平博一直的东西，老罗的历史演讲就是这个感性的内在驱动力。</p>
+<p>####编程知识<br>query真是牛逼得不得了的一个工具，打通了数据显示的关卡，下一步就是进一步掌握params的传递方法；</p>
+<h2 id="Decisional"><a href="#Decisional" class="headerlink" title="Decisional"></a>Decisional</h2><h3 id="我们会如何用一句话形容今天的工作？"><a href="#我们会如何用一句话形容今天的工作？" class="headerlink" title="我们会如何用一句话形容今天的工作？"></a>我们会如何用一句话形容今天的工作？</h3><p>低谷期中寻求突破，学习进度似有小成；</p>
+<h3 id="有哪些工作需要明天继续努力？"><a href="#有哪些工作需要明天继续努力？" class="headerlink" title="有哪些工作需要明天继续努力？"></a>有哪些工作需要明天继续努力？</h3><p>完成购物完整的学习；</p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>20170216学习纪录</p><p><a href="https://www.hanwei.ink/2017/02/17/1426149/">https://www.hanwei.ink/2017/02/17/1426149/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Han Wei</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2017-02-17</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2024-04-07</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2017/02/19/1432581/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">20170217学习纪录</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2017/02/16/20170215-learning-record/"><span class="level-item">20170215学习纪录</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div id="comment-container"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css"><script src="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js"></script><script>var gitalk = new Gitalk({
+            id: "34e9cd4365610099a0b41888be21000a",
+            repo: "blog",
+            owner: "freedomsky11",
+            clientID: "97b0d4602f15ef2a938a",
+            clientSecret: "0df30f94ab8faa596b25651dee141512d9bc3daa",
+            admin: ["freedomsky11"],
+            createIssueManually: false,
+            distractionFreeMode: false,
+            perPage: 20,
+            pagerDirection: "last",
+            
+            
+            enableHotKey: true,
+            language: "zh-CN",
+        })
+        gitalk.render('comment-container')</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="/img/olio.jpg" alt="Han Wei"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Han Wei</p><p class="is-size-6 is-block">Developer, Art lover, Runner</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Guangzhou, China</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">218</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">10</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">3</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/freedomsky11" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/freedomsky11"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com/freedomsky1111"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/atom.xml"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-04-07T05:11:49.000Z">2024-04-07</time></p><p class="title"><a href="/2024/04/07/AI-and-Brain/">AI与大脑</a></p><p class="categories"><a href="/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/">生活感悟</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-12-12T01:54:00.000Z">2023-12-12</time></p><p class="title"><a href="/2023/12/12/basic-use-of-postgresql/">postgresql快速上手</a></p><p class="categories"><a href="/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/">编程技术</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-11-17T04:05:03.000Z">2023-11-17</time></p><p class="title"><a href="/2023/11/17/happiness/">幸福主义</a></p><p class="categories"><a href="/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/">生活感悟</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-11-16T04:37:06.000Z">2023-11-16</time></p><p class="title"><a href="/2023/11/16/half-galss-of-water/">半杯水的现象</a></p><p class="categories"><a href="/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/">生活感悟</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-11-09T08:07:05.000Z">2023-11-09</time></p><p class="title"><a href="/2023/11/09/energy-of-mind/">心的能量</a></p><p class="categories"><a href="/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/">生活感悟</a></p></div></article></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/">首页</a><p class="is-size-7"><span>&copy; 2024 Han Wei</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>

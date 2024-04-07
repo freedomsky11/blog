@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>20170615学习纪录 - 码字空间</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="码字空间"><meta name="msapplication-TileImage" content="/img/favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="码字空间"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="##Objective###今天做了什么？  写ORID 看了全栈营二期的创意大赛比赛总结直播 学了Rails第三课：Rails101第四章 重点学习了下RESTful的概念  ###关于今天的学习，你记得什么？####新旧知识  routes里面的resources是一组资源的意思 RESTful概念是指，将CRUD封装起来，然后在外面对应着四个基本verb：POST、GET、UPDATE、DE"><meta property="og:type" content="blog"><meta property="og:title" content="20170615学习纪录"><meta property="og:url" content="https://www.hanwei.ink/2017/06/16/20170615-learning-record/"><meta property="og:site_name" content="码字空间"><meta property="og:description" content="##Objective###今天做了什么？  写ORID 看了全栈营二期的创意大赛比赛总结直播 学了Rails第三课：Rails101第四章 重点学习了下RESTful的概念  ###关于今天的学习，你记得什么？####新旧知识  routes里面的resources是一组资源的意思 RESTful概念是指，将CRUD封装起来，然后在外面对应着四个基本verb：POST、GET、UPDATE、DE"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://www.hanwei.ink/img/og_image.png"><meta property="article:published_time" content="2017-06-15T22:39:00.000Z"><meta property="article:modified_time" content="2024-04-07T02:51:29.985Z"><meta property="article:author" content="Han Wei"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://www.hanwei.ink/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.hanwei.ink/2017/06/16/20170615-learning-record/"},"headline":"20170615学习纪录","image":["https://www.hanwei.ink/img/og_image.png"],"datePublished":"2017-06-15T22:39:00.000Z","dateModified":"2024-04-07T02:51:29.985Z","author":{"@type":"Person","name":"Han Wei"},"publisher":{"@type":"Organization","name":"码字空间","logo":{"@type":"ImageObject","url":{"text":"首页"}}},"description":"##Objective###今天做了什么？  写ORID 看了全栈营二期的创意大赛比赛总结直播 学了Rails第三课：Rails101第四章 重点学习了下RESTful的概念  ###关于今天的学习，你记得什么？####新旧知识  routes里面的resources是一组资源的意思 RESTful概念是指，将CRUD封装起来，然后在外面对应着四个基本verb：POST、GET、UPDATE、DE"}</script><link rel="canonical" href="https://www.hanwei.ink/2017/06/16/20170615-learning-record/"><link rel="alternate" href="/atom.xml" title="码字空间" type="application/atom+xml"><link rel="icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/6.0.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><script src="https://www.googletagmanager.com/gtag/js?id=G-D3QCK6R4PV" async></script><script>window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'G-D3QCK6R4PV');</script><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.2"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/">首页</a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a><a class="navbar-item" target="_blank" rel="noopener" href="https://happiness.hanwei.ink/">&lt;&lt;幸福主义&gt;&gt;</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/freedomsky11/blog"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2017-06-15T22:39:00.000Z" title="6/16/2017, 6:39:00 AM">2017-06-16</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/">编程技术</a></span></div></div><h1 class="title is-3 is-size-4-mobile">20170615学习纪录</h1><div class="content"><p>##Objective<br>###今天做了什么？</p>
+<ol>
+<li>写ORID</li>
+<li>看了全栈营二期的创意大赛比赛总结直播</li>
+<li>学了Rails第三课：Rails101第四章</li>
+<li>重点学习了下RESTful的概念</li>
+</ol>
+<p>###关于今天的学习，你记得什么？<br>####新旧知识</p>
+<ol>
+<li>routes里面的resources是一组资源的意思</li>
+<li>RESTful概念是指，将CRUD封装起来，然后在外面对应着四个基本verb：POST、GET、UPDATE、DELETE，里面则是基本的七个acion和四个页面</li>
+<li>rails就是按照RESTful概念设计的，所以在编程的时候只要重点写好CRUD其他功能rails基本就已经帮我们完成了，只需要在进行参数设置、数据限制、页面设计就可以</li>
+<li>path路径其实就是helper的一个简写，在生产网页的时候还是会转换回基本的url的</li>
+<li>在controller中定义的变量，带@的这些基本可以理解成中间量，他们只在controller中运算，在传送给view或者model后就会失效了。</li>
+<li>浏览器真是一个重要的角色</li>
+<li>人和浏览器之间的交互就两个，分别是request和response。</li>
+<li>response分两种，可见、不可见。可见的就是在views上、不可见的就是在model里。</li>
+<li>request面向controller，这里就用到了RESTful概念了，request原先用GET和POST两种，在RESTful里面有四个verb如上所述。而，request是通过调用url来实现的，这个功能的背后就是routing也是我们在config/routes里面的设置。</li>
+<li>Controller收到request后，对应四个动作，有七个响应（行动）及四个页面。他们通过Verb（动作、方法）和path（helpler、路径）来选择。</li>
+<li>不同的对象会有不同的controller文件和views，在rails里生成controller的时候会生产对应的controller文件及views文件夹，七个响应在controller里是有固定名字的，对应其中的四个会有相应的四个自动调用的页面，他们的命名也是有规则的。</li>
+<li>如果需要数据，则需要在controller中定义@变量，controller在model和view之间传输数据就是靠@变量。</li>
+<li>Controller的@变量和view之间只是数据传递关系，@变量和model之间则是运算关系。</li>
+<li>model和数据库之间使用的是数据库语言，但是controller和model之间使用的则是method方法，controller通过method方法完成和model的对话，这类方法本质上应该是属于model的方法（这点需要确认），但看上去对数据库的操作是使用model的method。而@变量和数据之间的关系，就像word应用程序与doc文件的具体关系，在CRUD后，C与U还需要进行保存操作，而D则不用。R就相当于用word打开doc，C相当于在word上新建doc，之后还需要保存到数据库，U相当于更改R或C后的doc，同样需要保存。D则相当于直接在word里删除doc。</li>
+<li>params[:id]的意思可能是，从当前的参数列表中提取id这个参数</li>
+<li>render是返回某个页面但是不刷新数据，就是不会重新进行一遍controller里面的取值操作的意思，也可以理解成不重新从model里面拿object的意思。</li>
+<li>默写的CRUD前面四个是给views传参数用的，后面几个是对model传参数用的。</li>
+<li>validates是表示model接受数据时候的限制，这个并不限制controller的输出，而是限制model的输入</li>
+<li>render “form”是 &lt;%= render :partial =&gt; “form” %&gt; 的“缩写”，意思是要引用 Partial (局部）页面的方式。大量重复的程式码可以用这样的方式收纳。它的规则是同目录底下的 _xxxx.html.erb，要是其他地址则需写全，比如：”common/footer”或”common/navbar”</li>
+<li><pre><code>   &lt;%= f.label &quot;title&quot;, :class =&gt; &quot;string optional control-label&quot; %&gt;和 &lt;%= f.text_field :title, :class =&gt; &quot;string optional form-control&quot; %&gt;中，f.xxx表示显示类型，第二个的title表示接受数据对象，后面的class是样式。f,是前面复制的group
+</code></pre>
+</li>
+<li>gem 不是动态载入 Rails 环境的，只有“在 app/ 下开发的程式码”是动态载入，所以当有 <code>app</code> 外的档案被修改，都应该“重开”治百病。动态载入可以这么理解，就是这类动态载入的内容在程序运行期间是会不断发生变化，也就是刷新的。所以，新的变动会立马发生变化，但是类似GEM这些在程序一开始运行的时候载入后，后面就不会变动了。</li>
+<li>在 Restful 的概念里把这个 groups 叫做 resources，“一组资源”的意思。</li>
+<li>为了要控制它的运作，我们会创建一个新的 Controller文件 叫做 groups_controller.rb、</li>
+<li>这七个 action ，是每个CRUD功能里最基本的动作。只要我们在 controller.rb 里定义 (def) 好这七个方法当作动作 (action)。其他的部分 Rails 就会帮我们处理了。</li>
+<li>比如，设定 Routing (路由) 只需要简单一行: resources :groups,就可以了，所以我们定义好这七个action就算是完成了最基本的后端工作。这样不管浏览器端跑来什么样的请求 (request) ，Routing都会聪明地帮我们导向正确的 action 去运作后续流程。</li>
+<li>因为 CRUD 是常见的操作行为，但是大家实作的方式、与网址设计方式不一样。造成很多维护上的困扰。后来就有人发明 RESTful 这个概念，希望用 HTTP 的动作 ( Verb）一起去封装 CRUD 的行为。所以，RESTful实际上相当于一个打包好的CRUD，适用于不同的浏览器。</li>
+<li>而CRUD是指四种面向浏览器的四类操作，涉及七个Action，也可以理解为七个动作，以及四个页面。</li>
+<li>所以，我们只要做好这七个ACTION，其他的工作rails会帮我们处理，因为其他部分的实际上是通用的程序。只需要进行一些通用设定就可以。</li>
+<li>所以，本质上来看ROR就是写好CRUD，设置到config（routes），规定好model，设计好views，再加上一些其他的设置。</li>
+<li>使用封装过后的RESTful，CRUD在外部看来就是四个HTTP request。所以提高了兼容性。</li>
+<li>resources就是一组资源的意思，在routes中就是表示这是一组restful资源，也即是一组规定格式的CRUD。</li>
+</ol>
+<p>####遗留问题</p>
+<ol>
+<li>能否不适用@而直接对数据库操作？</li>
+</ol>
+<p>####涉及资源</p>
+<ol>
+<li>网站：LOGDOWN；</li>
+<li>网站：全栈营</li>
+<li>网页：Rails 还有很多内建验质函式，你可以看这里：<a target="_blank" rel="noopener" href="http://guides.rubyonrails.org/active_record_validations.html">http://guides.rubyonrails.org/active_record_validations.html</a></li>
+</ol>
+<p>##Reflective<br>###你要如何形容今天的情绪？</p>
+<ol>
+<li>学习RESTful的时候大脑有过载的感觉，边调整呼吸边喝水坚持学习完了。感觉还是有些理解的不够透彻。</li>
+</ol>
+<p>###今天的高峰是什么？</p>
+<ul>
+<li>加深了对RESTful的理解</li>
+</ul>
+<p>###今天的低点是什么？</p>
+<ul>
+<li>学习的时间长了会有疲惫感。</li>
+</ul>
+<p>##Interpretive<br>###我们今天学到了什么？</p>
+<ol>
+<li>大脑有过载的感觉时，边调整呼吸边喝水坚持学习完了。</li>
+<li>scaffold也许是早起rails内置的，后面虽然功能完善，但一直保留，貌似后面建立程序就不是这么用了。</li>
+<li>全栈营的论坛就像个矿场，没事可以去挖一挖。</li>
+<li>有五个对象的MVC模型图貌似比四层空间模型好用，在加一个浏览器对象做中介效果更佳。最后画了个六个对象的关系图。</li>
+<li>Rails MVC架构、CRUDRails的RESTful是重点内容，要多回顾。</li>
+</ol>
+<p>###今天有什么重要的领悟？<br>####编程知识</p>
+<ul>
+<li>本质上来看ROR就是写好CRUD，设置到config（routes），规定好model，设计好views，再加上一些其他的设置。</li>
+</ul>
+<p>##Decisional<br>###我们会如何用几句话形容今天？</p>
+<ul>
+<li>加深了对RESTful的理解。</li>
+</ul>
+<p>###明天有什么计划？</p>
+<ol>
+<li>写ORID</li>
+<li>学全栈营</li>
+</ol>
+</div><div class="article-licensing box"><div class="licensing-title"><p>20170615学习纪录</p><p><a href="https://www.hanwei.ink/2017/06/16/20170615-learning-record/">https://www.hanwei.ink/2017/06/16/20170615-learning-record/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Han Wei</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2017-06-16</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2024-04-07</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2017/06/17/20170616-learning-record/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">20170616学习纪录</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2017/06/15/an-error-record-app-helpers-flashes-helper-a-app-helpers-flasher-helper-rb-rb/"><span class="level-item">报错纪录：将app/helpers/flashes_helper.rb 打成 app/helpers/flasher_helper.rb</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div id="comment-container"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css"><script src="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js"></script><script>var gitalk = new Gitalk({
+            id: "4d3c9500b88c6cc1299f5c779078f882",
+            repo: "blog",
+            owner: "freedomsky11",
+            clientID: "97b0d4602f15ef2a938a",
+            clientSecret: "0df30f94ab8faa596b25651dee141512d9bc3daa",
+            admin: ["freedomsky11"],
+            createIssueManually: false,
+            distractionFreeMode: false,
+            perPage: 20,
+            pagerDirection: "last",
+            
+            
+            enableHotKey: true,
+            language: "zh-CN",
+        })
+        gitalk.render('comment-container')</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="/img/olio.jpg" alt="Han Wei"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Han Wei</p><p class="is-size-6 is-block">Developer, Art lover, Runner</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Guangzhou, China</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">218</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">10</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">3</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/freedomsky11" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/freedomsky11"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com/freedomsky1111"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/atom.xml"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-04-07T05:11:49.000Z">2024-04-07</time></p><p class="title"><a href="/2024/04/07/AI-and-Brain/">AI与大脑</a></p><p class="categories"><a href="/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/">生活感悟</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-12-12T01:54:00.000Z">2023-12-12</time></p><p class="title"><a href="/2023/12/12/basic-use-of-postgresql/">postgresql快速上手</a></p><p class="categories"><a href="/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/">编程技术</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-11-17T04:05:03.000Z">2023-11-17</time></p><p class="title"><a href="/2023/11/17/happiness/">幸福主义</a></p><p class="categories"><a href="/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/">生活感悟</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-11-16T04:37:06.000Z">2023-11-16</time></p><p class="title"><a href="/2023/11/16/half-galss-of-water/">半杯水的现象</a></p><p class="categories"><a href="/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/">生活感悟</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-11-09T08:07:05.000Z">2023-11-09</time></p><p class="title"><a href="/2023/11/09/energy-of-mind/">心的能量</a></p><p class="categories"><a href="/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/">生活感悟</a></p></div></article></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/">首页</a><p class="is-size-7"><span>&copy; 2024 Han Wei</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>

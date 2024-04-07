@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>工作三周分享——做前端可能需要的一些知识 - 码字空间</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="码字空间"><meta name="msapplication-TileImage" content="/img/favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="码字空间"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="转行成为前端工程师三周了，有很多东西想分享给社区的小伙伴，但无奈现在每天都是枪林弹雨，周末和晚上都在狂补基础，时间实在有限，更多的东西等缓过来再分享，这里就先简单的分享下这段时间我觉得对转前端比较重要的东西，很多是徐帅在课上强调过的，还有一些我开始找工作的时候徐帅也给过建议，但是当时没有get到点，现在有了切身体会，所以供小伙伴们参考和补课。1、DOM对象，这是链接HTML&amp;#x2F;CSS与JS的关键知识"><meta property="og:type" content="blog"><meta property="og:title" content="工作三周分享——做前端可能需要的一些知识"><meta property="og:url" content="https://www.hanwei.ink/2018/04/07/after-workeg-in-new-profession-three-weeks/"><meta property="og:site_name" content="码字空间"><meta property="og:description" content="转行成为前端工程师三周了，有很多东西想分享给社区的小伙伴，但无奈现在每天都是枪林弹雨，周末和晚上都在狂补基础，时间实在有限，更多的东西等缓过来再分享，这里就先简单的分享下这段时间我觉得对转前端比较重要的东西，很多是徐帅在课上强调过的，还有一些我开始找工作的时候徐帅也给过建议，但是当时没有get到点，现在有了切身体会，所以供小伙伴们参考和补课。1、DOM对象，这是链接HTML&amp;#x2F;CSS与JS的关键知识"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://www.hanwei.ink/img/og_image.png"><meta property="article:published_time" content="2018-04-07T05:00:00.000Z"><meta property="article:modified_time" content="2024-04-07T02:51:29.992Z"><meta property="article:author" content="Han Wei"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://www.hanwei.ink/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.hanwei.ink/2018/04/07/after-workeg-in-new-profession-three-weeks/"},"headline":"工作三周分享——做前端可能需要的一些知识","image":["https://www.hanwei.ink/img/og_image.png"],"datePublished":"2018-04-07T05:00:00.000Z","dateModified":"2024-04-07T02:51:29.992Z","author":{"@type":"Person","name":"Han Wei"},"publisher":{"@type":"Organization","name":"码字空间","logo":{"@type":"ImageObject","url":{"text":"首页"}}},"description":"转行成为前端工程师三周了，有很多东西想分享给社区的小伙伴，但无奈现在每天都是枪林弹雨，周末和晚上都在狂补基础，时间实在有限，更多的东西等缓过来再分享，这里就先简单的分享下这段时间我觉得对转前端比较重要的东西，很多是徐帅在课上强调过的，还有一些我开始找工作的时候徐帅也给过建议，但是当时没有get到点，现在有了切身体会，所以供小伙伴们参考和补课。1、DOM对象，这是链接HTML&#x2F;CSS与JS的关键知识"}</script><link rel="canonical" href="https://www.hanwei.ink/2018/04/07/after-workeg-in-new-profession-three-weeks/"><link rel="alternate" href="/atom.xml" title="码字空间" type="application/atom+xml"><link rel="icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/6.0.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><script src="https://www.googletagmanager.com/gtag/js?id=G-D3QCK6R4PV" async></script><script>window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'G-D3QCK6R4PV');</script><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.2"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/">首页</a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a><a class="navbar-item" target="_blank" rel="noopener" href="https://happiness.hanwei.ink/">&lt;&lt;幸福主义&gt;&gt;</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/freedomsky11/blog"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2018-04-07T05:00:00.000Z" title="4/7/2018, 1:00:00 PM">2018-04-07</time>发表</span><span class="level-item"><a class="link-muted" href="/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/">编程技术</a></span></div></div><h1 class="title is-3 is-size-4-mobile">工作三周分享——做前端可能需要的一些知识</h1><div class="content"><p>转行成为前端工程师三周了，有很多东西想分享给社区的小伙伴，但无奈现在每天都是枪林弹雨，周末和晚上都在狂补基础，时间实在有限，更多的东西等缓过来再分享，这里就先简单的分享下这段时间我觉得对转前端比较重要的东西，很多是徐帅在课上强调过的，还有一些我开始找工作的时候徐帅也给过建议，但是当时没有get到点，现在有了切身体会，所以供小伙伴们参考和补课。<br><strong>1、DOM对象</strong>，这是链接HTML/CSS与JS的关键知识点，也是jQuery/Vue等库和框架的底层基础，少了它前端知识会有重大缺失。有的公司不一定用它，但这个知识对于理解前端框架非常重要。<br><strong>2、原生CSS</strong>，虽然有很多框架，徐帅也说过用框架会有效率。但是，工作中不可避免会遇到一些框架解决不了的问题，这个时候使用原生的CSS就不可避免。然后，这里重点的是CSS布局。因为布局定好以后基本就是调样式的问题了。<br><strong>3、jQuery</strong>，很多公司已经不用这个了，但是还可能有很多公司在用，我公司的一个管理页面就是用的它。所以，有时间的话最好学习一下，而且如果了解了上面提到的 DOM 对象，看jq其实非常快。<br><strong>4、js基础</strong>，就像徐帅说的一切都是JS，无论是小程序还是各种框架甚至是google插件本质上都是JS写出来的。js基础越好就意味着你能做的事情越多，在具备基础的html/css知识后，本质上考验的就是你的js基础知识了。<br><strong>5、VUE和小程序</strong>，小程序和VUE很像，但是还是有很多不一样的地方，如果要开发小程序，一定要认真看小程序开发文档，虽然有和徐帅学VUE理解会很快，但这不代表你可以直接上来就用。<strong>认真看文档是程序员最基本的素质。</strong><br><strong>6、把知识用起来</strong>。很多同学跟着学习了好长时间还不知道怎么用，这里反应了两个问题。第一个是没需求，第二个是没思路。<br>（1）工作与不工作对于学技术最大的区别不在于有没有工资，而在于有没有需求。当产品提需求的时候，为了工作我们自然而然要去把知识用起来。但是还没工作的同学就没有这个条件。那怎么办呢？自己找需求。方式很多，比如做老师布置的作业、做自己想做的东西、到freecodecamp上做题以及问问工作了的同学在做什么，只要你想给自己找需求自然找得到。<br>（2）有需求后很多同学做的时候会没思路，这个问题其实不单没工作的同学会遇到，工作了的也会遇到。除了多看基础多思考外，更高效的方法就是多看别人的Demo，demo就是别人写好的项目代码，最好看类似项目的开源代码。这个过程里不单可以直接把部分代码拿过来用，而且可以学习和借鉴别人的思路解决自己的问题，同时这也是运用基础知识的过程，通过这个过程你会发现自己的不足，就可以有针对性的去补基础了。<br> <strong>7、看demo的技巧</strong>。<br>（1）有的demo往往很大，这个时候很难下手，这个时候可以试着庖丁解牛。就是需要用什么功能就重点看对应部分的代码。<br>（2）在想弄明白代码作用的时候，可以多用删除和撤销。这样就能很直观的理解很多代码的作用。<br>（3）编辑器搜索，当我们想了解一个变量或者函数的作用的时候，不妨在文件甚至项目里搜索它，看看它都用在什么地方，或者在那里定义，又或者从哪里引入。这对于理解变量和函数有着非常大的帮助。<br>（4）把开发文档、w3c和mdn当作字典来用。虽然google也可以很快查的你想要的东西，但直接使用开发文档或者w3c和mdn来查相关内容效率会高很多，看demo就像看英文文章一样，学过html/css/js就像基本知道了语法，剩下的标签、属性、借口无非就是单词。碰到不懂的查一查，看demo基本问题就不大了。<br><strong>8、photoshop</strong>，如果是找做前端页面的工作（比如实习工作），会要求你根据PSD切图还原界面，这是传统的前端做法。psd就是ps设计稿，基本你需要做的就是切图还有写html，再通过css调样式，之后给页面绑接口。如果是找这类型的工作，建议简单学一下PS的基础技能，不算难，学几个具体的PS技能就可以办到了。</p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>工作三周分享——做前端可能需要的一些知识</p><p><a href="https://www.hanwei.ink/2018/04/07/after-workeg-in-new-profession-three-weeks/">https://www.hanwei.ink/2018/04/07/after-workeg-in-new-profession-three-weeks/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Han Wei</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2018-04-07</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2024-04-07</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2018/05/05/the-way-i-transfer-new-profession/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">年近三十，非计算机专业，在体制内工作六年后转职程序员心得</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2018/03/14/personal-track-join-the-market/"><span class="level-item">投身市场</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div id="comment-container"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css"><script src="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js"></script><script>var gitalk = new Gitalk({
+            id: "d4907981bd0fabe4d252723e3b3d4ed3",
+            repo: "blog",
+            owner: "freedomsky11",
+            clientID: "97b0d4602f15ef2a938a",
+            clientSecret: "0df30f94ab8faa596b25651dee141512d9bc3daa",
+            admin: ["freedomsky11"],
+            createIssueManually: false,
+            distractionFreeMode: false,
+            perPage: 20,
+            pagerDirection: "last",
+            
+            
+            enableHotKey: true,
+            language: "zh-CN",
+        })
+        gitalk.render('comment-container')</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="/img/olio.jpg" alt="Han Wei"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Han Wei</p><p class="is-size-6 is-block">Developer, Art lover, Runner</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Guangzhou, China</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">218</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">10</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">3</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/freedomsky11" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/freedomsky11"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com/freedomsky1111"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/atom.xml"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-04-07T05:11:49.000Z">2024-04-07</time></p><p class="title"><a href="/2024/04/07/AI-and-Brain/">AI与大脑</a></p><p class="categories"><a href="/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/">生活感悟</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-12-12T01:54:00.000Z">2023-12-12</time></p><p class="title"><a href="/2023/12/12/basic-use-of-postgresql/">postgresql快速上手</a></p><p class="categories"><a href="/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/">编程技术</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-11-17T04:05:03.000Z">2023-11-17</time></p><p class="title"><a href="/2023/11/17/happiness/">幸福主义</a></p><p class="categories"><a href="/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/">生活感悟</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-11-16T04:37:06.000Z">2023-11-16</time></p><p class="title"><a href="/2023/11/16/half-galss-of-water/">半杯水的现象</a></p><p class="categories"><a href="/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/">生活感悟</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-11-09T08:07:05.000Z">2023-11-09</time></p><p class="title"><a href="/2023/11/09/energy-of-mind/">心的能量</a></p><p class="categories"><a href="/categories/%E7%94%9F%E6%B4%BB%E6%84%9F%E6%82%9F/">生活感悟</a></p></div></article></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/">首页</a><p class="is-size-7"><span>&copy; 2024 Han Wei</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
